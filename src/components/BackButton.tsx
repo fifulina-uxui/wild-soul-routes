@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 export function BackButton({ to, label }: { to: string; label: string }) {
   return (
