@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
+import { BackButton } from '../components/BackButton'
 import { useLang } from '../i18n'
 
 export default function BlogArticlePage() {
@@ -25,15 +26,7 @@ export default function BlogArticlePage() {
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-10 md:px-8">
           <Reveal>
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-[rgb(255_255_255/20%)] bg-[rgb(255_255_255/12%)] px-5 py-2 text-[14px] font-bold leading-5 text-[#fafafa] backdrop-blur-md transition-colors duration-200 hover:bg-[rgb(255_255_255/22%)]"
-            >
-              <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
-                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z" />
-              </svg>
-              {t.blog.back}
-            </Link>
+            <BackButton to="/blog" label={t.blog.back} />
             <p className="mt-6 text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
               {post.tag}
             </p>
