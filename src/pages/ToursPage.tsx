@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
-import { BackButton } from '../components/BackButton'
 import { useLang } from '../i18n'
 
 export default function ToursPage() {
@@ -29,9 +28,6 @@ export default function ToursPage() {
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-12 md:px-8">
           <Reveal>
-            <div className="mb-6">
-              <BackButton to="/" label={t.cta.home} />
-            </div>
             <h1 className="text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
               {t.toursPage.heading}
             </h1>
