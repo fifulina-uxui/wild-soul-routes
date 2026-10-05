@@ -1,0 +1,40 @@
+/* Горизонт — специфичные стили приложения */
+
+.floating-glass {
+  background: rgb(70 70 70 / 35%);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .floating-glass {
+    background: rgb(30 30 30 / 95%);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 450ms ease,
+    transform 450ms ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .group img {
+    transition: none !important;
+  }
+}
