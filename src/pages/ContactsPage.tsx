@@ -1,11 +1,12 @@
 import Subpage from './Subpage'
 import LeadForm from '../sections/LeadForm'
 import { Reveal } from '../sections/Reveal'
+import { BackButton } from '../components/BackButton'
 import { contacts } from '../data/content'
 import { useLang } from '../i18n'
 
 export default function ContactsPage() {
-  const { lang } = useLang()
+  const { lang, t } = useLang()
   const ru = lang === 'ru'
 
   const rows = [
@@ -19,6 +20,9 @@ export default function ContactsPage() {
       <section className="bg-black">
         <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
           <Reveal>
+            <div className="mb-6">
+              <BackButton to="/" label={t.cta.home} />
+            </div>
             <p className="text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
               {ru ? '07 — Контакты' : '07 — Contacts'}
             </p>
