@@ -27,14 +27,14 @@ export function LogoMark({ size = 28, className = '' }: { size?: number; classNa
 export default function Logo() {
   return (
     <Link to="/" className="flex items-center gap-3 text-[#fafafa]">
-      <LogoMark />
+      <LogoMark size={36} />
       <span className="flex flex-col leading-none">
-        <span className="whitespace-nowrap text-[15px] font-bold tracking-[0.02em]">
+        <span className="whitespace-nowrap text-[19px] font-bold tracking-[0.02em]">
           Wild Soul
         </span>
         <span
           aria-label="Routes"
-          className="mt-[1px] flex w-full justify-between text-[11px] font-medium leading-none text-[rgb(250_250_250/55%)]"
+          className="mt-1 flex w-full justify-between text-[13px] font-medium uppercase leading-none text-[rgb(250_250_250/55%)]"
         >
           <span>R</span>
           <span>o</span>
