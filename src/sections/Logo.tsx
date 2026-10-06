@@ -34,7 +34,7 @@ export default function Logo() {
         </span>
         <span
           aria-label="Routes"
-          className="mt-1 flex w-full justify-between text-[10px] font-medium uppercase leading-none text-[rgb(250_250_250/55%)]"
+          className="mt-[1px] flex w-full justify-between text-[11px] font-medium leading-none text-[rgb(250_250_250/55%)]"
         >
           <span>R</span>
           <span>o</span>
