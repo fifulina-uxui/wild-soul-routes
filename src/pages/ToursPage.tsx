@@ -85,7 +85,7 @@ export default function ToursPage() {
 
               <div className="relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8">
                 <div className="w-full">
-                  <p className="text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                  <p className="text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
                     {tour.coords}
                   </p>
                   <h2 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">

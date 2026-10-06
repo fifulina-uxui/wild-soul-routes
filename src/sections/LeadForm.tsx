@@ -19,7 +19,7 @@ export default function LeadForm() {
       <div className="mx-auto max-w-[1200px] px-5 py-16 md:px-8 md:py-24">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <p className="text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+            <p className="text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
               {t.lead.label}
             </p>
             <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">

@@ -9,7 +9,7 @@ export default function Journal() {
     <section id="journal" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
-          <p className="text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+          <p className="text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
             {t.journal.label}
           </p>
           <h2 className="mt-2 max-w-[600px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
@@ -29,7 +29,7 @@ export default function Journal() {
                     className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
-                <p className="mt-5 text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                <p className="mt-5 text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
                   {post.tag}
                 </p>
                 <h3 className="mt-2 text-[24px] font-bold leading-[30px] text-[#fafafa] transition-colors duration-200 group-hover:text-[rgb(250_250_250/70%)]">

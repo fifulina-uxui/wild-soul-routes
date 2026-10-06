@@ -17,7 +17,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 py-16 md:px-8">
         <div className="max-w-[600px]">
-          <p className="text-[14px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/70%)]">
+          <p className="text-[14px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/70%)]">
             {t.hero.tagline}
           </p>
           <h1 className="mt-4 text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">

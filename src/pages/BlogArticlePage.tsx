@@ -27,7 +27,7 @@ export default function BlogArticlePage() {
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-10 md:px-8">
           <Reveal>
             <BackButton to="/blog" label={t.blog.back} />
-            <p className="mt-6 text-[12px] font-bold uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+            <p className="mt-6 text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
               {post.tag}
             </p>
             <h1 className="mt-3 max-w-[820px] text-[clamp(30px,4vw,56px)] font-bold leading-[1.08] text-[#fafafa]">
