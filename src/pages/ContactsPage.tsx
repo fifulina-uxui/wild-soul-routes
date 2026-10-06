@@ -20,7 +20,7 @@ export default function ContactsPage() {
         <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
           <Reveal>
             <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-              {ru ? '07 — Контакты' : '07 — Contacts'}
+              {ru ? 'Контакты' : 'Contacts'}
             </p>
             <h2 className="mt-2 max-w-[600px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
               {ru ? 'Мы на связи' : 'Get in touch'}

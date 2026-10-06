@@ -358,7 +358,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     directions: {
-      label: '03 — География',
+      label: 'География',
       heading: 'Направления',
       text: 'Мы работаем только с регионами, которые знаем лично. Каждое направление — это проверенные гиды, понятная логистика и маршруты, которые мы регулярно обновляем.',
       items: [
@@ -375,7 +375,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     why: {
-      label: '04 — Подход',
+      label: 'Подход',
       heading: 'Почему с нами удобно',
       items: [
         {
@@ -397,7 +397,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     journal: {
-      label: '05 — Блог',
+      label: 'Блог',
       heading: 'Читаем перед поездкой',
       items: [
         {
@@ -470,7 +470,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       },
     ],
     team: {
-      label: '06 — Люди',
+      label: 'Люди',
       heading: 'Команда',
       text: 'Нас четверо, и каждый отвечает за свой регион. Мы не передаём туры подрядчикам — ведём группы сами.',
       items: [
@@ -501,7 +501,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     lead: {
-      label: '07 — Заявка',
+      label: 'Заявка',
       heading: 'Оставить заявку',
       text: 'Расскажите, куда хотите поехать, — в течение рабочего дня предложим маршрут, даты и честную смету. Если планов пока нет, просто оставьте контакты: поможем выбрать.',
       bullets: [
@@ -777,7 +777,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     directions: {
-      label: '03 — Geography',
+      label: 'Geography',
       heading: 'Destinations',
       text: 'We only work in regions we know first-hand. Every destination means trusted guides, clear logistics and routes we update regularly.',
       items: [
@@ -794,7 +794,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     why: {
-      label: '04 — Approach',
+      label: 'Approach',
       heading: 'Why travel with us',
       items: [
         {
@@ -816,7 +816,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     journal: {
-      label: '05 — Blog',
+      label: 'Blog',
       heading: 'Read before you go',
       items: [
         {
@@ -889,7 +889,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       },
     ],
     team: {
-      label: '06 — People',
+      label: 'People',
       heading: 'Team',
       text: 'Four of us, each responsible for their own region. We never hand tours to contractors — we lead the groups ourselves.',
       items: [
@@ -920,7 +920,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       ],
     },
     lead: {
-      label: '07 — Request',
+      label: 'Request',
       heading: 'Plan my trip',
       text: 'Tell us where you want to go — within one business day we will suggest a route, dates and an honest estimate. No plans yet? Just leave your contacts and we will help you choose.',
       bullets: [
