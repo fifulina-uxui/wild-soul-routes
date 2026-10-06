@@ -9,7 +9,7 @@ export default function Tours() {
     <section id="tours" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 pb-7 pt-14 md:px-8 md:pt-24">
         <Reveal>
-          <p className="text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+          <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
             {t.tours.label}
           </p>
           <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
@@ -43,7 +43,7 @@ export default function Tours() {
                 }`}
               >
                 <div className="max-w-[560px]">
-                  <p className="text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                  <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
                     {tour.coords}
                   </p>
                   <h3 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">

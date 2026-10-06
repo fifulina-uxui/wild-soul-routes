@@ -27,7 +27,7 @@ export default function TourDetailPage() {
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-10 md:px-8">
           <Reveal>
             <BackButton to="/tours" label={t.tourDetail.back} />
-            <p className="mt-6 text-[12px] font-light uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+            <p className="mt-6 text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
               {tour.coords}
             </p>
             <h1 className="mt-3 max-w-[720px] text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
@@ -78,7 +78,7 @@ export default function TourDetailPage() {
           {detail.program.map((step, i) => (
             <Reveal key={step.day}>
               <div className="grid grid-cols-[64px_1fr] gap-4 border-b border-[rgb(255_255_255/15%)] py-5 md:grid-cols-[120px_1fr] md:gap-10">
-                <p className="text-[12px] font-light uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                <p className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                   {String(i + 1).padStart(2, '0')} · {step.day}
                 </p>
                 <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{step.text}</p>
@@ -101,7 +101,7 @@ export default function TourDetailPage() {
                 className="flex items-baseline justify-between gap-4 border-b border-[rgb(255_255_255/15%)] py-5"
               >
                 <p className="text-[18px] leading-[26px] text-[#fafafa]">{date.when}</p>
-                <p className="text-[12px] font-light uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                <p className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                   {date.note}
                 </p>
               </div>
@@ -129,7 +129,7 @@ export default function TourDetailPage() {
         <Reveal>
           <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-10 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-[12px] font-light uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+              <p className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                 {t.tours.meta.price}
               </p>
               <p className="mt-2 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
