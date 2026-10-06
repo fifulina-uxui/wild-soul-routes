@@ -10,10 +10,28 @@ export default function ToursPage() {
   const [country, setCountry] = useState<string | null>(searchParams.get('c'))
 
   const countries = useMemo(
-    () => Array.from(new Set(t.tours.items.map((tour) => tour.coords.split('— ')[1]))),
+    () =>
+      Array.from(
+        new Set(
+          t.tours.items.flatMap((tour) =>
+            tour.coords
+              .split('— ')[1]
+              .split('·')
+              .map((c) => c.trim()),
+          ),
+        ),
+      ),
     [t],
   )
-  const items = country ? t.tours.items.filter((tour) => tour.coords.endsWith(country)) : t.tours.items
+  const items = country
+    ? t.tours.items.filter((tour) =>
+        tour.coords
+          .split('— ')[1]
+          .split('·')
+          .map((c) => c.trim())
+          .includes(country),
+      )
+    : t.tours.items
 
   return (
     <Subpage flush>
