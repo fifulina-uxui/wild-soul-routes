@@ -53,22 +53,22 @@ export default function Header() {
     <>
       {/* Шапка поверх фотографии */}
       <header className="absolute inset-x-0 top-0 z-30">
-        <div className="mx-auto flex max-w-[1316px] items-center justify-between gap-6 px-6 py-4 md:px-8">
-          <div className="flex items-center gap-8">
+        <div className="mx-auto flex max-w-[1316px] items-center gap-6 px-6 py-4 md:px-8">
+          <div className="flex flex-1 items-center">
             <Logo />
-            <nav className="hidden items-center gap-4 lg:flex">
-              {t.nav.map((item) => (
-                <NavLink
-                  key={item.href}
-                  to={item.href}
-                  className={({ isActive }) => navClass(isActive, 'text-[16px] leading-6')}
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </nav>
           </div>
-          <div className="flex items-center gap-5">
+          <nav className="hidden items-center gap-4 lg:flex">
+            {t.nav.map((item) => (
+              <NavLink
+                key={item.href}
+                to={item.href}
+                className={({ isActive }) => navClass(isActive, 'text-[16px] leading-6')}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+          <div className="flex flex-1 items-center justify-end gap-5">
             <LangSwitcher />
             <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
               {t.cta.lead}
