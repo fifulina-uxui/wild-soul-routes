@@ -30,36 +30,33 @@ export default function DirectionsPage() {
         </div>
       </section>
 
-      {/* Карточки стран с фото */}
-      <div className="flex flex-col gap-4 px-4 pt-8 md:px-6">
+      {/* Карточки стран с фото — 3 в ряд */}
+      <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-6 px-5 pt-12 sm:grid-cols-2 md:px-8 lg:grid-cols-3">
         {t.directionsPage.cards.map((card) => (
           <Reveal key={card.country}>
             <Link
               to={`/tours?c=${encodeURIComponent(card.country)}`}
-              className="group relative block min-h-[45vh] overflow-hidden rounded-[8px]"
+              className="group flex h-full flex-col overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]"
             >
-              <img
-                src={asset(card.image)}
-                alt={card.country}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
-
-              <div className="relative z-10 mx-auto flex h-full min-h-[45vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8">
-                <div className="w-full">
-                  <h2 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-                    {card.country}
-                  </h2>
-                  <p className="mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {card.text}
-                  </p>
-                  <p className="mt-8 inline-flex items-center gap-2 border-t border-[rgb(255_255_255/15%)] pt-5 text-[12px] uppercase leading-5 tracking-[0.17em] text-[#fafafa]">
-                    {t.nav.find((n) => n.href === '/tours')?.label}
-                    <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-                  </p>
-                </div>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={asset(card.image)}
+                  alt={card.country}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+                  {card.country}
+                </h2>
+                <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                  {card.text}
+                </p>
+                <div className="mt-8 flex-1" />
+                <span className="inline-flex min-h-[36.5px] w-fit items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 group-hover:border-[#fafafa]">
+                  {t.nav.find((n) => n.href === '/tours')?.label}
+                </span>
               </div>
             </Link>
           </Reveal>
