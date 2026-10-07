@@ -135,7 +135,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
-      meta: { days: 'Длительность', price: 'Стоимость', start: 'Начало', highlight: 'Главное' },
+      meta: { days: 'Длительность', price: 'Стоимость', start: 'Старт', highlight: 'Главное' },
       items: [
         {
           id: 'tibet',

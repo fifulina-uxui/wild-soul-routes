@@ -77,6 +77,12 @@ export default function Tours() {
                   <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-4">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.start}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.days}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.days}</dd>
@@ -86,12 +92,6 @@ export default function Tours() {
                         {t.tours.meta.price}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.price}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                        {t.tours.meta.start}
-                      </dt>
-                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
                     </div>
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
