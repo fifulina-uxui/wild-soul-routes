@@ -196,7 +196,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           price: 'от 120 000 ₽',
           start: '20 апреля – 9 мая 2027',
           highlight: 'Эверест',
-          image: 'images/tour-nepal.jpg',
+          image: 'images/tour-everest.jpg',
         },
         {
           id: 'cappadocia',
@@ -742,7 +742,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           price: 'from ₽120,000',
           start: 'Apr 20 – May 9, 2027',
           highlight: 'Everest',
-          image: 'images/tour-nepal.jpg',
+          image: 'images/tour-everest.jpg',
         },
         {
           id: 'cappadocia',
