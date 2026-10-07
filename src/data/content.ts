@@ -157,8 +157,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Непал с разных сторон: древние храмы Катманду, джунгли Читвана с носорогами и спокойная Покхара у озера с йогой и медитациями.',
           days: '10 дней',
-          price: '3 490 $',
-          priceEarly: '3 390 $',
+          price: '2 390 $',
+          priceEarly: '2 290 $',
           start: '8–17 апреля 2027',
           highlight: 'Катманду',
           image: 'images/tour-nepal.jpg',
@@ -709,8 +709,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Nepal from every side: the ancient temples of Kathmandu, the rhino jungles of Chitwan and peaceful Pokhara by the lake with yoga and meditation.',
           days: '10 days',
-          price: '$3,490',
-          priceEarly: '$3,390',
+          price: '$2,390',
+          priceEarly: '$2,290',
           start: 'Apr 8–17, 2027',
           highlight: 'Kathmandu',
           image: 'images/tour-nepal.jpg',
