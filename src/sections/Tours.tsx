@@ -19,9 +19,11 @@ export default function Tours() {
     const year = Number(d.match(/\d{4}/)?.[0] ?? 0)
     return year * 10000 + month * 100 + day
   }
-  const nearest = [...t.tours.items]
+  // Ближайшие туры на главной — четыре актуальных, по дате начала
+  const NEAREST_IDS = ['nepal-bhutan', 'nepal', 'nepal-trek', 'tibet']
+  const nearest = t.tours.items
+    .filter((tour) => NEAREST_IDS.includes(tour.id))
     .sort((a, b) => ts(a.start) - ts(b.start))
-    .slice(0, 4)
 
   return (
     <section id="tours" className="bg-black">
