@@ -129,7 +129,7 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="flex flex-1 flex-col justify-center gap-1 px-6 md:px-8">
+        <nav className="flex flex-1 flex-col gap-1 px-6 pt-10 md:px-8">
           {t.nav.map((item, i) => (
             <NavLink
               key={item.href}
@@ -144,11 +144,16 @@ export default function Header() {
               {item.label}
             </NavLink>
           ))}
+          <div className="mt-8">
+            <LangSwitcher />
+          </div>
         </nav>
 
-        <div className="flex items-center justify-between gap-4 px-6 pb-8 md:px-8">
-          <LangSwitcher />
-          <Link to="/contacts" className={ctaClass}>
+        <div className="px-6 pb-8 md:px-8">
+          <Link
+            to="/contacts"
+            className={`flex min-h-[48px] w-full items-center justify-center ${ctaClass}`}
+          >
             {t.cta.lead}
           </Link>
         </div>
