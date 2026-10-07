@@ -21,7 +21,7 @@ export default function Journal() {
             </div>
             <Link
               to="/blog"
-              className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+              className="hidden min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:inline-flex"
             >
               {t.blog.back}
             </Link>
@@ -52,6 +52,17 @@ export default function Journal() {
               </Link>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-12 sm:hidden">
+          <Reveal>
+            <Link
+              to="/blog"
+              className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa]"
+            >
+              {t.blog.back}
+            </Link>
+          </Reveal>
         </div>
       </div>
     </section>

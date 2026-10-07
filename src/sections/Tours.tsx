@@ -40,7 +40,7 @@ export default function Tours() {
             </div>
             <Link
               to="/tours"
-              className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+              className="hidden min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:inline-flex"
             >
               {t.tourDetail.back}
             </Link>
@@ -123,6 +123,17 @@ export default function Tours() {
             </article>
           </Reveal>
         ))}
+      </div>
+
+      <div className="px-5 pb-14 pt-10 sm:hidden">
+        <Reveal>
+          <Link
+            to="/tours"
+            className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa]"
+          >
+            {t.tourDetail.back}
+          </Link>
+        </Reveal>
       </div>
     </section>
   )
