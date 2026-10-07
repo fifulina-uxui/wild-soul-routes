@@ -141,7 +141,7 @@ export default function ToursPage() {
                         {t.tours.meta.priceEarly}
                       </p>
                     </div>
-                    <div className="col-span-3 flex lg:col-span-1 lg:justify-end">
+                    <div className="col-span-3 mt-4 flex lg:col-span-1 lg:mt-0 lg:justify-end">
                       <Link
                         to={`/tours/${tour.id}`}
                         className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
