@@ -196,8 +196,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Трек с прохождением трёх перевалов 5000+, посещение базового лагеря Эвереста, виды на четыре восьмитысячника.',
           days: '20 дней',
-          price: '3 490 $',
-          priceEarly: '3 390 $',
+          price: '2 390 $',
+          priceEarly: '2 290 $',
           start: '20 апреля – 9 мая 2027',
           highlight: 'Эверест',
           image: 'images/tour-everest.jpg',
@@ -748,8 +748,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'A trek across three 5,000+ metre passes, a visit to Everest Base Camp and views of four eight-thousanders.',
           days: '20 days',
-          price: '$3,490',
-          priceEarly: '$3,390',
+          price: '$2,390',
+          priceEarly: '$2,290',
           start: 'Apr 20 – May 9, 2027',
           highlight: 'Everest',
           image: 'images/tour-everest.jpg',
