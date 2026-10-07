@@ -26,7 +26,7 @@ export function LogoMark({ size = 28, className = '' }: { size?: number; classNa
 
 export default function Logo() {
   return (
-    <Link to="/" className="flex origin-left scale-[0.7] items-center gap-3 text-[#fafafa] sm:scale-100">
+    <Link to="/" className="flex origin-left scale-[0.9] items-center gap-3 text-[#fafafa] sm:scale-100">
       <LogoMark size={36} />
       <span className="flex flex-col leading-none">
         <span className="whitespace-nowrap text-[19px] font-bold tracking-[0.02em]">
