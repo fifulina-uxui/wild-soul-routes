@@ -127,9 +127,9 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     hero: {
       tagline: 'Путешествия с душой',
-      title: 'Исследовательские путешествия с гидом и психологом',
-      subtitle: 'Смысл в каждом шаге',
-      subtitle2: '',
+      title: 'Маршруты, которые хочется прожить',
+      subtitle: 'Исследовательские путешествия с гидом и психологом',
+      subtitle2: 'Смысл в каждом шаге',
     },
     tours: {
       label: 'Маршруты',
@@ -671,9 +671,9 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     hero: {
       tagline: 'Travel with soul',
-      title: 'Exploratory journeys with a guide and a psychologist',
-      subtitle: 'Meaning in every step',
-      subtitle2: '',
+      title: 'Routes you will want to live',
+      subtitle: 'Exploratory journeys with a guide and a psychologist',
+      subtitle2: 'Meaning in every step',
     },
     tours: {
       label: 'Routes',
