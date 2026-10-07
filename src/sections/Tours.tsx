@@ -5,6 +5,17 @@ import { Reveal } from './Reveal'
 export default function Tours() {
   const { t } = useLang()
 
+  // Четыре ближайших тура по дате начала (dd.mm.yyyy)
+  const nearest = [...t.tours.items]
+    .sort((a, b) => {
+      const ts = (d: string) => {
+        const [dd, mm, yyyy] = d.split('.')
+        return Number(`${yyyy}${mm}${dd}`)
+      }
+      return ts(a.start) - ts(b.start)
+    })
+    .slice(0, 4)
+
   return (
     <section id="tours" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 pb-7 pt-14 md:px-8 md:pt-24">
@@ -19,7 +30,7 @@ export default function Tours() {
       </div>
 
       <div className="flex flex-col gap-4 px-4 md:px-6">
-        {t.tours.items.map((tour, i) => (
+        {nearest.map((tour, i) => (
           <Reveal key={tour.id}>
             <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
               <img
