@@ -127,11 +127,9 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     hero: {
       tagline: 'Путешествия с душой',
-      title: 'Маршруты, которые хочется прожить',
-      subtitle:
-        'Авторские путешествия по Тибету, Непалу, Турции, Грузии и Таиланду с гидом и психологом. Исследование новых мест и полноценная программа групповой психотерапии — в одном путешествии.',
-      subtitle2:
-        'Много природы, активного отдыха, живых разговоров и времени на знакомство с миром и собой.',
+      title: 'Исследовательские путешествия с гидом и психологом',
+      subtitle: 'Смысл в каждом шаге',
+      subtitle2: '',
     },
     tours: {
       label: 'Маршруты',
@@ -673,11 +671,9 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     hero: {
       tagline: 'Travel with soul',
-      title: 'Routes you will want to live',
-      subtitle:
-        'Original journeys across Tibet, Nepal, Türkiye, Georgia and Thailand with a guide and a psychologist. Exploring new places and a full group psychotherapy program — in a single trip.',
-      subtitle2:
-        'Plenty of nature, active days, honest conversations and time to meet the world — and yourself.',
+      title: 'Exploratory journeys with a guide and a psychologist',
+      subtitle: 'Meaning in every step',
+      subtitle2: '',
     },
     tours: {
       label: 'Routes',

@@ -27,9 +27,11 @@ export default function Hero() {
           <p className="mt-4 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
             {t.hero.subtitle}
           </p>
-          <p className="mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/55%)]">
-            {t.hero.subtitle2}
-          </p>
+          {t.hero.subtitle2 && (
+            <p className="mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/55%)]">
+              {t.hero.subtitle2}
+            </p>
+          )}
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a
