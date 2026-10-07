@@ -35,7 +35,7 @@ export default function TourDetailPage() {
               {tour.title}
             </h1>
 
-            <div className="mt-8 grid max-w-[720px] grid-cols-3 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
+            <div className="mt-8 grid max-w-[720px] grid-cols-2 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
               <div>
                 <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                   {t.tours.meta.days}
@@ -55,12 +55,6 @@ export default function TourDetailPage() {
                 <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">
                   {t.tours.meta.priceEarly}
                 </p>
-              </div>
-              <div>
-                <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                  {t.tours.meta.highlight}
-                </dt>
-                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.highlight}</dd>
               </div>
             </div>
           </Reveal>
