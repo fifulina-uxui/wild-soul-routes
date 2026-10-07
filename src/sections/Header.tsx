@@ -144,7 +144,7 @@ export default function Header() {
               {item.label}
             </NavLink>
           ))}
-          <div className="mt-8">
+          <div className="mt-8 w-fit">
             <LangSwitcher />
           </div>
         </nav>
