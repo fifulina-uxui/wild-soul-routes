@@ -5,6 +5,7 @@ export interface Tour {
   description: string
   days: string
   price: string
+  start: string
   highlight: string
   image: string
 }
@@ -29,7 +30,7 @@ export interface PageContent {
   tours: {
     label: string
     heading: string
-    meta: { days: string; price: string; highlight: string }
+    meta: { days: string; price: string; start: string; highlight: string }
     items: Tour[]
   }
   toursPage: {
@@ -134,7 +135,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
-      meta: { days: 'Длительность', price: 'Стоимость', highlight: 'Главное' },
+      meta: { days: 'Длительность', price: 'Стоимость', start: 'Начало', highlight: 'Главное' },
       items: [
         {
           id: 'tibet',
@@ -144,6 +145,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Рассвет у монастыря Ронгбук под северной стеной Эвереста и священная гора Кайлас. Медленная акклиматизация, ночёвки в гестхаусах и лучшие точки для фотографии.',
           days: '12 дней',
           price: 'от 210 000 ₽',
+          start: '12.05.2027',
           highlight: 'Эверест',
           image: 'images/tour-tibet.jpg',
         },
@@ -155,6 +157,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Ступы со всевидящими глазами, молитвенные барабаны и закат на горном озере Пхева. Долина Катманду без спешки: храмы, дворцы и чайные домики.',
           days: '9 дней',
           price: 'от 96 000 ₽',
+          start: '03.10.2026',
           highlight: 'Катманду',
           image: 'images/tour-nepal.jpg',
         },
@@ -166,6 +169,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Ступы Катманду и королевство Бутан: дзонги Тхимпху, долина Пунакхи и подъём к монастырю Такцанг — Тигриному гнезду на скале.',
           days: '12 дней',
           price: 'от 240 000 ₽',
+          start: '02.11.2026',
           highlight: 'Тигриное гнездо',
           image: 'images/tour-nepal.jpg',
         },
@@ -177,6 +181,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Классика долины Катманду без трекинга: храмы и дворцы трёх городов-музеев, рассвет над Гималаями в Нагаркоте и тихая Покхара.',
           days: '8 дней',
           price: 'от 88 000 ₽',
+          start: '21.10.2026',
           highlight: 'Нагаркот',
           image: 'images/tour-nepal.jpg',
         },
@@ -188,6 +193,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Пеший маршрут к базовому лагерю Аннапурны через рододендроновые леса и рассвет на Пун-Хилле. Настоящие горы в комфортном темпе.',
           days: '14 дней',
           price: 'от 120 000 ₽',
+          start: '17.10.2026',
           highlight: 'Аннапурна',
           image: 'images/tour-nepal.jpg',
         },
@@ -199,6 +205,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Полёт на воздушном шаре над долинами на рассвете, подземные города и два дня в Стамбуле с гидом. Маршрут, который мы сами проезжаем каждый год.',
           days: '8 дней',
           price: 'от 89 000 ₽',
+          start: '18.04.2027',
           highlight: 'Гёреме',
           image: 'images/tour-cappadocia.jpg',
         },
@@ -210,6 +217,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Кахетия, Сванетия и Казбеги: семейные винодельни, горные башни и застолья, куда зовут только своих. Гастрономический маршрут без туристических мест.',
           days: '6 дней',
           price: 'от 52 000 ₽',
+          start: '08.06.2027',
           highlight: 'Кахетия',
           image: 'images/tour-georgia.jpg',
         },
@@ -221,6 +229,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Карстовые острова, тихие лагуны и ночёвки в бунгало над водой. Сноркелинг, каяки и рассветы, ради которых стоит проснуться в пять утра.',
           days: '11 дней',
           price: 'от 138 000 ₽',
+          start: '15.01.2027',
           highlight: 'Пхукет',
           image: 'images/tour-andaman.jpg',
         },
@@ -675,7 +684,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Routes',
       heading: 'Upcoming tours',
-      meta: { days: 'Duration', price: 'Price', highlight: 'Highlight' },
+      meta: { days: 'Duration', price: 'Price', start: 'Start', highlight: 'Highlight' },
       items: [
         {
           id: 'tibet',
@@ -685,6 +694,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Sunrise at Rongbuk Monastery beneath Everest’s north face and the sacred Mount Kailash. Slow acclimatization, guesthouse nights and the finest photo spots.',
           days: '12 days',
           price: 'from ₽210,000',
+          start: '12.05.2027',
           highlight: 'Everest',
           image: 'images/tour-tibet.jpg',
         },
@@ -696,6 +706,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'All-seeing eyes of ancient stupas, prayer wheels and sunset over Phewa Lake. The Kathmandu Valley at an unhurried pace: temples, palaces and teahouses.',
           days: '9 days',
           price: 'from ₽96,000',
+          start: '03.10.2026',
           highlight: 'Kathmandu',
           image: 'images/tour-nepal.jpg',
         },
@@ -707,6 +718,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'The stupas of Kathmandu and the kingdom of Bhutan: the dzongs of Thimphu, the Punakha valley and the climb to Taktsang — the Tiger’s Nest on a cliff.',
           days: '12 days',
           price: 'from ₽240,000',
+          start: '02.11.2026',
           highlight: 'Tiger’s Nest',
           image: 'images/tour-nepal.jpg',
         },
@@ -718,6 +730,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'The classics of the Kathmandu Valley without trekking: temples and palaces of three museum cities, a Himalayan sunrise in Nagarkot and quiet Pokhara.',
           days: '8 days',
           price: 'from ₽88,000',
+          start: '21.10.2026',
           highlight: 'Nagarkot',
           image: 'images/tour-nepal.jpg',
         },
@@ -729,6 +742,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'A walking route to Annapurna Base Camp through rhododendron forests, with sunrise on Poon Hill. Real mountains at a comfortable pace.',
           days: '14 days',
           price: 'from ₽120,000',
+          start: '17.10.2026',
           highlight: 'Annapurna',
           image: 'images/tour-nepal.jpg',
         },
@@ -740,6 +754,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'A dawn balloon flight over the valleys, underground cities and two days in Istanbul with a guide. A route we travel ourselves every year.',
           days: '8 days',
           price: 'from ₽89,000',
+          start: '18.04.2027',
           highlight: 'Göreme',
           image: 'images/tour-cappadocia.jpg',
         },
@@ -751,6 +766,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Kakheti, Svaneti and Kazbegi: family wineries, mountain towers and feasts reserved for friends. A gastronomic route away from the tourist trail.',
           days: '6 days',
           price: 'from ₽52,000',
+          start: '08.06.2027',
           highlight: 'Kakheti',
           image: 'images/tour-georgia.jpg',
         },
@@ -762,6 +778,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
             'Karst islands, quiet lagoons and nights in overwater bungalows. Snorkeling, kayaks and sunrises worth waking up at five for.',
           days: '11 days',
           price: 'from ₽138,000',
+          start: '15.01.2027',
           highlight: 'Phuket',
           image: 'images/tour-andaman.jpg',
         },
