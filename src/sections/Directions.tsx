@@ -9,15 +9,25 @@ export default function Directions() {
     <section id="directions" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
-          <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-            {t.directions.label}
-          </p>
-          <h2 className="mt-2 max-w-[600px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
-            {t.directions.heading}
-          </h2>
-          <p className="mt-4 max-w-[600px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-            {t.directions.text}
-          </p>
+          <div className="flex flex-wrap items-start justify-between gap-6">
+            <div>
+              <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                {t.directions.label}
+              </p>
+              <h2 className="mt-2 max-w-[600px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+                {t.directions.heading}
+              </h2>
+              <p className="mt-4 max-w-[600px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                {t.directions.text}
+              </p>
+            </div>
+            <Link
+              to="/directions"
+              className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+            >
+              {t.directions.all}
+            </Link>
+          </div>
         </Reveal>
 
         <Reveal className="mt-12">
@@ -36,15 +46,6 @@ export default function Directions() {
               </li>
             ))}
           </ul>
-        </Reveal>
-
-        <Reveal className="mt-10">
-          <Link
-            to="/directions"
-            className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
-          >
-            {t.directions.all}
-          </Link>
         </Reveal>
       </div>
     </section>

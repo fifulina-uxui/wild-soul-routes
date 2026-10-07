@@ -21,12 +21,22 @@ export default function Tours() {
     <section id="tours" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 pb-7 pt-14 md:px-8 md:pt-24">
         <Reveal>
-          <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-            {t.tours.label}
-          </p>
-          <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
-            {t.tours.heading}
-          </h2>
+          <div className="flex flex-wrap items-start justify-between gap-6">
+            <div>
+              <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                {t.tours.label}
+              </p>
+              <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+                {t.tours.heading}
+              </h2>
+            </div>
+            <Link
+              to="/tours"
+              className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+            >
+              {t.tourDetail.back}
+            </Link>
+          </div>
         </Reveal>
       </div>
 
@@ -111,17 +121,6 @@ export default function Tours() {
             </article>
           </Reveal>
         ))}
-      </div>
-
-      <div className="mx-auto max-w-[1200px] px-5 pb-14 pt-10 md:px-8 md:pb-24">
-        <Reveal>
-          <Link
-            to="/tours"
-            className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
-          >
-            {t.tourDetail.back}
-          </Link>
-        </Reveal>
       </div>
     </section>
   )
