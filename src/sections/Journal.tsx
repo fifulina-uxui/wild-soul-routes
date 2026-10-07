@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { asset } from '../lib/asset'
 import { useLang } from '../i18n'
 import { Reveal } from './Reveal'
 
@@ -33,7 +34,7 @@ export default function Journal() {
               <Link to={`/blog/${post.id}`} className="group flex h-full flex-col">
                 <div className="overflow-hidden rounded-[8px]">
                   <img
-                    src={post.image}
+                    src={asset(post.image)}
                     alt={post.title}
                     loading="lazy"
                     className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"

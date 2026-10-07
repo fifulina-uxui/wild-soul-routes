@@ -52,6 +52,7 @@ export interface PageContent {
     label: string
     heading: string
     text: string
+    all: string
     items: { name: string; count: string }[]
   }
   directionsPage: {
@@ -492,6 +493,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'География',
       heading: 'Направления',
       text: 'Мы работаем только с регионами, которые знаем лично. Каждое направление — это проверенные гиды, понятная логистика и маршруты, которые мы регулярно обновляем.',
+      all: 'Все направления',
       items: [
         { name: 'Тибет', count: '3 маршрута' },
         { name: 'Непал', count: '4 маршрута' },
@@ -1041,6 +1043,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Geography',
       heading: 'Destinations',
       text: 'We only work in regions we know first-hand. Every destination means trusted guides, clear logistics and routes we update regularly.',
+      all: 'All destinations',
       items: [
         { name: 'Tibet', count: '3 routes' },
         { name: 'Nepal', count: '4 routes' },

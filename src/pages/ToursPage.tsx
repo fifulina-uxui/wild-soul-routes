@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { asset } from '../lib/asset'
 import { Link, useSearchParams } from 'react-router'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
@@ -38,7 +39,7 @@ export default function ToursPage() {
       {/* Полоса-hero каталога */}
       <section className="relative flex h-[40vh] min-h-[300px] items-end overflow-hidden">
         <img
-          src="images/hero.jpg"
+          src={asset('images/hero.jpg')}
           alt={t.toursPage.heading}
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -93,7 +94,7 @@ export default function ToursPage() {
           <Reveal key={tour.id}>
             <article className="group relative min-h-[55vh] overflow-hidden rounded-[8px]">
               <img
-                src={tour.image}
+                src={asset(tour.image)}
                 alt={tour.title}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"

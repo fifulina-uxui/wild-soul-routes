@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router'
+import { asset } from '../lib/asset'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { BackButton } from '../components/BackButton'
@@ -18,7 +19,7 @@ export default function TourDetailPage() {
       {/* Hero тура */}
       <section className="relative flex h-[56vh] min-h-[380px] items-end overflow-hidden">
         <img
-          src={`/${tour.image}`}
+          src={asset(tour.image)}
           alt={tour.title}
           className="absolute inset-0 h-full w-full object-cover"
         />

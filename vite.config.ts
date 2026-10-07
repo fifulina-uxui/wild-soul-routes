@@ -4,8 +4,9 @@ import { defineConfig } from "vite"
 import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: './',
+// Режим "gh" собирает сайт под подпапку GitHub Pages: /wild-soul-routes/
+export default defineConfig(({ mode }) => ({
+  base: mode === 'gh' ? '/wild-soul-routes/' : '/',
   plugins: [inspectAttr(), react()],
   server: {
     port: 3000,
@@ -15,4 +16,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}));

@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { asset } from '../lib/asset'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { useLang } from '../i18n'
@@ -11,7 +12,7 @@ export default function DirectionsPage() {
       {/* Полоса-hero */}
       <section className="relative flex h-[40vh] min-h-[300px] items-end overflow-hidden">
         <img
-          src="images/hero.jpg"
+          src={asset('images/hero.jpg')}
           alt={t.directionsPage.heading}
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -38,7 +39,7 @@ export default function DirectionsPage() {
               className="group relative block min-h-[45vh] overflow-hidden rounded-[8px]"
             >
               <img
-                src={card.image}
+                src={asset(card.image)}
                 alt={card.country}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"

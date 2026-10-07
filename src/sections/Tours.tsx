@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { asset } from '../lib/asset'
 import { useLang } from '../i18n'
 import { Reveal } from './Reveal'
 
@@ -44,7 +45,7 @@ export default function Tours() {
           <Reveal key={tour.id}>
             <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
               <img
-                src={tour.image}
+                src={asset(tour.image)}
                 alt={tour.title}
                 loading={i === 0 ? 'eager' : 'lazy'}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
