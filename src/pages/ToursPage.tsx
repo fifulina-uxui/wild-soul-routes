@@ -114,7 +114,7 @@ export default function ToursPage() {
                     {tour.description}
                   </p>
 
-                  <div className="mt-8 grid grid-cols-3 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
+                  <div className="mt-8 grid grid-cols-3 items-center gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:grid-cols-[1fr_1fr_1fr_auto]">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.start}
@@ -141,15 +141,14 @@ export default function ToursPage() {
                         {t.tours.meta.priceEarly}
                       </p>
                     </div>
-                  </div>
-
-                  <div className="mt-8">
-                    <Link
-                      to={`/tours/${tour.id}`}
-                      className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
-                    >
-                      {t.cta.more}
-                    </Link>
+                    <div className="col-span-3 flex lg:col-span-1 lg:justify-end">
+                      <Link
+                        to={`/tours/${tour.id}`}
+                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
+                      >
+                        {t.cta.more}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
