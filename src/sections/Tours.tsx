@@ -13,6 +13,10 @@ export default function Tours() {
     jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
   }
   const ts = (d: string) => {
+    // Формат «27.03.2027 – …»
+    const num = d.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/)
+    if (num) return Number(num[3]) * 10000 + Number(num[2]) * 100 + Number(num[1])
+    // Формат «27 марта – 4 апреля 2027» / «Mar 27 – Apr 4, 2027»
     const day = Number(d.match(/\d+/)?.[0] ?? 1)
     const word = (d.match(/[а-яА-ЯA-Za-z]+/)?.[0] ?? '').toLowerCase()
     const month = MONTHS[word] ?? MONTHS[word.slice(0, 3)] ?? 1
