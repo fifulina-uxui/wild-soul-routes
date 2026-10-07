@@ -6,15 +6,21 @@ import { Reveal } from './Reveal'
 export default function Tours() {
   const { t } = useLang()
 
-  // Четыре ближайших тура по дате начала (dd.mm.yyyy)
+  // Четыре ближайших тура по дате начала (формат «27 марта – 4 апреля 2027» / «Mar 27 – Apr 4, 2027»)
+  const MONTHS: Record<string, number> = {
+    января: 1, февраля: 2, марта: 3, апреля: 4, мая: 5, июня: 6,
+    июля: 7, августа: 8, сентября: 9, октября: 10, ноября: 11, декабря: 12,
+    jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+  }
+  const ts = (d: string) => {
+    const day = Number(d.match(/\d+/)?.[0] ?? 1)
+    const word = (d.match(/[а-яА-ЯA-Za-z]+/)?.[0] ?? '').toLowerCase()
+    const month = MONTHS[word] ?? MONTHS[word.slice(0, 3)] ?? 1
+    const year = Number(d.match(/\d{4}/)?.[0] ?? 0)
+    return year * 10000 + month * 100 + day
+  }
   const nearest = [...t.tours.items]
-    .sort((a, b) => {
-      const ts = (d: string) => {
-        const [dd, mm, yyyy] = d.split('.')
-        return Number(`${yyyy}${mm}${dd}`)
-      }
-      return ts(a.start) - ts(b.start)
-    })
+    .sort((a, b) => ts(a.start) - ts(b.start))
     .slice(0, 4)
 
   return (
