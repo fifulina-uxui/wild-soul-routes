@@ -54,7 +54,7 @@ export default function DirectionsPage() {
                   {card.text}
                 </p>
                 <div className="mt-8 flex-1" />
-                <span className="inline-flex min-h-[36.5px] w-fit items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 group-hover:border-[#fafafa]">
+                <span className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[rgb(0_0_0/87%)] transition-colors duration-200 group-hover:bg-[#e6e6e6]">
                   {t.nav.find((n) => n.href === '/tours')?.label}
                 </span>
               </div>
