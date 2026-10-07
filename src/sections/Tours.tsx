@@ -20,7 +20,7 @@ export default function Tours() {
     <section id="tours" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 pb-7 pt-14 md:px-8 md:pt-24">
         <Reveal>
-          <div className="flex flex-wrap items-end justify-between gap-6">
+          <div className="flex flex-wrap items-center justify-between gap-6">
             <div>
               <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
                 {t.tours.label}

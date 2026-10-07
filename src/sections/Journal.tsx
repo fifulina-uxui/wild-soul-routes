@@ -9,7 +9,7 @@ export default function Journal() {
     <section id="journal" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
-          <div className="flex flex-wrap items-end justify-between gap-6">
+          <div className="flex flex-wrap items-center justify-between gap-6">
             <div>
               <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
                 {t.journal.label}
