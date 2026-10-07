@@ -172,7 +172,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           price: 'от 240 000 ₽',
           start: '02.11.2026',
           highlight: 'Тигриное гнездо',
-          image: 'images/tour-nepal.jpg',
+          image: 'images/tour-bhutan.jpg',
         },
         {
           id: 'nepal-tour',
@@ -483,7 +483,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       cards: [
         { country: 'Тибет', text: 'Высокогорье, монастыри и кора вокруг священного Кайласа.', image: 'images/tour-tibet.jpg' },
         { country: 'Непал', text: 'Ступы Катманду и рассветы над Аннапурной.', image: 'images/tour-nepal.jpg' },
-        { country: 'Бутан', text: 'Дзонги, перевал Дочу-Ла и монастырь Такцанг на скале.', image: 'images/tour-tibet.jpg' },
+        { country: 'Бутан', text: 'Дзонги, перевал Дочу-Ла и монастырь Такцанг на скале.', image: 'images/tour-bhutan.jpg' },
         { country: 'Турция', text: 'Каппадокия, Ликийская тропа и Стамбул.', image: 'images/tour-cappadocia.jpg' },
         { country: 'Грузия', text: 'Кахетия, Сванетия и Военно-грузинская дорога.', image: 'images/tour-georgia.jpg' },
         { country: 'Таиланд', text: 'Острова Андаманского моря и Бангкок.', image: 'images/tour-andaman.jpg' },
@@ -722,7 +722,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           price: 'from ₽240,000',
           start: '02.11.2026',
           highlight: 'Tiger’s Nest',
-          image: 'images/tour-nepal.jpg',
+          image: 'images/tour-bhutan.jpg',
         },
         {
           id: 'nepal-tour',
@@ -1033,7 +1033,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       cards: [
         { country: 'Tibet', text: 'Highlands, monasteries and the kora around sacred Kailash.', image: 'images/tour-tibet.jpg' },
         { country: 'Nepal', text: 'The stupas of Kathmandu and sunrises over Annapurna.', image: 'images/tour-nepal.jpg' },
-        { country: 'Bhutan', text: 'Dzongs, the Dochu-La pass and the Tiger’s Nest on a cliff.', image: 'images/tour-tibet.jpg' },
+        { country: 'Bhutan', text: 'Dzongs, the Dochu-La pass and the Tiger’s Nest on a cliff.', image: 'images/tour-bhutan.jpg' },
         { country: 'Türkiye', text: 'Cappadocia, the Lycian Way and Istanbul.', image: 'images/tour-cappadocia.jpg' },
         { country: 'Georgia', text: 'Kakheti, Svaneti and the Georgian Military Highway.', image: 'images/tour-georgia.jpg' },
         { country: 'Thailand', text: 'The islands of the Andaman Sea and Bangkok.', image: 'images/tour-andaman.jpg' },
