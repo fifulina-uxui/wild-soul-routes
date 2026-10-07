@@ -5,6 +5,7 @@ export interface Tour {
   description: string
   days: string
   price: string
+  priceEarly: string
   start: string
   highlight: string
   image: string
@@ -30,7 +31,7 @@ export interface PageContent {
   tours: {
     label: string
     heading: string
-    meta: { days: string; price: string; start: string; highlight: string }
+    meta: { days: string; price: string; priceEarly: string; start: string; highlight: string }
     items: Tour[]
   }
   toursPage: {
@@ -134,7 +135,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
-      meta: { days: 'Длительность', price: 'Стоимость', start: 'Даты', highlight: 'Главное' },
+      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное' },
       items: [
         {
           id: 'tibet',
@@ -143,7 +144,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Эверест с севера, древние храмы и города, культура Тибета и кора вокруг священного Кайласа.',
           days: '16 дней',
-          price: 'от 210 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '28 мая – 12 июня 2027',
           highlight: 'Эверест',
           image: 'images/tour-tibet.jpg',
@@ -155,7 +157,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Непал с разных сторон: древние храмы Катманду, джунгли Читвана с носорогами и спокойная Покхара у озера с йогой и медитациями.',
           days: '10 дней',
-          price: 'от 96 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '8–17 апреля 2027',
           highlight: 'Катманду',
           image: 'images/tour-nepal.jpg',
@@ -167,7 +170,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Древние монастыри Бутана, гималайские долины и традиционные деревни. 9 дней среди природы и культуры страны, где массовый туризм ещё не изменил привычный уклад жизни.',
           days: '9 дней',
-          price: 'от 240 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '27 марта – 4 апреля 2027',
           highlight: 'Тигриное гнездо',
           image: 'images/tour-bhutan.jpg',
@@ -179,7 +183,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Классика долины Катманду без трекинга: храмы и дворцы трёх городов-музеев, рассвет над Гималаями в Нагаркоте и тихая Покхара.',
           days: '8 дней',
-          price: 'от 88 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '21–28 октября 2026',
           highlight: 'Нагаркот',
           image: 'images/tour-nepal.jpg',
@@ -191,7 +196,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Трек с прохождением трёх перевалов 5000+, посещение базового лагеря Эвереста, виды на четыре восьмитысячника.',
           days: '20 дней',
-          price: 'от 120 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '20 апреля – 9 мая 2027',
           highlight: 'Эверест',
           image: 'images/tour-everest.jpg',
@@ -203,7 +209,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Полёт на воздушном шаре над долинами на рассвете, подземные города и два дня в Стамбуле с гидом. Маршрут, который мы сами проезжаем каждый год.',
           days: '8 дней',
-          price: 'от 89 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '18–25 апреля 2027',
           highlight: 'Гёреме',
           image: 'images/tour-cappadocia.jpg',
@@ -215,7 +222,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Кахетия, Сванетия и Казбеги: семейные винодельни, горные башни и застолья, куда зовут только своих. Гастрономический маршрут без туристических мест.',
           days: '6 дней',
-          price: 'от 52 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '8–13 июня 2027',
           highlight: 'Кахетия',
           image: 'images/tour-georgia.jpg',
@@ -227,7 +235,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Карстовые острова, тихие лагуны и ночёвки в бунгало над водой. Сноркелинг, каяки и рассветы, ради которых стоит проснуться в пять утра.',
           days: '11 дней',
-          price: 'от 138 000 ₽',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
           start: '15–25 января 2027',
           highlight: 'Пхукет',
           image: 'images/tour-andaman.jpg',
@@ -678,7 +687,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Routes',
       heading: 'Upcoming tours',
-      meta: { days: 'Duration', price: 'Price', start: 'Dates', highlight: 'Highlight' },
+      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight' },
       items: [
         {
           id: 'tibet',
@@ -687,7 +696,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Everest from the north, ancient temples and towns, the culture of Tibet and the kora around sacred Kailash.',
           days: '16 days',
-          price: 'from ₽210,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'May 28 – Jun 12, 2027',
           highlight: 'Everest',
           image: 'images/tour-tibet.jpg',
@@ -699,7 +709,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Nepal from every side: the ancient temples of Kathmandu, the rhino jungles of Chitwan and peaceful Pokhara by the lake with yoga and meditation.',
           days: '10 days',
-          price: 'from ₽96,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Apr 8–17, 2027',
           highlight: 'Kathmandu',
           image: 'images/tour-nepal.jpg',
@@ -711,7 +722,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Ancient monasteries of Bhutan, Himalayan valleys and traditional villages. 9 days among the nature and culture of a country where mass tourism has not yet changed the way of life.',
           days: '9 days',
-          price: 'from ₽240,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Mar 27 – Apr 4, 2027',
           highlight: 'Tiger’s Nest',
           image: 'images/tour-bhutan.jpg',
@@ -723,7 +735,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'The classics of the Kathmandu Valley without trekking: temples and palaces of three museum cities, a Himalayan sunrise in Nagarkot and quiet Pokhara.',
           days: '8 days',
-          price: 'from ₽88,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Oct 21–28, 2026',
           highlight: 'Nagarkot',
           image: 'images/tour-nepal.jpg',
@@ -735,7 +748,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'A trek across three 5,000+ metre passes, a visit to Everest Base Camp and views of four eight-thousanders.',
           days: '20 days',
-          price: 'from ₽120,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Apr 20 – May 9, 2027',
           highlight: 'Everest',
           image: 'images/tour-everest.jpg',
@@ -747,7 +761,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'A dawn balloon flight over the valleys, underground cities and two days in Istanbul with a guide. A route we travel ourselves every year.',
           days: '8 days',
-          price: 'from ₽89,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Apr 18–25, 2027',
           highlight: 'Göreme',
           image: 'images/tour-cappadocia.jpg',
@@ -759,7 +774,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Kakheti, Svaneti and Kazbegi: family wineries, mountain towers and feasts reserved for friends. A gastronomic route away from the tourist trail.',
           days: '6 days',
-          price: 'from ₽52,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Jun 8–13, 2027',
           highlight: 'Kakheti',
           image: 'images/tour-georgia.jpg',
@@ -771,7 +787,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           description:
             'Karst islands, quiet lagoons and nights in overwater bungalows. Snorkeling, kayaks and sunrises worth waking up at five for.',
           days: '11 days',
-          price: 'from ₽138,000',
+          price: '$3,490',
+          priceEarly: '$3,390',
           start: 'Jan 15–25, 2027',
           highlight: 'Phuket',
           image: 'images/tour-andaman.jpg',

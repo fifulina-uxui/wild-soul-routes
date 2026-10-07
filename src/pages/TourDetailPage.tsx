@@ -46,7 +46,15 @@ export default function TourDetailPage() {
                 <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                   {t.tours.meta.price}
                 </dt>
-                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.price}</dd>
+                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
+                  {tour.priceEarly}{' '}
+                  <span className="text-[14px] leading-5 text-[rgb(250_250_250/45%)] line-through">
+                    {tour.price}
+                  </span>
+                </dd>
+                <p className="mt-1 text-[12px] leading-4 text-[rgb(250_250_250/45%)]">
+                  {t.tours.meta.priceEarly}
+                </p>
               </div>
               <div>
                 <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
@@ -134,10 +142,13 @@ export default function TourDetailPage() {
                 {t.tours.meta.price}
               </p>
               <p className="mt-2 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-                {tour.price}
+                {tour.priceEarly}{' '}
+                <span className="text-[0.6em] font-normal text-[rgb(250_250_250/45%)] line-through">
+                  {tour.price}
+                </span>
               </p>
               <p className="mt-2 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                {t.tourDetail.priceNote}
+                {t.tours.meta.priceEarly} · {t.tourDetail.priceNote}
               </p>
             </div>
             <Link

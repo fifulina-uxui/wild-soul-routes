@@ -131,7 +131,15 @@ export default function ToursPage() {
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.price}
                       </dt>
-                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.price}</dd>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
+                        {tour.priceEarly}{' '}
+                        <span className="text-[14px] leading-5 text-[rgb(250_250_250/45%)] line-through">
+                          {tour.price}
+                        </span>
+                      </dd>
+                      <p className="mt-1 text-[12px] leading-4 text-[rgb(250_250_250/45%)]">
+                        {t.tours.meta.priceEarly}
+                      </p>
                     </div>
                   </div>
 
