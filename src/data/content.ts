@@ -133,7 +133,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     tours: {
       label: 'Маршруты',
-      heading: 'Популярные туры',
+      heading: 'Ближайшие туры',
       meta: { days: 'Длительность', price: 'Стоимость', highlight: 'Главное' },
       items: [
         {
@@ -674,7 +674,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     tours: {
       label: 'Routes',
-      heading: 'Popular tours',
+      heading: 'Upcoming tours',
       meta: { days: 'Duration', price: 'Price', highlight: 'Highlight' },
       items: [
         {
