@@ -515,19 +515,19 @@ export const content: Record<'ru' | 'en', PageContent> = {
       heading: 'Почему путешествуют с нами',
       items: [
         {
-          title: 'Авторские маршруты',
+          title: 'Внимание к каждому',
           text: 'Каждый маршрут мы сначала проезжаем сами: проверяем дороги, гостиницы и гидов. В программе — только места, куда мы готовы возвращаться.',
         },
         {
-          title: 'Маленькие группы',
+          title: 'Опыт, которому можно доверять',
           text: 'До 8 человек в группе. Это значит: тихие утренние точки без толпы, живое общение с гидом и гибкость в программе каждого дня.',
         },
         {
-          title: 'Логистика под ключ',
+          title: 'Групповая работа с психологом',
           text: 'Билеты, трансферы, разрешения и страховка — на нас. Вы получаете один документ с понятным планом и просто собираете рюкзак.',
         },
         {
-          title: 'Поддержка 24/7',
+          title: 'Время почувствовать место',
           text: 'Координатор на связи весь тур: поможет с задержкой рейса, заменой отеля или аптечкой в горах. Решаем вопросы за минуты, а не за дни.',
         },
       ],
@@ -1058,19 +1058,19 @@ export const content: Record<'ru' | 'en', PageContent> = {
       heading: 'Why travel with us',
       items: [
         {
-          title: 'Original routes',
+          title: 'Attention to everyone',
           text: 'We travel every route ourselves first: checking roads, lodges and guides. Only places we would happily return to make the program.',
         },
         {
-          title: 'Small groups',
+          title: 'Experience you can trust',
           text: 'Up to 8 people. That means quiet mornings without crowds, real conversations with the guide and flexibility every single day.',
         },
         {
-          title: 'End-to-end logistics',
+          title: 'Group work with a psychologist',
           text: 'Flights, transfers, permits and insurance — all on us. You get one document with a clear plan and simply pack your bag.',
         },
         {
-          title: '24/7 support',
+          title: 'Time to feel the place',
           text: 'A coordinator stays in touch throughout the tour: flight delays, hotel changes or a first-aid kit in the mountains — solved in minutes, not days.',
         },
       ],
