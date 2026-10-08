@@ -520,7 +520,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Опыт, которому можно доверять',
-          text: 'До 8 человек в группе. Это значит: тихие утренние точки без толпы, живое общение с гидом и гибкость в программе каждого дня.',
+          text: 'Годами путешествуем сами и создаём маршруты, заранее продумывая логистику, детали и безопасность.',
         },
         {
           title: 'Групповая работа с психологом',
@@ -1063,7 +1063,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Experience you can trust',
-          text: 'Up to 8 people. That means quiet mornings without crowds, real conversations with the guide and flexibility every single day.',
+          text: 'We have been travelling ourselves for years and design our routes thinking through logistics, details and safety in advance.',
         },
         {
           title: 'Group work with a psychologist',
