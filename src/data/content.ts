@@ -524,7 +524,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Групповая работа с психологом',
-          text: 'Билеты, трансферы, разрешения и страховка — на нас. Вы получаете один документ с понятным планом и просто собираете рюкзак.',
+          text: 'Мы делаем осмысленные туры, где во время путешествия проходит настоящая терапия. Если вы готовы к трансформации, нам по пути.',
         },
         {
           title: 'Время почувствовать место',
@@ -1067,7 +1067,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Group work with a psychologist',
-          text: 'Flights, transfers, permits and insurance — all on us. You get one document with a clear plan and simply pack your bag.',
+          text: 'We create meaningful journeys where real therapy happens along the way. If you are ready for a transformation, we are on the same path.',
         },
         {
           title: 'Time to feel the place',
