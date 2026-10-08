@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/10" />
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black to-transparent" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 py-16 md:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 py-16 max-sm:pb-6 md:px-8">
         <div className="max-w-[600px]">
           <p className="text-[14px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/70%)]">
             {t.hero.tagline}
