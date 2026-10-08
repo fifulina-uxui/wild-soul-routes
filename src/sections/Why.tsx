@@ -19,7 +19,7 @@ export default function Why() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {t.why.items.map((f, i) => (
             <Reveal key={f.title}>
-              <div className="flex h-full flex-col gap-3 rounded-[16px] bg-[#121212] p-6 md:p-8">
+              <div className="flex h-full flex-col gap-3 rounded-[16px] border border-[rgb(255_255_255/15%)] p-6 md:p-8">
                 <span className="text-[14px] font-bold leading-5 text-[rgb(250_250_250/55%)]">
                   {String(i + 1).padStart(2, '0')}
                 </span>
