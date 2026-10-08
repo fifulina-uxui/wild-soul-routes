@@ -78,11 +78,11 @@ export default function TourDetailPage() {
           </h2>
         </Reveal>
         <div className="mt-8 border-t border-[rgb(255_255_255/15%)]">
-          {detail.program.map((step, i) => (
+          {detail.program.map((step) => (
             <Reveal key={step.day}>
               <div className="grid grid-cols-[64px_1fr] gap-4 border-b border-[rgb(255_255_255/15%)] py-5 md:grid-cols-[120px_1fr] md:gap-10">
                 <p className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                  {String(i + 1).padStart(2, '0')} · {step.day}
+                  {step.day}
                 </p>
                 <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{step.text}</p>
               </div>
