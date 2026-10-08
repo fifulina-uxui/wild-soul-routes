@@ -611,7 +611,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     team: {
       label: 'Люди',
       heading: 'Команда',
-      text: 'Нас четверо, и каждый отвечает за свой регион. Мы не передаём туры подрядчикам — ведём группы сами.',
+      text: 'Мы не передаём туры подрядчикам — ведём группы сами.',
       items: [
         {
           initials: 'ЮФ',
@@ -624,18 +624,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
           name: 'Тензин Норбу',
           role: 'Гид по Тибету и Непалу',
           text: 'Родился в Лхасе. Знает каждый монастырь долины и говорит на пяти языках.',
-        },
-        {
-          initials: 'МО',
-          name: 'Марк Оганесян',
-          role: 'Гид по Кавказу и Грузии',
-          text: 'Альпинист и сомелье-любитель. Ведёт горные и гастрономические программы.',
-        },
-        {
-          initials: 'АС',
-          name: 'Анна Соколова',
-          role: 'Координатор путешествий',
-          text: 'Отвечает за логистику и поддержку в пути. Решает любой вопрос за один звонок.',
         },
       ],
     },
@@ -1166,7 +1154,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     team: {
       label: 'People',
       heading: 'Team',
-      text: 'Four of us, each responsible for their own region. We never hand tours to contractors — we lead the groups ourselves.',
+      text: 'We never hand tours to contractors — we lead the groups ourselves.',
       items: [
         {
           initials: 'YF',
@@ -1179,18 +1167,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
           name: 'Tenzin Norbu',
           role: 'Guide, Tibet & Nepal',
           text: 'Born in Lhasa. Knows every monastery in the valley and speaks five languages.',
-        },
-        {
-          initials: 'MO',
-          name: 'Mark Hovhannisyan',
-          role: 'Guide, Caucasus & Georgia',
-          text: 'Mountaineer and amateur sommelier. Leads mountain and gastronomic programs.',
-        },
-        {
-          initials: 'AS',
-          name: 'Anna Sokolova',
-          role: 'Travel coordinator',
-          text: 'Handles logistics and on-trip support. Solves any problem with a single call.',
         },
       ],
     },
