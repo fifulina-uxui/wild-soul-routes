@@ -33,7 +33,7 @@ export default function Hero() {
             </p>
           )}
 
-          <div className="mt-12 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
+          <div className="mt-[72px] flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
             <a
               href="#tours"
               className="inline-flex min-h-[42px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
