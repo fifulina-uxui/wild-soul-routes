@@ -76,7 +76,7 @@ export interface PageContent {
     subtitle: string
     back: string
   }
-  articles: { id: string; intro: string; body: string[] }[]
+  articles: { id: string; intro: string; body: string[]; images?: string[] }[]
   team: {
     label: string
     heading: string
@@ -578,6 +578,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'Ноябрь — лотерея. Шары могут не летать несколько дней подряд, зато подземные города пусты, а снег на туфовых грибах — отдельный вид красоты. Зимой ехать стоит только тем, кто готов к отменам ради фотографий заснеженных долин.',
           'Итог простой: хотите гарантированный полёт — апрель, май, конец сентября. Хотите тишины и снега — декабрь, но держите в запасе пару свободных дней.',
         ],
+        images: ['images/hero.jpg', 'images/hero-home.jpg'],
       },
       {
         id: 'tibet-trek',
@@ -590,6 +591,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'Каждый вечер в маршруте — час тишины или разговора. В горах это работает иначе, чем в городе: высота и усталость снимают защитные слои, и люди говорят честнее. Это не побочный эффект путешествия — это его суть.',
           'Если сомневаетесь, потянете ли: наш темп — шаг и пауза, шаг и пауза. Маршрут проходили люди 55+ без горного опыта. Главное — честно заполнить анкету здоровья перед поездкой и довериться акклиматизации.',
         ],
+        images: ['images/tour-everest.jpg', 'images/hero-home.jpg'],
       },
       {
         id: 'georgia-food',
@@ -603,6 +605,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В Казбеги не едим в отелях — спускаемся к семье в Гергети. Харчо здесь варят на казане над огнём, а к застолью подключаются соседи. Тосты за горы, за дорогу, за гостей — и в какой-то момент вы поймёте, что это и есть групповая терапия по-грузински.',
           'И два адреса на дорогу: хлебная в Гудаури у третьего километра — пури из тоне горячее некуда, и чайная в Пасанаури, где родились хинкали. Просто, громко и очень честно.',
         ],
+        images: ['images/hero.jpg', 'images/tour-cappadocia.jpg'],
       },
     ],
     team: {
@@ -1130,6 +1133,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'November is a lottery. Balloons may stay grounded for days, but the underground cities are empty, and snow on the fairy chimneys is a beauty of its own. In winter, come only if you are ready for cancellations in exchange for snowy valleys.',
           'The bottom line: for a guaranteed flight choose April, May or late September. For silence and snow — December, but keep a couple of spare days.',
         ],
+        images: ['images/hero.jpg', 'images/hero-home.jpg'],
       },
       {
         id: 'tibet-trek',
@@ -1142,6 +1146,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'Every evening on the route holds an hour of silence or talk. In the mountains it works differently than in the city: altitude and fatigue peel away the protective layers, and people speak more honestly. That is not a side effect of the journey — it is the point.',
           'If you doubt you can make it: our pace is step and pause, step and pause. People over 55 with no mountain experience have completed this route. The key is to fill in the health questionnaire honestly and trust the acclimatization.',
         ],
+        images: ['images/tour-everest.jpg', 'images/hero-home.jpg'],
       },
       {
         id: 'georgia-food',
@@ -1155,6 +1160,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'In Kazbegi we skip the hotels and go down to a family in Gergeti. The kharcho simmers in a cauldron over open fire, and neighbours join the feast. Toasts to the mountains, to the road, to the guests — and at some point you realise this is group therapy, Georgian-style.',
           'And two addresses for the road: the bakery in Gudauri at the third kilometre — puri from the tone, impossibly hot; and the teahouse in Pasanauri, where khinkali were born. Simple, loud and very honest.',
         ],
+        images: ['images/hero.jpg', 'images/tour-cappadocia.jpg'],
       },
     ],
     team: {

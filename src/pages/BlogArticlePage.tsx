@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { asset } from '../lib/asset'
 import Subpage from './Subpage'
@@ -46,10 +47,22 @@ export default function BlogArticlePage() {
         <Reveal>
           <p className="text-[20px] font-bold leading-[28px] text-[#fafafa]">{article.intro}</p>
         </Reveal>
-        {article.body.map((paragraph) => (
-          <Reveal key={paragraph.slice(0, 32)}>
-            <p className="mt-8 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{paragraph}</p>
-          </Reveal>
+        {article.body.map((paragraph, i) => (
+          <Fragment key={paragraph.slice(0, 32)}>
+            <Reveal>
+              <p className="mt-8 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{paragraph}</p>
+            </Reveal>
+            {i % 2 === 1 && article.images?.[Math.floor((i - 1) / 2)] && (
+              <Reveal>
+                <img
+                  src={asset(article.images[Math.floor((i - 1) / 2)])}
+                  alt={post.title}
+                  loading="lazy"
+                  className="mt-10 aspect-[16/10] w-full rounded-[8px] object-cover"
+                />
+              </Reveal>
+            )}
+          </Fragment>
         ))}
 
         <Reveal>
