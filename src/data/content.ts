@@ -528,7 +528,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Время почувствовать место',
-          text: 'Координатор на связи весь тур: поможет с задержкой рейса, заменой отеля или аптечкой в горах. Решаем вопросы за минуты, а не за дни.',
+          text: 'Не пытаемся увидеть всё за раз. Оставляем пространство для прогулок, общения, культуры и настоящего погружения.',
         },
       ],
     },
@@ -1071,7 +1071,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Time to feel the place',
-          text: 'A coordinator stays in touch throughout the tour: flight delays, hotel changes or a first-aid kit in the mountains — solved in minutes, not days.',
+          text: 'We do not try to see everything at once. We leave room for walks, conversations, culture and genuine immersion.',
         },
       ],
     },
