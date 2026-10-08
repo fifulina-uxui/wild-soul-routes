@@ -512,7 +512,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     why: {
       label: 'Подход',
-      heading: 'Почему с нами удобно',
+      heading: 'Почему путешествуют с нами',
       items: [
         {
           title: 'Авторские маршруты',
