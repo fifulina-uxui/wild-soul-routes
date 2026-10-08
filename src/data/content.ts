@@ -516,7 +516,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       items: [
         {
           title: 'Внимание к каждому',
-          text: 'Каждый маршрут мы сначала проезжаем сами: проверяем дороги, гостиницы и гидов. В программе — только места, куда мы готовы возвращаться.',
+          text: 'Мы рядом на всех этапах путешествия, знаем своих участников и учитываем то, что важно именно вам.',
         },
         {
           title: 'Опыт, которому можно доверять',
@@ -1059,7 +1059,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       items: [
         {
           title: 'Attention to everyone',
-          text: 'We travel every route ourselves first: checking roads, lodges and guides. Only places we would happily return to make the program.',
+          text: 'We are by your side at every stage of the journey, we know our travellers and take into account what matters to you personally.',
         },
         {
           title: 'Experience you can trust',
