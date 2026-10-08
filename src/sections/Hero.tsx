@@ -5,7 +5,7 @@ export default function Hero() {
   const { t } = useLang()
 
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden">
+    <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden sm:items-center">
       <img
         src={asset('images/hero-home.jpg')}
         alt="Эверест в закатном свете, полная луна над вершиной"
