@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Navigate, useParams } from 'react-router'
 import { asset } from '../lib/asset'
 import Subpage from './Subpage'
@@ -8,28 +8,60 @@ import LeadForm from '../sections/LeadForm'
 import { useLang } from '../i18n'
 
 const PER_PAGE = 9
+// Несимметричная раскладка: сумма 24 = 4 ряда по 6 колонок
+const SPANS = [4, 2, 2, 2, 2, 3, 3, 4, 2]
+const spanClass: Record<number, string> = {
+  2: 'sm:col-span-2',
+  3: 'sm:col-span-3',
+  4: 'sm:col-span-4',
+  6: 'sm:col-span-6',
+}
 
 function TourGallery({ images, alt }: { images: string[]; alt: string }) {
   const [page, setPage] = useState(0)
+  const [open, setOpen] = useState<number | null>(null)
   const pages = Math.ceil(images.length / PER_PAGE)
   const shown = images.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)
   const { t } = useLang()
 
+  useEffect(() => {
+    if (open === null) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(null)
+      if (e.key === 'ArrowRight') setOpen((v) => (v === null ? v : Math.min(images.length - 1, v + 1)))
+      if (e.key === 'ArrowLeft') setOpen((v) => (v === null ? v : Math.max(0, v - 1)))
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [open === null, images.length])
+
   const pagerBtn =
     'inline-flex min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-6 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] disabled:pointer-events-none disabled:opacity-30'
 
+  const navBtn =
+    'absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[rgb(255_255_255/12%)] text-[#fafafa] backdrop-blur-md transition-colors duration-200 hover:bg-[rgb(255_255_255/25%)] disabled:pointer-events-none disabled:opacity-30'
+
   return (
     <div className="mt-10">
-      <div className="grid grid-cols-3 gap-2 sm:gap-3">
+      <div className="grid grid-cols-2 auto-rows-[140px] gap-2 sm:auto-rows-[220px] sm:grid-cols-6 sm:gap-3">
         {shown.map((img, i) => (
-          <div key={`${img}-${i}`} className="relative aspect-[4/3] overflow-hidden rounded-[4px]">
+          <button
+            key={`${img}-${i}`}
+            type="button"
+            onClick={() => setOpen(page * PER_PAGE + i)}
+            className={`group relative cursor-zoom-in overflow-hidden ${spanClass[SPANS[i % SPANS.length]] ?? 'sm:col-span-2'}`}
+          >
             <img
               src={asset(img)}
               alt={alt}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
             />
-          </div>
+          </button>
         ))}
       </div>
       <div className="mt-6 flex items-center justify-between">
@@ -53,6 +85,58 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
           {t.tourDetail.galleryNext}
         </button>
       </div>
+
+      {open !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-10"
+          onClick={() => setOpen(null)}
+        >
+          <button
+            type="button"
+            aria-label="Close"
+            onClick={() => setOpen(null)}
+            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-[4px] bg-[rgb(255_255_255/12%)] text-[#fafafa] backdrop-blur-md transition-colors duration-200 hover:bg-[rgb(255_255_255/25%)]"
+          >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 1l16 16M17 1L1 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Previous"
+            disabled={open === 0}
+            onClick={(e) => {
+              e.stopPropagation()
+              setOpen((v) => Math.max(0, (v ?? 0) - 1))
+            }}
+            className={`${navBtn} left-3 sm:left-6`}
+          >
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+              <path d="M9 1L1 9l8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <img
+            src={asset(images[open])}
+            alt={alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-full max-w-full object-contain"
+          />
+          <button
+            type="button"
+            aria-label="Next"
+            disabled={open === images.length - 1}
+            onClick={(e) => {
+              e.stopPropagation()
+              setOpen((v) => Math.min(images.length - 1, (v ?? 0) + 1))
+            }}
+            className={`${navBtn} right-3 sm:right-6`}
+          >
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+              <path d="M1 1l8 8-8 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+      )}
     </div>
   )
 }
