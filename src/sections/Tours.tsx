@@ -55,7 +55,7 @@ export default function Tours() {
       <div className="flex flex-col gap-4 px-4 md:px-6">
         {nearest.map((tour, i) => (
           <Reveal key={tour.id}>
-            <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
+            <article className="group relative min-h-[70vh] overflow-hidden">
               <img
                 src={asset(tour.image)}
                 alt={tour.title}

@@ -36,7 +36,7 @@ export default function DirectionsPage() {
           <Reveal key={card.country}>
             <Link
               to={`/tours?c=${encodeURIComponent(card.country)}`}
-              className="group flex h-full flex-col overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]"
+              className="group flex h-full flex-col overflow-hidden bg-[rgb(255_255_255/4%)]"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
