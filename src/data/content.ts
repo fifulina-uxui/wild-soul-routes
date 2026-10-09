@@ -127,9 +127,10 @@ export interface PageContent {
 }
 
 export const contacts = {
-  address: { ru: 'Москва, ул. Тверская, 1, офис 12', en: '1 Tverskaya St, Office 12, Moscow' },
-  phone: '+7 495 120-45-67',
-  email: 'hello@wildsoulroutes.com',
+  legal: 'Individual Entrepreneur Olesia Berendeeva',
+  id: '345864745',
+  address: { ru: 'Грузия, Батуми, ул. Шартава, 30', en: 'Georgia, Batumi, Shartava Street 30' },
+  email: 'info@wildsoulroutes.com',
 }
 
 export const content: Record<'ru' | 'en', PageContent> = {

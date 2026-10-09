@@ -28,6 +28,8 @@ export default function Footer() {
           </nav>
 
           <div className="flex flex-col gap-1 text-[14px] leading-5 text-[rgb(250_250_250/55%)] md:items-end">
+            <span>{contacts.legal}</span>
+            <span>ID {contacts.id}</span>
             <span>{contacts.address[lang]}</span>
             <a
               href={`mailto:${contacts.email}`}

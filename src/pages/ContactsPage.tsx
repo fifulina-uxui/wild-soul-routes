@@ -9,8 +9,9 @@ export default function ContactsPage() {
   const ru = lang === 'ru'
 
   const rows = [
+    { label: ru ? 'Компания' : 'Company', value: contacts.legal },
+    { label: ru ? 'Идентификационный номер' : 'Identification number', value: contacts.id },
     { label: ru ? 'Адрес' : 'Address', value: contacts.address[lang] },
-    { label: ru ? 'Телефон' : 'Phone', value: contacts.phone, href: `tel:${contacts.phone.replace(/[^+\d]/g, '')}` },
     { label: 'E-mail', value: contacts.email, href: `mailto:${contacts.email}` },
   ]
 
@@ -27,7 +28,7 @@ export default function ContactsPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid max-w-[720px] grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="mt-12 grid max-w-[960px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {rows.map((row) => (
               <Reveal key={row.label}>
                 <div className="flex flex-col gap-2">
