@@ -33,7 +33,7 @@ export default function PrivacyPage() {
                   : 'You may request deletion of your data at any time by emailing us.'}
               </p>
               <div className="mt-4 flex flex-col gap-1 border-t border-[rgb(255_255_255/15%)] pt-6 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                <span>{contacts.legal}</span>
+                <span>{contacts.legal[lang]}</span>
                 <span>ID {contacts.id}</span>
                 <span>{contacts.address[lang]}</span>
                 <a

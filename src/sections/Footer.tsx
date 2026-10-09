@@ -29,7 +29,7 @@ export default function Footer() {
 
           <div className="flex flex-col gap-1 text-[14px] leading-5 text-[rgb(250_250_250/55%)] md:items-end">
             <span>
-              {contacts.legal}, ID {contacts.id}
+              {contacts.legal[lang]}, ID {contacts.id}
             </span>
             <span>{contacts.address[lang]}</span>
             <a

@@ -128,7 +128,7 @@ export interface PageContent {
 }
 
 export const contacts = {
-  legal: 'Individual Entrepreneur Olesia Berendeeva',
+  legal: { ru: 'ИП Олеся Берендеева', en: 'Individual Entrepreneur Olesia Berendeeva' },
   id: '345864745',
   address: { ru: 'Грузия, Батуми, ул. Шартава, 30', en: 'Georgia, Batumi, Shartava Street 30' },
   email: 'info@wildsoulroutes.com',

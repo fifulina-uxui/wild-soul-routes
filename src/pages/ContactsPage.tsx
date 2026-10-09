@@ -9,7 +9,7 @@ export default function ContactsPage() {
   const ru = lang === 'ru'
 
   const rows = [
-    { label: ru ? 'Компания' : 'Company', value: contacts.legal },
+    { label: ru ? 'Компания' : 'Company', value: contacts.legal[lang] },
     { label: ru ? 'Идентификационный номер' : 'Identification number', value: contacts.id },
     { label: ru ? 'Адрес' : 'Address', value: contacts.address[lang] },
     { label: 'E-mail', value: contacts.email, href: `mailto:${contacts.email}` },
