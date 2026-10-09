@@ -524,11 +524,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Групповая работа с психологом',
-          text: 'Мы делаем осмысленные туры, где во время путешествия проходит настоящая терапия. Если вы готовы к трансформации, нам по пути.',
+          text: 'Мы создаём путешествия, где тур сочетается с настоящей терапевтической работой. Если вы готовы к трансформации — нам по пути.',
         },
         {
           title: 'Время почувствовать место',
-          text: 'Не пытаемся увидеть всё за раз. Оставляем пространство для прогулок, общения, культуры и настоящего погружения.',
+          text: 'Не пытаемся увидеть всё за раз. Оставляем время для прогулок, общения, культуры и погружения в место.',
         },
       ],
     },
@@ -1067,11 +1067,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Group work with a psychologist',
-          text: 'We create meaningful journeys where real therapy happens along the way. If you are ready for a transformation, we are on the same path.',
+          text: 'We create journeys where the tour is combined with real therapeutic work. If you are ready for a transformation — we are on the same path.',
         },
         {
           title: 'Time to feel the place',
-          text: 'We do not try to see everything at once. We leave room for walks, conversations, culture and genuine immersion.',
+          text: 'We do not try to see everything at once. We leave time for walks, conversations, culture and immersion in the place.',
         },
       ],
     },
