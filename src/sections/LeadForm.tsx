@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { Link } from 'react-router'
 import { useLang } from '../i18n'
 import { Reveal } from './Reveal'
 
@@ -109,7 +110,13 @@ export default function LeadForm({ submitLabel }: { submitLabel?: string }) {
                   {submitLabel ?? t.cta.submit}
                 </button>
                 <p className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                  {t.lead.form.legal}
+                  {t.lead.form.legal}{' '}
+                  <Link
+                    to="/privacy"
+                    className="underline decoration-[rgb(250_250_250/40%)] underline-offset-4 transition-colors duration-200 hover:text-[#fafafa]"
+                  >
+                    {t.lead.form.legalLink}
+                  </Link>
                 </p>
               </form>
             )}

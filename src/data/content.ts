@@ -118,6 +118,7 @@ export interface PageContent {
       comment: string
       commentPlaceholder: string
       legal: string
+      legalLink: string
     }
     success: { title: string; text: string }
   }
@@ -752,7 +753,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
         emailPlaceholder: 'you@example.com',
         comment: 'Доп. комментарии',
         commentPlaceholder: 'Например: удобное время для связи',
-        legal: 'Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.',
+        legal: 'Нажимая кнопку, вы соглашаетесь с',
+        legalLink: 'политикой обработки персональных данных.',
       },
       success: {
         title: 'Заявка отправлена',
@@ -1381,7 +1383,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
         emailPlaceholder: 'you@example.com',
         comment: 'Additional comments',
         commentPlaceholder: 'E.g. preferred time to reach you',
-        legal: 'By submitting, you agree to the personal data processing policy.',
+        legal: 'By submitting, you agree to the',
+        legalLink: 'personal data processing policy.',
       },
       success: {
         title: 'Request sent',
