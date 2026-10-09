@@ -618,7 +618,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           name: 'Олеся Берендеева',
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
-          instagram: 'https://instagram.com/wildsoulroutes',
+          instagram: 'https://www.instagram.com/oberendeeva',
         },
         {
           initials: 'АВ',
@@ -1163,7 +1163,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           name: 'Olesya Berendeeva',
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
-          instagram: 'https://instagram.com/wildsoulroutes',
+          instagram: 'https://www.instagram.com/oberendeeva',
         },
         {
           initials: 'VA',
