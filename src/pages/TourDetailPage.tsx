@@ -303,8 +303,8 @@ export default function TourDetailPage() {
         <section className={section}>
           <Reveal>
             <h2 className={h2}>{t.tourDetail.guide}</h2>
-            <div className="mt-8 flex flex-col gap-8 border-t border-[rgb(255_255_255/15%)] pt-6 sm:flex-row sm:items-start sm:gap-10">
-              <div className="flex flex-1 flex-col gap-4">
+            <div className="mt-8 flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-10">
+              <div className="flex flex-1 flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-6">
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
                     {detail.guide.name}
