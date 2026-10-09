@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useState, type FormEvent, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import { useLang } from '../i18n'
 import { Reveal } from './Reveal'
@@ -6,7 +6,7 @@ import { Reveal } from './Reveal'
 const inputClass =
   'h-14 w-full rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none'
 
-export default function LeadForm({ submitLabel }: { submitLabel?: string }) {
+export default function LeadForm({ submitLabel, aside }: { submitLabel?: string; aside?: ReactNode }) {
   const [sent, setSent] = useState(false)
   const { t } = useLang()
 
@@ -20,20 +20,24 @@ export default function LeadForm({ submitLabel }: { submitLabel?: string }) {
       <div className="mx-auto max-w-[1200px] px-5 py-16 md:px-8 md:py-24">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-              {t.lead.label}
-            </p>
-            <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
-              {t.lead.heading}
-            </h2>
-            <p className="mt-4 max-w-[504px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-              {t.lead.text}
-            </p>
-            <ul className="mt-8 flex flex-col gap-3 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-              {t.lead.bullets.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
+            {aside ?? (
+              <>
+                <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                  {t.lead.label}
+                </p>
+                <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+                  {t.lead.heading}
+                </h2>
+                <p className="mt-4 max-w-[504px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                  {t.lead.text}
+                </p>
+                <ul className="mt-8 flex flex-col gap-3 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
+                  {t.lead.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </Reveal>
 
           <Reveal>
