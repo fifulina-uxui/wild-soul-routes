@@ -140,6 +140,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       submit: 'Отправить заявку',
       choose: 'Выбрать путешествие',
       format: 'Узнать о формате',
+      consult: 'Получить консультацию',
     },
     hero: {
       tagline: 'Путешествия с душой',
@@ -747,6 +748,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       submit: 'Send request',
       choose: 'Choose a journey',
       format: 'About the format',
+      consult: 'Get a consultation',
     },
     hero: {
       tagline: 'Travel with soul',
