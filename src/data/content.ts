@@ -27,7 +27,7 @@ export interface TourDetail {
 
 export interface PageContent {
   nav: { href: string; label: string }[]
-  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string }
+  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string; consult: string }
   hero: {
     tagline: string
     title: string
