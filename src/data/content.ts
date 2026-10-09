@@ -28,7 +28,7 @@ export interface TourDetail {
 
 export interface PageContent {
   nav: { href: string; label: string }[]
-  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string; consult: string }
+  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string; consult: string; consultText: string }
   hero: {
     tagline: string
     title: string
@@ -144,6 +144,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       choose: 'Выбрать путешествие',
       format: 'Узнать о формате',
       consult: 'Получить консультацию',
+      consultText: 'Расскажите, куда хотите поехать, — ответим в течение рабочего дня.',
     },
     hero: {
       tagline: 'Путешествия с душой',
@@ -768,6 +769,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       choose: 'Choose a journey',
       format: 'About the format',
       consult: 'Get a consultation',
+      consultText: 'Tell us where you want to go — we will reply within one business day.',
     },
     hero: {
       tagline: 'Travel with soul',
