@@ -26,7 +26,22 @@ export default function Team() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#121212] text-[14px] font-bold text-[rgb(250_250_250/70%)]">
                   {m.initials}
                 </span>
-                <h3 className="text-[20px] font-bold leading-7 text-[#fafafa]">{m.name}</h3>
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-[20px] font-bold leading-7 text-[#fafafa]">{m.name}</h3>
+                  <a
+                    href={m.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Instagram — ${m.name}`}
+                    className="text-[rgb(250_250_250/55%)] transition-colors duration-200 hover:text-[#fafafa]"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="36" y="36" width="184" height="184" rx="48" />
+                      <circle cx="128" cy="128" r="42" />
+                      <circle cx="180" cy="76" r="12" fill="currentColor" stroke="none" />
+                    </svg>
+                  </a>
+                </div>
                 <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">
                   {m.role}
                 </p>

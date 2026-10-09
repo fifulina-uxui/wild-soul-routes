@@ -81,7 +81,7 @@ export interface PageContent {
     label: string
     heading: string
     text: string
-    items: { initials: string; name: string; role: string; text: string }[]
+    items: { initials: string; name: string; role: string; text: string; instagram: string }[]
   }
   lead: {
     label: string
@@ -618,12 +618,14 @@ export const content: Record<'ru' | 'en', PageContent> = {
           name: 'Юлия Фёдорова',
           role: 'Основатель, автор маршрутов',
           text: '14 лет в экспедиционном туризме. Прошла Ликийскую тропу, трижды была у Эвереста.',
+          instagram: 'https://instagram.com/wildsoulroutes',
         },
         {
           initials: 'ТН',
           name: 'Тензин Норбу',
           role: 'Гид по Тибету и Непалу',
           text: 'Родился в Лхасе. Знает каждый монастырь долины и говорит на пяти языках.',
+          instagram: 'https://instagram.com/wildsoulroutes',
         },
       ],
     },
@@ -1161,12 +1163,14 @@ export const content: Record<'ru' | 'en', PageContent> = {
           name: 'Yulia Fyodorova',
           role: 'Founder, route designer',
           text: '14 years in expedition travel. Hiked the Lycian Way and stood before Everest three times.',
+          instagram: 'https://instagram.com/wildsoulroutes',
         },
         {
           initials: 'TN',
           name: 'Tenzin Norbu',
           role: 'Guide, Tibet & Nepal',
           text: 'Born in Lhasa. Knows every monastery in the valley and speaks five languages.',
+          instagram: 'https://instagram.com/wildsoulroutes',
         },
       ],
     },
