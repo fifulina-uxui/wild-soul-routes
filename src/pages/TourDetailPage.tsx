@@ -1,8 +1,9 @@
-import { Link, Navigate, useParams } from 'react-router'
+import { Navigate, useParams } from 'react-router'
 import { asset } from '../lib/asset'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { BackButton } from '../components/BackButton'
+import LeadForm from '../sections/LeadForm'
 import { useLang } from '../i18n'
 
 const section = 'mx-auto max-w-[1200px] px-5 pt-14 md:px-8 md:pt-20'
@@ -90,9 +91,9 @@ export default function TourDetailPage() {
             </div>
 
             <div className="mt-8">
-              <Link to="/contacts" className={ctaPrimary}>
+              <a href="#lead" className={ctaPrimary}>
                 {t.tourDetail.signup}
-              </Link>
+              </a>
             </div>
           </Reveal>
         </div>
@@ -190,9 +191,9 @@ export default function TourDetailPage() {
         <Reveal>
           <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-10 md:flex-row md:items-end md:justify-between">
             {priceBlock}
-            <Link to="/contacts" className={ctaPrimary}>
+            <a href="#lead" className={ctaPrimary}>
               {t.tourDetail.signup}
-            </Link>
+            </a>
           </div>
         </Reveal>
       </section>
@@ -253,17 +254,8 @@ export default function TourDetailPage() {
         </section>
       )}
 
-      {/* Остались вопросы */}
-      <section className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-20">
-        <Reveal>
-          <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-10 md:flex-row md:items-center md:justify-between">
-            <p className={`max-w-[420px] ${bodyText}`}>{t.tourDetail.questionsText}</p>
-            <Link to="/contacts" className={ctaPrimary}>
-              {t.tourDetail.questions}
-            </Link>
-          </div>
-        </Reveal>
-      </section>
+      {/* Форма заявки */}
+      <LeadForm />
     </Subpage>
   )
 }

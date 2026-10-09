@@ -5,7 +5,6 @@ import Directions from '../sections/Directions'
 import Why from '../sections/Why'
 import Journal from '../sections/Journal'
 import Team from '../sections/Team'
-import LeadForm from '../sections/LeadForm'
 import Footer from '../sections/Footer'
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
         <Why />
         <Journal />
         <Team />
-        <LeadForm />
       </main>
       <Footer />
     </div>
