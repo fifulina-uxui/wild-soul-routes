@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Navigate, useParams } from 'react-router'
 import { asset } from '../lib/asset'
 import Subpage from './Subpage'
@@ -5,6 +6,56 @@ import { Reveal } from '../sections/Reveal'
 import { BackButton } from '../components/BackButton'
 import LeadForm from '../sections/LeadForm'
 import { useLang } from '../i18n'
+
+const PER_PAGE = 9
+
+function TourGallery({ images, alt }: { images: string[]; alt: string }) {
+  const [page, setPage] = useState(0)
+  const pages = Math.ceil(images.length / PER_PAGE)
+  const shown = images.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)
+  const { t } = useLang()
+
+  const pagerBtn =
+    'inline-flex min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-6 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] disabled:pointer-events-none disabled:opacity-30'
+
+  return (
+    <div className="mt-10">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3">
+        {shown.map((img, i) => (
+          <div key={`${img}-${i}`} className="relative aspect-[4/3] overflow-hidden rounded-[4px]">
+            <img
+              src={asset(img)}
+              alt={alt}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={() => setPage((v) => Math.max(0, v - 1))}
+          disabled={page === 0}
+          className={pagerBtn}
+        >
+          {t.tourDetail.galleryPrev}
+        </button>
+        <p className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
+          {page + 1} / {pages}
+        </p>
+        <button
+          type="button"
+          onClick={() => setPage((v) => Math.min(pages - 1, v + 1))}
+          disabled={page === pages - 1}
+          className={pagerBtn}
+        >
+          {t.tourDetail.galleryNext}
+        </button>
+      </div>
+    </div>
+  )
+}
 
 const section = 'mx-auto max-w-[1200px] px-5 pt-14 md:px-8 md:pt-20'
 const h2 = 'text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]'
@@ -133,6 +184,15 @@ export default function TourDetailPage() {
             <div className="max-w-[720px]">
               <ListItems items={detail.highlights} />
             </div>
+          </Reveal>
+        </section>
+      )}
+
+      {/* Галерея тура */}
+      {detail.gallery && (
+        <section className={section}>
+          <Reveal>
+            <TourGallery images={detail.gallery} alt={tour.title} />
           </Reveal>
         </section>
       )}

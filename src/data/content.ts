@@ -15,6 +15,7 @@ export interface TourDetail {
   id: string
   intro: string
   highlights?: string[]
+  gallery?: string[]
   program: { day: string; text: string }[]
   guide?: { name: string; role: string; text: string; instagram: string }
   dates: { when: string; note: string }[]
@@ -53,6 +54,8 @@ export interface PageContent {
     includes: string
     excludes: string
     highlights: string
+    galleryPrev: string
+    galleryNext: string
     guide: string
     signup: string
     booking: string
@@ -272,6 +275,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
       includes: 'В стоимость входит',
       excludes: 'Не входит в стоимость',
       highlights: 'Что вас ждёт в этом туре?',
+      galleryPrev: 'Назад',
+      galleryNext: 'Вперёд',
       guide: 'Кто гид',
       signup: 'Записаться',
       booking: 'Условия бронирования',
@@ -403,6 +408,20 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'деревни шерпов и местные монастыри',
           'две ночи в отеле в Намче-Базаре и две ночи в улучшенной лоджии в Гокио',
           'посещение базового лагеря Эвереста',
+        ],
+        gallery: [
+          'images/tour-everest.jpg',
+          'images/hero-home.jpg',
+          'images/tour-nepal.jpg',
+          'images/tour-bhutan.jpg',
+          'images/tour-tibet.jpg',
+          'images/hero.jpg',
+          'images/tour-cappadocia.jpg',
+          'images/tour-georgia.jpg',
+          'images/tour-andaman.jpg',
+          'images/tour-everest.jpg',
+          'images/tour-nepal.jpg',
+          'images/hero-home.jpg',
         ],
         program: [
           { day: 'День 1 · Катманду', text: 'Прилетаем в Непал и встречаемся в шумном, тёплом Катманду — городе, где древность соседствует с хаосом. Заселяемся в отель, знакомимся, настраиваемся на предстоящее. Проверим снаряжение, при необходимости докупим что-то в туристическом районе Тамель. Если останется время — погуляем по улочкам, вдохнём запах специй, пройдём мимо ступ и мастерских. Вечером совместный ужин. Ночёвка на 1400 м.' },
@@ -880,6 +899,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
       includes: "What's included",
       excludes: 'Not included',
       highlights: 'What awaits you on this tour',
+      galleryPrev: 'Previous',
+      galleryNext: 'Next',
       guide: 'Your guide',
       signup: 'Sign up',
       booking: 'Booking terms',
@@ -1011,6 +1032,20 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'Sherpa villages and local monasteries',
           'two nights in a hotel in Namche Bazaar and two nights in a superior lodge in Gokyo',
           'a visit to Everest Base Camp',
+        ],
+        gallery: [
+          'images/tour-everest.jpg',
+          'images/hero-home.jpg',
+          'images/tour-nepal.jpg',
+          'images/tour-bhutan.jpg',
+          'images/tour-tibet.jpg',
+          'images/hero.jpg',
+          'images/tour-cappadocia.jpg',
+          'images/tour-georgia.jpg',
+          'images/tour-andaman.jpg',
+          'images/tour-everest.jpg',
+          'images/tour-nepal.jpg',
+          'images/hero-home.jpg',
         ],
         program: [
           { day: 'Day 1 · Kathmandu', text: 'We arrive in Nepal and meet in noisy, warm Kathmandu — a city where antiquity lives next to chaos. We check into the hotel, get to know each other and tune in for what lies ahead. We check the gear and buy anything missing in the tourist district of Thamel. If time allows — a walk through the streets past stupas and workshops. A shared dinner in the evening. Overnight at 1,400 m.' },
