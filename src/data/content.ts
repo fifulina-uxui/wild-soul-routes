@@ -109,8 +109,10 @@ export interface PageContent {
     form: {
       name: string
       namePlaceholder: string
-      phone: string
-      phonePlaceholder: string
+      telegram: string
+      telegramPlaceholder: string
+      email: string
+      emailPlaceholder: string
       comment: string
       commentPlaceholder: string
       legal: string
@@ -737,12 +739,14 @@ export const content: Record<'ru' | 'en', PageContent> = {
         '— Отмена с полным возвратом за 30 дней до тура',
       ],
       form: {
-        name: 'Имя',
+        name: 'Имя и фамилия',
         namePlaceholder: 'Как к вам обращаться',
-        phone: 'Телефон',
-        phonePlaceholder: '+7 ___ ___-__-__',
-        comment: 'Куда хочется',
-        commentPlaceholder: 'Например: Тибет в октябре, вдвоём',
+        telegram: 'Номер Telegram',
+        telegramPlaceholder: '+7 ___ ___-__-__',
+        email: 'Email',
+        emailPlaceholder: 'you@example.com',
+        comment: 'Доп. комментарии',
+        commentPlaceholder: 'Например: удобное время для связи',
         legal: 'Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.',
       },
       success: {
@@ -1362,12 +1366,14 @@ export const content: Record<'ru' | 'en', PageContent> = {
         '— Full refund for cancellations 30 days before the tour',
       ],
       form: {
-        name: 'Name',
+        name: 'Full name',
         namePlaceholder: 'What should we call you',
-        phone: 'Phone',
-        phonePlaceholder: '+7 ___ ___-__-__',
-        comment: 'Where to',
-        commentPlaceholder: 'E.g. Tibet in October, two people',
+        telegram: 'Telegram number',
+        telegramPlaceholder: '+1 ___ ___-__-__',
+        email: 'Email',
+        emailPlaceholder: 'you@example.com',
+        comment: 'Additional comments',
+        commentPlaceholder: 'E.g. preferred time to reach you',
         legal: 'By submitting, you agree to the personal data processing policy.',
       },
       success: {

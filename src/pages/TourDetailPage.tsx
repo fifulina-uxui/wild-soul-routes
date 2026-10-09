@@ -333,7 +333,7 @@ export default function TourDetailPage() {
       )}
 
       {/* Форма заявки */}
-      <LeadForm />
+      <LeadForm submitLabel={t.tourDetail.signup} />
     </Subpage>
   )
 }

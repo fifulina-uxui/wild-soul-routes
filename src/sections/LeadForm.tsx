@@ -5,7 +5,7 @@ import { Reveal } from './Reveal'
 const inputClass =
   'h-14 w-full rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none'
 
-export default function LeadForm() {
+export default function LeadForm({ submitLabel }: { submitLabel?: string }) {
   const [sent, setSent] = useState(false)
   const { t } = useLang()
 
@@ -54,15 +54,28 @@ export default function LeadForm() {
                   <input id="lead-name" name="name" required placeholder={t.lead.form.namePlaceholder} className={inputClass} />
                 </div>
                 <div>
-                  <label htmlFor="lead-phone" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {t.lead.form.phone}
+                  <label htmlFor="lead-telegram" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                    {t.lead.form.telegram}
                   </label>
                   <input
-                    id="lead-phone"
-                    name="phone"
+                    id="lead-telegram"
+                    name="telegram"
                     type="tel"
                     required
-                    placeholder={t.lead.form.phonePlaceholder}
+                    placeholder={t.lead.form.telegramPlaceholder}
+                    className={inputClass}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lead-email" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                    {t.lead.form.email}
+                  </label>
+                  <input
+                    id="lead-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder={t.lead.form.emailPlaceholder}
                     className={inputClass}
                   />
                 </div>
@@ -82,7 +95,7 @@ export default function LeadForm() {
                   type="submit"
                   className="mt-2 inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
                 >
-                  {t.cta.submit}
+                  {submitLabel ?? t.cta.submit}
                 </button>
                 <p className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
                   {t.lead.form.legal}
