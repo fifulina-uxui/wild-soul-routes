@@ -219,27 +219,46 @@ export default function TourDetailPage() {
         <section className={section}>
           <Reveal>
             <h2 className={h2}>{t.tourDetail.guide}</h2>
-            <div className="mt-8 flex max-w-[720px] flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-6">
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
-                  {detail.guide.name}
-                </h3>
-                <a
-                  href={detail.guide.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Instagram — ${detail.guide.name}`}
-                  className="text-[rgb(250_250_250/55%)] transition-colors duration-200 hover:text-[#fafafa]"
-                >
-                  <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="36" y="36" width="184" height="184" rx="48" />
-                    <circle cx="128" cy="128" r="42" />
-                    <circle cx="180" cy="76" r="12" fill="currentColor" stroke="none" />
-                  </svg>
-                </a>
+            <div className="mt-8 flex flex-col gap-8 border-t border-[rgb(255_255_255/15%)] pt-6 sm:flex-row sm:items-start sm:gap-10">
+              <div className="flex flex-1 flex-col gap-4">
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+                    {detail.guide.name}
+                  </h3>
+                  <a
+                    href={detail.guide.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Instagram — ${detail.guide.name}`}
+                    className="text-[rgb(250_250_250/55%)] transition-colors duration-200 hover:text-[#fafafa]"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="36" y="36" width="184" height="184" rx="48" />
+                      <circle cx="128" cy="128" r="42" />
+                      <circle cx="180" cy="76" r="12" fill="currentColor" stroke="none" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{detail.guide.role}</p>
+                <p className={bodyText}>{detail.guide.text}</p>
               </div>
-              <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{detail.guide.role}</p>
-              <p className={bodyText}>{detail.guide.text}</p>
+              <div className="relative aspect-[3/4] w-full max-w-[280px] shrink-0 overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]">
+                {detail.guide.photo ? (
+                  <img
+                    src={asset(detail.guide.photo)}
+                    alt={detail.guide.name}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                ) : (
+                  <span className="absolute inset-0 flex items-center justify-center text-[32px] font-bold text-[rgb(250_250_250/30%)]">
+                    {detail.guide.name
+                      .split(' ')
+                      .map((w) => w[0])
+                      .join('')}
+                  </span>
+                )}
+              </div>
             </div>
           </Reveal>
         </section>

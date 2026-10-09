@@ -17,7 +17,7 @@ export interface TourDetail {
   highlights?: string[]
   gallery?: string[]
   program: { day: string; text: string }[]
-  guide?: { name: string; role: string; text: string; instagram: string }
+  guide?: { name: string; role: string; text: string; instagram: string; photo?: string }
   dates: { when: string; note: string }[]
   includes: string[]
   excludes?: string[]
