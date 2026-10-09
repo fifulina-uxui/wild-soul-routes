@@ -14,9 +14,15 @@ export interface Tour {
 export interface TourDetail {
   id: string
   intro: string
+  highlights?: string[]
   program: { day: string; text: string }[]
+  guide?: { name: string; role: string; text: string; instagram: string }
   dates: { when: string; note: string }[]
   includes: string[]
+  excludes?: string[]
+  booking?: string[]
+  discounts?: string[]
+  features?: string[]
 }
 
 export interface PageContent {
@@ -45,6 +51,15 @@ export interface PageContent {
     program: string
     dates: string
     includes: string
+    excludes: string
+    highlights: string
+    guide: string
+    signup: string
+    booking: string
+    discounts: string
+    features: string
+    questions: string
+    questionsText: string
     back: string
     priceNote: string
   }
@@ -253,7 +268,16 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tourDetail: {
       program: 'Программа по дням',
       dates: 'Ближайшие заезды',
-      includes: 'Что включено',
+      includes: 'В стоимость входит',
+      excludes: 'Не входит в стоимость',
+      highlights: 'Что вас ждёт в этом туре?',
+      guide: 'Кто гид',
+      signup: 'Записаться',
+      booking: 'Условия бронирования',
+      discounts: 'Система скидок',
+      features: 'Особенности тура',
+      questions: 'Остались вопросы?',
+      questionsText: 'Напишите нам — ответим на любой вопрос о маршруте, снаряжении и подготовке в течение рабочего дня.',
       back: 'Все туры',
       priceNote: 'за человека при двухместном размещении',
     },
@@ -367,36 +391,89 @@ export const content: Record<'ru' | 'en', PageContent> = {
       {
         id: 'nepal-trek',
         intro:
-          'Двадцать дней в самом высокогорном регионе планеты: три перевала выше пяти тысяч — Конгма-Ла, Чо-Ла и Ренджо-Ла, ночёвка над облаками в Горак-Шепе и базовый лагерь Эвереста. С одной точки — четыре восьмитысячника сразу.',
-        program: [
-          { day: 'День 1', text: 'Прилёт в Катманду. Проверка снаряжения, знакомство с группой.' },
-          { day: 'День 2', text: 'Перелёт в Луклу (2840 м), переход в Пакдинг вдоль реки Дудх-Коси.' },
-          { day: 'День 3', text: 'Подъём в Намче-Базар (3440 м) — столицу шерпов.' },
-          { day: 'День 4', text: 'День акклиматизации: смотровая площадка с первым видом на Эверест.' },
-          { day: 'День 5', text: 'Переход в Тенгбоче (3860 м) — главный монастырь региона.' },
-          { day: 'День 6', text: 'Переход в Дингбоче (4410 м) под стеной Ама-Даблам.' },
-          { day: 'День 7', text: 'Акклиматизация: радиальный подъём на Нангкар-Цанг (5083 м).' },
-          { day: 'День 8', text: 'Переход в Чукхунг (4730 м). Вечерняя встреча группы.' },
-          { day: 'День 9', text: 'Первый перевал — Конгма-Ла (5535 м). Спуск в Лобуче.' },
-          { day: 'День 10', text: 'Переход в Горак-Шеп (5140 м), закат на Кала-Паттар (5644 м).' },
-          { day: 'День 11', text: 'Базовый лагерь Эвереста (5364 м) — главная точка маршрута.' },
-          { day: 'День 12', text: 'Переход в Дзонгла у подножия второго перевала.' },
-          { day: 'День 13', text: 'Перевал Чо-Ла (5420 м), спуск в долину Гокио.' },
-          { day: 'День 14', text: 'Бирюзовые озёра Гокио. Тихий вечер у третьего озера.' },
-          { day: 'День 15', text: 'Подъём на Гокио-Ри (5357 м): Эверест, Лхоцзе, Макалу и Чо-Ойю в одной панораме.' },
-          { day: 'День 16', text: 'Третий перевал — Ренджо-Ла (5360 м). Спуск в Тхаме.' },
-          { day: 'День 17', text: 'Возвращение в Намче-Базар. Горячий душ и праздничный ужин.' },
-          { day: 'День 18', text: 'Длинный спуск в Луклу. Финальный вечер в горах.' },
-          { day: 'День 19', text: 'Перелёт в Катманду, прощальный ужин с группой.' },
-          { day: 'День 20', text: 'Вылет домой.' },
+          'Трек через три перевала к базовому лагерю Эвереста — для тех, кто готов идти дальше и бросить вызов себе. Это путь через самые высокие перевалы региона, тишину, горный воздух и масштаб, в котором человек ощущает себя частью чего-то бесконечного. На маршруте — панорамы Эвереста, Лхоцзе, Чо-Ойю, Макалу и одной из красивейших гор мира Ама-Даблам, столица шерпов Намче-Базар и тропы, где почти не встретишь толпы. Это сложный трек: он подходит тем, кто уже ходил треки в Непале или другие трудные маршруты в мире.',
+        highlights: [
+          'атмосферный Катманду с его своеобразным ритмом',
+          'три перевала Гималаев: Ренджо-Ла (5360 м), Чо-Ла (5420 м), Кхонгма-Ла (5535 м)',
+          'перелёт на маленьком самолёте в Луклу с видом на Гималаи — входит в стоимость',
+          'Намче-Базар — столица шерпов',
+          'бирюзовые ледниковые озёра Гокио',
+          'меньше туристов, больше тишины',
+          'деревни шерпов и местные монастыри',
+          'две ночи в отеле в Намче-Базаре и две ночи в улучшенной лоджии в Гокио',
+          'посещение базового лагеря Эвереста',
         ],
-        dates: [{ when: '20 апреля – 9 мая 2027', note: 'набор открыт' }],
+        program: [
+          { day: 'День 1 · Катманду', text: 'Прилетаем в Непал и встречаемся в шумном, тёплом Катманду — городе, где древность соседствует с хаосом. Заселяемся в отель, знакомимся, настраиваемся на предстоящее. Проверим снаряжение, при необходимости докупим что-то в туристическом районе Тамель. Если останется время — погуляем по улочкам, вдохнём запах специй, пройдём мимо ступ и мастерских. Вечером совместный ужин. Ночёвка на 1400 м.' },
+          { day: 'День 2 · Перелёт в Луклу, Пхакдинг (2640 м)', text: 'Ранним утром выезжаем в аэропорт и летим на маленьком самолёте вдоль заснеженных вершин — прямо в Луклу (2860 м), ворота к Эвересту. Выпьем кофе, соберёмся с духом и выйдем на тропу. Первый переход — до деревни Пхакдинг: дорога петляет среди холмов и деревень, вверх и вниз, как и положено в Гималаях. Вечером отдых в уютной тёплой лоджии. Возможен вылет не из Катманду, а из аэропорта Рамечап — тогда выезд будет в начале ночи; мы заранее сообщим формат и будем действовать в интересах группы и по погоде. Ночёвка на 2640 м.' },
+          { day: 'День 3 · Намче-Базар (3440 м)', text: 'Насыщенный день — длинный, но невероятно красивый переход в сердце региона Кхумбу: петляющая тропа среди кедров и рододендронов, деревни с молитвенными барабанами и разноцветными флагами. Здесь мы впервые увидим заснеженные пики — и, возможно, сам Эверест на горизонте. Пересечём знаменитый подвесной мост Хиллари, названный в честь первого восходителя на Эверест. Вторая часть дня — подъём в Намче-Базар, столицу шерпов. Награда — уютный городок с кафе, пекарнями, горячим душем и видами на снежные хребты. Ночёвка на 3440 м.' },
+          { day: 'День 4 · Тамо (3450 м)', text: 'Короткий переход — специально для плавной и бережной акклиматизации. Покидаем оживлённые улицы Намче и уходим с «попсовой» тропы туда, где тише и просторнее. Дорога ведёт вдоль склона, через редкие деревни и молитвенные ступы. Высота набирается постепенно, без резких рывков — важный день, чтобы тело успело привыкнуть к горам. Ночуем в маленькой деревне Тамо с настоящей гималайской атмосферой и спокойствием. Ночёвка на 3450 м.' },
+          { day: 'День 5 · Таме (3820 м)', text: 'Неспешный набор высоты до Таме — древнего поселения на старом торговом пути в Тибет. Короткий и важный день для акклиматизации и погружения в культуру Кхумбу. По пути — сосновые и рододендроновые леса, горные ручьи, деревенская жизнь на склонах. Таме — одно из старейших поселений шерпов, здесь родились многие известные альпинисты, а над деревней стоит действующий монастырь. Ночуем в простой, но уютной лоджии с видом на хребты. Ночёвка на 3820 м.' },
+          { day: 'День 6 · Лунгден (4380 м)', text: 'Важный этап — пересекаем рубеж 4000 метров, продвигаясь к перевалам. Тропа проходит мимо молитвенных флагов и ступ, через леса и выходит в альпийскую зону с видами на водоразделы и хребты. Чем выше — тем меньше зелени и шире горизонты. Лунгден — первый контакт с разреженным воздухом и более суровой погодой. Ночёвка на 4380 м.' },
+          { day: 'День 7 · Акклиматизация в Лунгдене (4380 м)', text: 'Остаёмся на месте — перед важным днём нужно восстановиться и адаптироваться к высоте. Днём совершим радиальный выход на смотровую точку выше 5000 метров: идём медленно, в спокойном ритме, а по пути открываются невероятные виды на массивы и долину, по которой мы пришли. Вечером возвращаемся в деревню: отдых, тёплый чай, термосы, настрой на утро. Завтра — первый большой перевал.' },
+          { day: 'День 8 · Перевал Ренджо-Ла (5360 м)', text: 'Один из самых впечатляющих дней маршрута. Выходим из Лунгден ещё в темноте, подъём занимает несколько часов — и с перевала открывается одна из лучших панорам Гималаев: озёра Гокио, ледник Нгозумпа, восьмитысячники Эверест, Лхоцзе и Чо-Ойю. Затем непростой спуск по сыпухе, местами по снегу и каменным ступеням. Внизу нас ждёт Гокио — высокогорное селение у бирюзового озера и комфортная лоджия.' },
+          { day: 'День 9 · Гокио (4750 м)', text: 'Остаёмся в Гокио, чтобы отдохнуть между двумя перевалами. Совершим лёгкую прогулку к верхним озёрам Гокио с видом на Чо-Ойю.' },
+          { day: 'День 10 · Драгнак (4700 м)', text: 'Короткий, но впечатляющий переход через ледник Нгозумпа — крупнейший ледник Непала. Пересекаем каменные морены и ледовые гребни. Ближе к вечеру — ранний отбой: завтра очередной перевал.' },
+          { day: 'День 11 · Перевал Чо-Ла (5420 м)', text: 'Снова выходим рано утром. Сначала подъём плавный — до точки, откуда открывается впечатляющий вид на перевал. Финальный взлёт непростой, как и спуск. Зато потом идём по долине с видами на вершину Чолатзе — пожалуй, в этом дне она поражает больше всего. Ночуем в поселении Дзонгла (4800 м).' },
+          { day: 'День 12 · Горак-Шеп (5134 м)', text: 'Утром выходим из деревни и приближаемся к основной тропе в базовый лагерь Эвереста. По пути остановка на обед в Лобуче, затем путь к Горак-Шеп — последнему поселку перед лагерем. Тропа идёт вдоль ледника Кхумбу. Вечером встречаем закат с ближайшего холма.' },
+          { day: 'День 13 · Базовый лагерь Эвереста (5360 м)', text: 'Рано утром выходим в базовый лагерь — к ледовым серакам ледника Кхумбу, это лучшее зрелище! Затем возвращаемся в Горак-Шеп и переходим в Лобуче (4950 м). Готовимся к следующему перевалу.' },
+          { day: 'День 14 · Перевал Кхонгма-Ла (5535 м)', text: 'Наименее популярный перевал и самый дикий по ощущениям. Из Лобуче идём сначала по широкой долине, затем поднимаемся на каменистые склоны, минуем ледник и начинаем крутой подъём. Спуск технически проще, но длинный. Финишируем в Чукунге (4800 м) и заслуженно отдыхаем — все трудные участки маршрута позади!' },
+          { day: 'День 15 · Пангбоче (3930 м)', text: 'Теперь только вниз, к зелени и кислороду! Виды на Ама-Даблам сопровождают нас большую часть пути. В Дингбоче выпьем вкусного кофе в настоящей кофейне, затем спустимся в Пангбоче, где посетим древний монастырь.' },
+          { day: 'День 16 · Намче-Базар (3440 м)', text: 'Тропа идёт вниз через густые леса — наслаждаемся теплом и кислородом! В Намче нас ждут все блага цивилизации. Ночуем в том же уютном отеле.' },
+          { day: 'День 17 · Лукла (2820 м)', text: 'Заключительный день трека. Неспешно идём и любуемся видами, по пути останавливаемся в стильной кофейне. Во второй половине дня приходим в Луклу.' },
+          { day: 'День 18 · Резервный день', text: 'Резерв на случай непогоды, переноса рейсов и других обстоятельств.' },
+          { day: 'День 19 · Катманду', text: 'Рано утром вылетаем из Луклы в Катманду и вновь окунаемся в его ритм. Идём есть вкусную еду и отмечать завершение трека! Возможен вариант вылета в Рамечап — тогда едем из Рамечапа на трансфере.' },
+          { day: 'День 20 · Вылет домой', text: 'Настал день, когда мы вынуждены разъехаться по домам. Мы не прощаемся ни друг с другом, ни с Гималаями. До новых встреч — пусть дух приключений всегда будет с вами.' },
+        ],
+        guide: {
+          name: 'Олеся Берендеева',
+          role: 'Гид, автор маршрутов',
+          text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
+          instagram: 'https://www.instagram.com/oberendeeva',
+        },
+        dates: [{ when: '20.04.2027 – 09.05.2027', note: 'набор открыт' }],
         includes: [
-          'Сопровождение гида и психолога',
-          'Перелёт Катманду — Лукла — Катманду',
-          'Пермиты на национальный парк Сагарматха и регион Кхумбу',
-          'Ночёвки в ти-хаусах, портеры на группу',
-          'Вечерние встречи группы',
+          'две ночи в отеле в Катманду, размещение двухместное',
+          'встреча и проводы в аэропорту Катманду',
+          'билеты на самолёт Катманду — Лукла — Катманду или Рамечап — Лукла — Рамечап + трансфер',
+          'местный гид',
+          'один портер на двоих участников',
+          'баул на каждого участника',
+          'всё проживание на треке в хороших лоджиях, размещение двухместное',
+          'две ночи в отеле в Намче и улучшенной лоджии в Гокио, размещение двухместное',
+          'пермит в национальный парк Сагарматха',
+          'работа профессионального гида',
+          'групповая аптечка',
+        ],
+        excludes: [
+          'международный перелёт',
+          'страховка на все дни путешествия с вертолётной эвакуацией — обязательно!',
+          'виза в Непал — 50 $',
+          'питание в Катманду и на треке (включая интернет, душ и зарядку аккумуляторов) — 35–50 $ в день',
+          'чаевые портерам и местному гиду',
+          'дополнительные ночи в Катманду при необходимости',
+          'одноместное размещение',
+          'все прочие расходы, не указанные в программе',
+        ],
+        booking: [
+          'Заполните форму — и мы свяжемся с вами в течение рабочего дня.',
+          'Чтобы забронировать место в группе, необходимо внести предоплату. Мы отправим вам договор и счёт, после чего вы сможете внести депозит в размере 500 $ удобным для вас способом.',
+          'Оставшуюся сумму можно оплатить наличными в Катманду. При необходимости доступна оплата в рассрочку.',
+          'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
+        ],
+        discounts: [
+          'Early bird price — 2 290 $ до 31.12.2026',
+          'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
+          'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
+          'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
+          'Возвращаетесь к нам: вторая поездка — скидка 50 $, третья — 100 $, дальше — особые приятные бонусы',
+          'Максимальный размер скидки — 100 $. Скидки не суммируются',
+        ],
+        features: [
+          'Это сложный трек: много дней на высоте выше 4000 м. Маршрут подойдёт тем, кто уже ходил многодневные треки в высокогорье',
+          'Проживание на треке в лоджиях, размещение по двое',
+          'Необходимо стандартное снаряжение для трека',
+          'В зависимости от погоды, состояния группы и прочих обстоятельств гид может изменить маршрут',
         ],
       },
       {
@@ -799,6 +876,15 @@ export const content: Record<'ru' | 'en', PageContent> = {
       program: 'Day-by-day program',
       dates: 'Upcoming departures',
       includes: "What's included",
+      excludes: 'Not included',
+      highlights: 'What awaits you on this tour',
+      guide: 'Your guide',
+      signup: 'Sign up',
+      booking: 'Booking terms',
+      discounts: 'Discounts',
+      features: 'Good to know',
+      questions: 'Still have questions?',
+      questionsText: 'Write to us — we will answer any question about the route, gear and preparation within one business day.',
       back: 'All tours',
       priceNote: 'per person in a double room',
     },
@@ -912,36 +998,89 @@ export const content: Record<'ru' | 'en', PageContent> = {
       {
         id: 'nepal-trek',
         intro:
-          'Twenty days in the highest region on Earth: three passes above five thousand metres — Kongma-La, Cho-La and Renjo-La, a night above the clouds at Gorak Shep and Everest Base Camp itself. Four eight-thousanders from a single viewpoint.',
-        program: [
-          { day: 'Day 1', text: 'Arrival in Kathmandu. Gear check, meet the group.' },
-          { day: 'Day 2', text: 'Flight to Lukla (2,840 m), walk to Phakding along the Dudh Kosi river.' },
-          { day: 'Day 3', text: 'The climb to Namche Bazaar (3,440 m) — the Sherpa capital.' },
-          { day: 'Day 4', text: 'Acclimatization day: a viewpoint with the first sight of Everest.' },
-          { day: 'Day 5', text: 'Trek to Tengboche (3,860 m) — the region’s main monastery.' },
-          { day: 'Day 6', text: 'Trek to Dingboche (4,410 m) beneath the wall of Ama Dablam.' },
-          { day: 'Day 7', text: 'Acclimatization: a day climb to Nangkartshang (5,083 m).' },
-          { day: 'Day 8', text: 'Trek to Chukhung (4,730 m). Evening group meeting.' },
-          { day: 'Day 9', text: 'First pass — Kongma-La (5,535 m). Descent to Lobuche.' },
-          { day: 'Day 10', text: 'Trek to Gorak Shep (5,140 m), sunset on Kala Patthar (5,644 m).' },
-          { day: 'Day 11', text: 'Everest Base Camp (5,364 m) — the heart of the route.' },
-          { day: 'Day 12', text: 'Trek to Dzongla at the foot of the second pass.' },
-          { day: 'Day 13', text: 'Cho-La pass (5,420 m), descent into the Gokyo valley.' },
-          { day: 'Day 14', text: 'The turquoise Gokyo lakes. A quiet evening by the third lake.' },
-          { day: 'Day 15', text: 'The climb to Gokyo Ri (5,357 m): Everest, Lhotse, Makalu and Cho Oyu in one panorama.' },
-          { day: 'Day 16', text: 'Third pass — Renjo-La (5,360 m). Descent to Thame.' },
-          { day: 'Day 17', text: 'Back to Namche Bazaar. A hot shower and a celebratory dinner.' },
-          { day: 'Day 18', text: 'The long descent to Lukla. Final evening in the mountains.' },
-          { day: 'Day 19', text: 'Flight to Kathmandu, farewell dinner with the group.' },
-          { day: 'Day 20', text: 'Flight home.' },
+          'A three-pass trek to Everest Base Camp — for those ready to go further and challenge themselves. A route across the highest passes of the region, through silence, mountain air and a scale that makes you feel part of something infinite. Expect panoramas of Everest, Lhotse, Cho Oyu, Makalu and one of the world’s most beautiful mountains, Ama Dablam, the Sherpa capital of Namche Bazaar and trails where you hardly meet any crowds. This is a demanding trek: it suits those who have already trekked in Nepal or done other difficult routes elsewhere.',
+        highlights: [
+          'atmospheric Kathmandu with its very own rhythm',
+          'three Himalayan passes: Renjo-La (5,360 m), Cho-La (5,420 m), Kongma-La (5,535 m)',
+          'a small-plane flight to Lukla with Himalayan views — included in the price',
+          'Namche Bazaar — the Sherpa capital',
+          'the turquoise glacial lakes of Gokyo',
+          'fewer tourists, more silence',
+          'Sherpa villages and local monasteries',
+          'two nights in a hotel in Namche Bazaar and two nights in a superior lodge in Gokyo',
+          'a visit to Everest Base Camp',
         ],
-        dates: [{ when: 'Apr 20 – May 9, 2027', note: 'open for booking' }],
+        program: [
+          { day: 'Day 1 · Kathmandu', text: 'We arrive in Nepal and meet in noisy, warm Kathmandu — a city where antiquity lives next to chaos. We check into the hotel, get to know each other and tune in for what lies ahead. We check the gear and buy anything missing in the tourist district of Thamel. If time allows — a walk through the streets past stupas and workshops. A shared dinner in the evening. Overnight at 1,400 m.' },
+          { day: 'Day 2 · Flight to Lukla, Phakding (2,640 m)', text: 'Early in the morning we drive to the airport and fly a small plane along the snow-capped ridges straight to Lukla (2,860 m), the gateway to Everest. After coffee we gather our spirits and hit the trail. The first walk is to the village of Phakding: the path winds between hills and villages, up and down, as it should in the Himalayas. The flight may depart from Ramechhap instead of Kathmandu — in that case we leave in the middle of the night; we will let you know the format in advance and act in the group’s interest and according to the weather. Overnight at 2,640 m.' },
+          { day: 'Day 3 · Namche Bazaar (3,440 m)', text: 'A full day — a long but incredibly beautiful walk into the heart of the Khumbu region: a winding trail among cedars and rhododendrons, villages with prayer wheels and colourful flags. Here we see the snow-capped peaks for the first time — and maybe Everest itself on the horizon. We cross the famous Hillary suspension bridge, named after Everest’s first summiteer. The second half of the day is the climb to Namche Bazaar, the Sherpa capital. The reward is a cosy town with cafés, bakeries, hot showers and views of snowy ridges. Overnight at 3,440 m.' },
+          { day: 'Day 4 · Thamo (3,450 m)', text: 'A short walk — designed for gentle, careful acclimatization. We leave the busy streets of Namche and step off the “popular” trail to where it is quieter and more spacious. The path follows the slope through scattered villages and prayer stupas. Altitude is gained gradually, without sudden jumps — an important day for the body to adjust. We sleep in the tiny village of Thamo with a true Himalayan atmosphere and calm. Overnight at 3,450 m.' },
+          { day: 'Day 5 · Thame (3,820 m)', text: 'An unhurried gain of altitude to Thame, an ancient settlement on the old trading route to Tibet. A short but important day for acclimatization and immersion in Khumbu culture. Along the way: pine and rhododendron forests, mountain streams, village life scattered across the slopes. Thame is one of the oldest Sherpa settlements — many famous mountaineers were born here, and a working monastery stands above the village. We sleep in a simple but cosy lodge with views of the ridges. Overnight at 3,820 m.' },
+          { day: 'Day 6 · Lungden (4,380 m)', text: 'An important stage — we cross the 4,000-metre mark, moving towards the passes. The trail passes prayer flags and stupas, goes through forests and comes out into the alpine zone with views of the watersheds and ridges. The higher we go, the less greenery and the wider the horizons. Lungden is the first contact with thin air and harsher weather. Overnight at 4,380 m.' },
+          { day: 'Day 7 · Acclimatization in Lungden (4,380 m)', text: 'We stay in place — before a big day we need to recover and adapt to the altitude. During the day we make a side trip to a viewpoint above 5,000 metres: we walk slowly, at a calm pace, with incredible views of the massifs and the valley we came through. In the evening we return to the village: rest, warm tea, thermoses, getting ready for the morning. Tomorrow is the first big pass.' },
+          { day: 'Day 8 · Renjo-La pass (5,360 m)', text: 'One of the most impressive days of the route. We leave Lungden in the dark, the climb takes several hours — and from the pass one of the finest Himalayan panoramas opens up: the Gokyo lakes, the Ngozumpa glacier, the eight-thousanders Everest, Lhotse and Cho Oyu. Then a tricky descent over scree, partly over snow and stone steps. Below, Gokyo awaits — a high-altitude settlement by a turquoise lake and a comfortable lodge.' },
+          { day: 'Day 9 · Gokyo (4,750 m)', text: 'We stay in Gokyo to rest between two passes. An easy walk to the upper Gokyo lakes with a view of Cho Oyu.' },
+          { day: 'Day 10 · Dragnag (4,700 m)', text: 'A short but impressive crossing of the Ngozumpa glacier — the largest glacier in Nepal. We cross stone moraines and ice ridges. Early night: another pass tomorrow.' },
+          { day: 'Day 11 · Cho-La pass (5,420 m)', text: 'Another early start. The climb is gentle at first, up to the point where the impressive view of the pass opens. The final ascent is not easy, and neither is the descent. Then we walk along the valley with views of Cholatse — arguably the most striking sight of the day. Overnight in Dzongla (4,800 m).' },
+          { day: 'Day 12 · Gorak Shep (5,134 m)', text: 'In the morning we leave the village and approach the main trail to Everest Base Camp. A lunch stop in Lobuche, then on to Gorak Shep — the last settlement before the camp. The trail runs along the Khumbu glacier. In the evening we watch the sunset from the nearest hill.' },
+          { day: 'Day 13 · Everest Base Camp (5,360 m)', text: 'Early in the morning we walk to Base Camp — to the ice seracs of the Khumbu glacier, the best spectacle of all! Then we return to Gorak Shep and move on to Lobuche (4,950 m). Preparing for the next pass.' },
+          { day: 'Day 14 · Kongma-La pass (5,535 m)', text: 'The least popular pass and the wildest in feel. From Lobuche we first walk along a wide valley, then climb rocky slopes, pass the glacier and begin the steep ascent. The descent is technically easier but long. We finish in Chukhung (4,800 m) and take a well-earned rest — all the hard parts of the route are behind us!' },
+          { day: 'Day 15 · Pangboche (3,930 m)', text: 'Now only down, towards greenery and oxygen! Views of Ama Dablam accompany us most of the way. In Dingboche we drink great coffee in a real coffee house, then descend to Pangboche, where we visit an ancient monastery.' },
+          { day: 'Day 16 · Namche Bazaar (3,440 m)', text: 'The trail goes down through dense forests — we enjoy the warmth and the oxygen! In Namche all the comforts of civilization await. We sleep in the same cosy hotel.' },
+          { day: 'Day 17 · Lukla (2,820 m)', text: 'The final day of the trek. We walk unhurriedly, admiring the views, and stop at a stylish coffee house on the way. In the afternoon we arrive in Lukla.' },
+          { day: 'Day 18 · Reserve day', text: 'A buffer in case of bad weather, flight rescheduling or other circumstances.' },
+          { day: 'Day 19 · Kathmandu', text: 'Early in the morning we fly from Lukla to Kathmandu and dive back into its rhythm. Time for delicious food and to celebrate the end of the trek! The flight may land in Ramechhap — in that case we drive from Ramechhap by transfer.' },
+          { day: 'Day 20 · Flight home', text: 'The day has come when we have to head home. We say goodbye neither to each other nor to the Himalayas. Until we meet again — may the spirit of adventure always be with you.' },
+        ],
+        guide: {
+          name: 'Olesya Berendeeva',
+          role: 'Guide, route designer',
+          text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
+          instagram: 'https://www.instagram.com/oberendeeva',
+        },
+        dates: [{ when: '20.04.2027 – 09.05.2027', note: 'open for booking' }],
         includes: [
-          'Guide and psychologist with the group',
-          'Kathmandu–Lukla–Kathmandu flights',
-          'Sagarmatha National Park and Khumbu region permits',
-          'Teahouse nights, group porters',
-          'Evening group meetings',
+          'two nights in a Kathmandu hotel, double occupancy',
+          'airport pick-up and drop-off in Kathmandu',
+          'Kathmandu–Lukla–Kathmandu or Ramechhap–Lukla–Ramechhap plane tickets + transfer',
+          'local guide',
+          'one porter for every two participants',
+          'a duffel bag for each participant',
+          'all accommodation on the trek in good lodges, double occupancy',
+          'two nights in a hotel in Namche and a superior lodge in Gokyo, double occupancy',
+          'Sagarmatha National Park permit',
+          'professional guide services',
+          'group first-aid kit',
+        ],
+        excludes: [
+          'international flight',
+          'insurance for all days of the trip with helicopter evacuation — mandatory!',
+          'Nepal visa — $50',
+          'meals in Kathmandu and on the trek (including internet, showers and battery charging) — $35–50 per day',
+          'tips for porters and the local guide',
+          'extra nights in Kathmandu if needed',
+          'single occupancy',
+          'any other expenses not listed in the program',
+        ],
+        booking: [
+          'Fill in the form — and we will get back to you within one business day.',
+          'To book a place in the group, a prepayment is required. We will send you the contract and an invoice, after which you can pay a $500 deposit in a convenient way.',
+          'The remaining amount can be paid in cash in Kathmandu. Instalment payment is available if needed.',
+          'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
+        ],
+        discounts: [
+          'Early bird price — $2,290 until Dec 31, 2026',
+          'Wild Soul Club: special terms for those who travel with us again and bring friends',
+          'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
+          'Coming as a group of 5 or more? We will prepare special terms for the group',
+          'Coming back to us: second trip — $50 off, third trip — $100 off, beyond that — special pleasant bonuses',
+          'Maximum discount — $100. Discounts do not stack',
+        ],
+        features: [
+          'This is a demanding trek: many days above 4,000 m. The route suits those who have already done multi-day high-altitude treks',
+          'Accommodation on the trek in lodges, two people per room',
+          'Standard trekking gear is required',
+          'Depending on the weather, the group’s condition and other circumstances, the guide may change the route',
         ],
       },
       {
