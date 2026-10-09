@@ -111,6 +111,8 @@ export interface PageContent {
       namePlaceholder: string
       telegram: string
       telegramPlaceholder: string
+      telegramNick: string
+      telegramNickPlaceholder: string
       email: string
       emailPlaceholder: string
       comment: string
@@ -741,8 +743,10 @@ export const content: Record<'ru' | 'en', PageContent> = {
       form: {
         name: 'Имя и фамилия',
         namePlaceholder: 'Как к вам обращаться',
-        telegram: 'Номер Telegram',
-        telegramPlaceholder: '+7 ___ ___-__-__',
+        telegram: 'Напишите номер Telegram для связи',
+        telegramPlaceholder: 'Ваш номер телефона',
+        telegramNick: 'Напишите никнейм в Telegram для связи',
+        telegramNickPlaceholder: '@username',
         email: 'Email',
         emailPlaceholder: 'you@example.com',
         comment: 'Доп. комментарии',
@@ -1368,8 +1372,10 @@ export const content: Record<'ru' | 'en', PageContent> = {
       form: {
         name: 'Full name',
         namePlaceholder: 'What should we call you',
-        telegram: 'Telegram number',
-        telegramPlaceholder: '+1 ___ ___-__-__',
+        telegram: 'Your Telegram number for contact',
+        telegramPlaceholder: 'Your phone number',
+        telegramNick: 'Your Telegram username for contact',
+        telegramNickPlaceholder: '@username',
         email: 'Email',
         emailPlaceholder: 'you@example.com',
         comment: 'Additional comments',
