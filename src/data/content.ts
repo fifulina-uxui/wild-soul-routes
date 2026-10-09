@@ -614,10 +614,10 @@ export const content: Record<'ru' | 'en', PageContent> = {
       text: 'Мы не передаём туры подрядчикам — ведём группы сами.',
       items: [
         {
-          initials: 'ЮФ',
-          name: 'Юлия Фёдорова',
-          role: 'Основатель, автор маршрутов',
-          text: '14 лет в экспедиционном туризме. Прошла Ликийскую тропу, трижды была у Эвереста.',
+          initials: 'ОБ',
+          name: 'Олеся Берендеева',
+          role: 'Гид, автор маршрутов',
+          text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://instagram.com/wildsoulroutes',
         },
         {
@@ -1159,10 +1159,10 @@ export const content: Record<'ru' | 'en', PageContent> = {
       text: 'We never hand tours to contractors — we lead the groups ourselves.',
       items: [
         {
-          initials: 'YF',
-          name: 'Yulia Fyodorova',
-          role: 'Founder, route designer',
-          text: '14 years in expedition travel. Hiked the Lycian Way and stood before Everest three times.',
+          initials: 'OB',
+          name: 'Olesya Berendeeva',
+          role: 'Guide, route designer',
+          text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://instagram.com/wildsoulroutes',
         },
         {
