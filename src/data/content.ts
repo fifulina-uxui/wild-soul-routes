@@ -623,8 +623,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
         {
           initials: 'АВ',
           name: 'Виктория Анисимова',
-          role: 'Клинический и семейный психолог, бизнес-тренер',
-          text: 'Ведущая групповых программ. Мама, путешественница, неискоренимый оптимист. Без магии, мистики и эзотерики разбираю закономерности работы психологических механизмов. Помогаю проходить жизненные кризисы, стимулирую расти в доходе и достижениях.',
+          role: 'Клинический и семейный психолог',
+          text: 'Клинический и семейный психолог, бизнес-тренер, ведущая групповых программ. Мама, путешественница, неискоренимый оптимист. Без магии, мистики и эзотерики разбираю закономерности работы психологических механизмов. Помогаю проходить жизненные кризисы, стимулирую расти в доходе и достижениях.',
           instagram: 'https://instagram.com/wildsoulroutes',
         },
       ],
@@ -1168,8 +1168,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
         {
           initials: 'VA',
           name: 'Viktoria Anisimova',
-          role: 'Clinical and family psychologist, business trainer',
-          text: 'Group program facilitator. Mother, traveller, incurable optimist. Without magic, mysticism or esotericism, I unpack how psychological mechanisms work. I help people move through life crises and grow in income and achievements.',
+          role: 'Clinical and family psychologist',
+          text: 'Clinical and family psychologist, business trainer, group program facilitator. Mother, traveller, incurable optimist. Without magic, mysticism or esotericism, I unpack how psychological mechanisms work. I help people move through life crises and grow in income and achievements.',
           instagram: 'https://instagram.com/wildsoulroutes',
         },
       ],
