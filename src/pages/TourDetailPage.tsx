@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Navigate, useParams } from 'react-router'
 import { asset } from '../lib/asset'
 import Subpage from './Subpage'
@@ -20,9 +20,15 @@ const spanClass: Record<number, string> = {
 function TourGallery({ images, alt }: { images: string[]; alt: string }) {
   const [page, setPage] = useState(0)
   const [open, setOpen] = useState<number | null>(null)
+  const topRef = useRef<HTMLDivElement>(null)
   const pages = Math.ceil(images.length / PER_PAGE)
   const shown = images.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)
   const { t } = useLang()
+
+  const goToPage = (next: number) => {
+    setPage(next)
+    topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   useEffect(() => {
     if (open === null) return
@@ -46,7 +52,7 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
     'absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[rgb(255_255_255/12%)] text-[#fafafa] backdrop-blur-md transition-colors duration-200 hover:bg-[rgb(255_255_255/25%)] disabled:pointer-events-none disabled:opacity-30'
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 scroll-mt-24" ref={topRef}>
       <div className="grid grid-cols-2 auto-rows-[140px] gap-2 sm:auto-rows-[220px] sm:grid-cols-6 sm:gap-3">
         {shown.map((img, i) => (
           <button
@@ -67,7 +73,7 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
       <div className="mt-6 flex items-center justify-between">
         <button
           type="button"
-          onClick={() => setPage((v) => Math.max(0, v - 1))}
+          onClick={() => goToPage(Math.max(0, page - 1))}
           disabled={page === 0}
           className={pagerBtn}
         >
@@ -78,7 +84,7 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
         </p>
         <button
           type="button"
-          onClick={() => setPage((v) => Math.min(pages - 1, v + 1))}
+          onClick={() => goToPage(Math.min(pages - 1, page + 1))}
           disabled={page === pages - 1}
           className={pagerBtn}
         >
