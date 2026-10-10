@@ -110,7 +110,7 @@ export default function Tours() {
                           {tour.price}
                         </span>
                       </dd>
-                      <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">
+                      <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">
                         {t.tours.meta.priceEarly}
                       </p>
                     </div>

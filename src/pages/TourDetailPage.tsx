@@ -227,7 +227,7 @@ export default function TourDetailPage() {
                     {tour.price}
                   </span>
                 </dd>
-                <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">{t.tours.meta.priceEarly}</p>
+                <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">{t.tours.meta.priceEarly}</p>
               </div>
               <div>
                 <dt className={metaLabel}>{t.tours.meta.crew}</dt>
