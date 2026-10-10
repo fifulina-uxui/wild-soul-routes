@@ -151,7 +151,7 @@ export default function Header() {
 
         <div className="px-6 pb-8 md:px-8">
           <Link
-            to="/contacts"
+            to="/contacts#lead"
             className={`flex min-h-[48px] w-full items-center justify-center ${ctaClass}`}
           >
             {t.cta.lead}
