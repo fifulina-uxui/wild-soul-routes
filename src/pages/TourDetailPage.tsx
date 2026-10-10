@@ -210,10 +210,10 @@ export default function TourDetailPage() {
               {tour.title}
             </h1>
 
-            <div className="mt-8 grid max-w-[1100px] grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+            <div className="mt-8 grid max-w-[1100px] grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-3 lg:flex lg:items-start lg:justify-between lg:gap-10">
               <div>
                 <dt className={metaLabel}>{t.tours.meta.start}</dt>
-                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
+                <dd className="mt-1 whitespace-pre-line text-[18px] leading-[26px] text-[#fafafa]">{tour.start.replace(' – ', '\n')}</dd>
               </div>
               <div>
                 <dt className={metaLabel}>{t.tours.meta.days}</dt>
@@ -235,7 +235,7 @@ export default function TourDetailPage() {
                   {t.tours.crewNames[tour.crew]}
                 </dd>
               </div>
-              <div className="col-span-2 mt-4 flex sm:col-span-3 lg:col-span-1 lg:mt-0 lg:justify-end">
+              <div className="col-span-2 mt-4 flex sm:col-span-3 lg:mt-0">
                 <a href="#lead" className={`${ctaPrimary} w-full sm:w-auto`}>
                   {t.tourDetail.signup}
                 </a>
