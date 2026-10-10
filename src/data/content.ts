@@ -884,9 +884,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [
-          { when: 'Скоро', note: '' }],
-        ],
+        dates: [{ when: 'Скоро', note: '' }],
         includes: [
           'Сопровождение гида и психолога',
           'Проживание: бутик-отели в Кейптауне',
@@ -1848,9 +1846,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [
-          { when: 'Coming soon', note: '' }],
-        ],
+        dates: [{ when: 'Coming soon', note: '' }],
         includes: [
           'Guide and psychologist with the group',
           'Accommodation: boutique hotels in Cape Town',
