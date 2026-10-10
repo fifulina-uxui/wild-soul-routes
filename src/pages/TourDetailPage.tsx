@@ -418,7 +418,7 @@ export default function TourDetailPage() {
         aside={
           detail.features ? (
             <div>
-              <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+              <h2 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
                 {t.tourDetail.features}
               </h2>
               <ul className="mt-8 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
