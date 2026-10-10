@@ -264,7 +264,7 @@ export default function TourDetailPage() {
                   className="flex items-baseline justify-between gap-4 border-b border-[rgb(255_255_255/15%)] py-5"
                 >
                   <p className="text-[18px] leading-[26px] text-[#fafafa]">{date.when}</p>
-                  <p className={metaLabel}>{date.note}</p>
+                  <p className="text-[12px] leading-4 text-[#fafafa]">{date.note}</p>
                 </div>
               ))}
             </div>
