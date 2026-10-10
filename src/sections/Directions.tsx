@@ -41,7 +41,7 @@ export default function Directions() {
                   to={`/tours?c=${d.name}`}
                   className="flex items-baseline justify-between gap-4 py-5"
                 >
-                  <span className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+                  <span className="text-[24px] font-bold leading-[30px] text-[#fafafa] transition-transform duration-200 group-hover:translate-x-1">
                     {d.name}
                   </span>
                   <span className="text-[14px] leading-5 text-[rgb(250_250_250/55%)] transition-colors duration-200 group-hover:text-[#fafafa]">
