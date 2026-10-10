@@ -114,7 +114,7 @@ export default function ToursPage() {
                     {tour.description}
                   </p>
 
-                  <div className="mt-8 grid grid-cols-2 items-center gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+                  <div className="mt-8 grid grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.start}
