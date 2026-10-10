@@ -9,6 +9,7 @@ export interface Tour {
   start: string
   highlight: string
   image: string
+  crew: 'guide' | 'psych' | 'both'
 }
 
 export interface TourDetail {
@@ -38,7 +39,8 @@ export interface PageContent {
   tours: {
     label: string
     heading: string
-    meta: { days: string; price: string; priceEarly: string; start: string; highlight: string }
+    meta: { days: string; price: string; priceEarly: string; start: string; highlight: string; crew: string }
+    crewNames: { guide: string; psych: string; both: string }
     items: Tour[]
   }
   toursPage: {
@@ -161,7 +163,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
-      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное' },
+      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'С кем тур' },
+      crewNames: { guide: 'Гид', psych: 'Психолог', both: 'Гид + психолог' },
       items: [
         {
           id: 'tibet',
@@ -175,6 +178,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '28.05.2027 – 12.06.2027',
           highlight: 'Эверест',
           image: 'images/tour-tibet.jpg',
+          crew: 'both',
         },
         {
           id: 'nepal',
@@ -188,6 +192,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '08.04.2027 – 17.04.2027',
           highlight: 'Катманду',
           image: 'images/tour-nepal.jpg',
+          crew: 'both',
         },
         {
           id: 'nepal-bhutan',
@@ -201,6 +206,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '27.03.2027 – 04.04.2027',
           highlight: 'Тигриное гнездо',
           image: 'images/tour-bhutan.jpg',
+          crew: 'both',
         },
         {
           id: 'nepal-tour',
@@ -214,6 +220,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '21.10.2026 – 28.10.2026',
           highlight: 'Нагаркот',
           image: 'images/tour-nepal.jpg',
+          crew: 'guide',
         },
         {
           id: 'nepal-trek',
@@ -227,6 +234,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '20.04.2027 – 09.05.2027',
           highlight: 'Эверест',
           image: 'images/tour-everest.jpg',
+          crew: 'guide',
         },
         {
           id: 'georgia',
@@ -240,6 +248,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '08.06.2027 – 13.06.2027',
           highlight: 'Кахетия',
           image: 'images/tour-georgia.jpg',
+          crew: 'both',
         },
       ],
     },
@@ -704,7 +713,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Routes',
       heading: 'Upcoming tours',
-      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight' },
+      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Led by' },
+      crewNames: { guide: 'Guide', psych: 'Psychologist', both: 'Guide + psychologist' },
       items: [
         {
           id: 'tibet',
@@ -718,6 +728,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '28.05.2027 – 12.06.2027',
           highlight: 'Everest',
           image: 'images/tour-tibet.jpg',
+          crew: 'both',
         },
         {
           id: 'nepal',
@@ -731,6 +742,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '08.04.2027 – 17.04.2027',
           highlight: 'Kathmandu',
           image: 'images/tour-nepal.jpg',
+          crew: 'both',
         },
         {
           id: 'nepal-bhutan',
@@ -744,6 +756,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '27.03.2027 – 04.04.2027',
           highlight: 'Tiger’s Nest',
           image: 'images/tour-bhutan.jpg',
+          crew: 'both',
         },
         {
           id: 'nepal-tour',
@@ -757,6 +770,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '21.10.2026 – 28.10.2026',
           highlight: 'Nagarkot',
           image: 'images/tour-nepal.jpg',
+          crew: 'guide',
         },
         {
           id: 'nepal-trek',
@@ -770,6 +784,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '20.04.2027 – 09.05.2027',
           highlight: 'Everest',
           image: 'images/tour-everest.jpg',
+          crew: 'guide',
         },
         {
           id: 'georgia',
@@ -783,6 +798,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           start: '08.06.2027 – 13.06.2027',
           highlight: 'Kakheti',
           image: 'images/tour-georgia.jpg',
+          crew: 'both',
         },
       ],
     },
