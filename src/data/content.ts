@@ -557,11 +557,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
       subtitle: 'Мы работаем только с регионами, которые знаем лично. Каждое направление — это проверенные гиды, понятная логистика и маршруты, которые мы регулярно обновляем.',
       listLabel: 'Все регионы',
       cards: [
-        { country: 'Тибет', text: 'Высокогорье, монастыри и кора вокруг священного Кайласа.', image: 'images/tour-tibet.jpg' },
-        { country: 'Непал', text: 'Ступы Катманду и рассветы над Аннапурной.', image: 'images/tour-nepal.jpg' },
-        { country: 'Бутан', text: 'Дзонги, перевал Дочу-Ла и монастырь Такцанг на скале.', image: 'images/tour-bhutan.jpg' },
-        { country: 'Грузия', text: 'Кахетия, Сванетия и Военно-грузинская дорога.', image: 'images/tour-georgia.jpg' },
-        { country: 'ЮАР', text: 'Кейптаун, сафари и мыс Доброй Надежды.', image: 'images/tour-capetown.jpg' },
+        { country: 'Тибет', text: 'Высокогорье, древние монастыри и кора вокруг священного Кайласа. Эверест с северной стороны и города, где время идёт иначе. Маршруты для тех, кто готов к высоте и тишине.', image: 'images/tour-tibet.jpg' },
+        { country: 'Непал', text: 'Ступы и храмы Катманду, рассветы над Аннапурной и джунгли Читвана. Треки к базовому лагерю Эвереста и спокойные экскурсионные маршруты. Страна, куда мы возвращаемся каждый год.', image: 'images/tour-nepal.jpg' },
+        { country: 'Бутан', text: 'Дзонги, перевал Дочу-Ла и монастырь Такцанг на скале. Гималайские долины и деревни, где массовый туризм ещё не изменил уклад жизни. Самое закрытое королевство Азии — с нашими проверенными гидами.', image: 'images/tour-bhutan.jpg' },
+        { country: 'Грузия', text: 'Кахетия, Сванетия и Военно-грузинская дорога. Семейные винодельни, горные башни и застолья, куда зовут только своих. Гастрономические маршруты вдали от туристических мест.', image: 'images/tour-georgia.jpg' },
+        { country: 'ЮАР', text: 'Кейптаун и Столовая гора, сафари и мыс Доброй Надежды. Пингвины на Боулдерс-Бич и винные долины Стелленбоша. Десять дней на юго-западной оконечности Африки.', image: 'images/tour-capetown.jpg' },
       ],
     },
     directions: {
@@ -1148,11 +1148,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
       subtitle: 'We only work in regions we know first-hand. Every destination means trusted guides, clear logistics and routes we update regularly.',
       listLabel: 'All regions',
       cards: [
-        { country: 'Tibet', text: 'Highlands, monasteries and the kora around sacred Kailash.', image: 'images/tour-tibet.jpg' },
-        { country: 'Nepal', text: 'The stupas of Kathmandu and sunrises over Annapurna.', image: 'images/tour-nepal.jpg' },
-        { country: 'Bhutan', text: 'Dzongs, the Dochu-La pass and the Tiger’s Nest on a cliff.', image: 'images/tour-bhutan.jpg' },
-        { country: 'Georgia', text: 'Kakheti, Svaneti and the Georgian Military Highway.', image: 'images/tour-georgia.jpg' },
-        { country: 'South Africa', text: 'Cape Town, safaris and the Cape of Good Hope.', image: 'images/tour-capetown.jpg' },
+        { country: 'Tibet', text: 'Highlands, ancient monasteries and the kora around sacred Kailash. Everest from the north side and cities where time moves differently. Routes for those ready for altitude and silence.', image: 'images/tour-tibet.jpg' },
+        { country: 'Nepal', text: 'The stupas and temples of Kathmandu, sunrises over Annapurna and the jungles of Chitwan. Treks to Everest Base Camp and relaxed cultural routes. A country we return to every year.', image: 'images/tour-nepal.jpg' },
+        { country: 'Bhutan', text: 'Dzongs, the Dochu-La pass and the Tiger’s Nest on a cliff. Himalayan valleys and villages untouched by mass tourism. Asia’s most closed kingdom — with our trusted guides.', image: 'images/tour-bhutan.jpg' },
+        { country: 'Georgia', text: 'Kakheti, Svaneti and the Georgian Military Highway. Family wineries, mountain towers and feasts reserved for friends. Gastronomic routes away from the tourist trail.', image: 'images/tour-georgia.jpg' },
+        { country: 'South Africa', text: 'Cape Town and Table Mountain, safaris and the Cape of Good Hope. Penguins at Boulders Beach and the wine valleys of Stellenbosch. Ten days at the south-western tip of Africa.', image: 'images/tour-capetown.jpg' },
       ],
     },
     directions: {
