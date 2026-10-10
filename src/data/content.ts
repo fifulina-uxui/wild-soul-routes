@@ -345,7 +345,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '28 мая – 12 июня 2027', note: 'набор открыт' }],
+        dates: [{ when: '28.05.2027 – 12.06.2027', note: 'набор открыт' }],
         includes: [
           'Сопровождение гида и психолога всю дорогу',
           'Пермиты на Тибет и визовая поддержка',
@@ -431,7 +431,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '8–17 апреля 2027', note: 'набор открыт' }],
+        dates: [{ when: '08.04.2027 – 17.04.2027', note: 'набор открыт' }],
         includes: [
           'Сопровождение гида и психолога',
           'Проживание в отелях с завтраками',
@@ -516,7 +516,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '27 марта – 4 апреля 2027', note: 'набор открыт' }],
+        dates: [{ when: '27.03.2027 – 04.04.2027', note: 'набор открыт' }],
         includes: [
           'Сопровождение гида и психолога',
           'Виза в Бутан и сбор SDF',
@@ -601,8 +601,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '21–28 октября 2026', note: 'набор открыт' },
-          { when: '7–14 марта 2027', note: 'набор открыт' },
+          { when: '21.10.2026 – 28.10.2026', note: 'набор открыт' },
+          { when: '07.03.2027 – 14.03.2027', note: 'набор открыт' },
         ],
         includes: [
           'Сопровождение гида и психолога',
@@ -788,8 +788,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '8–13 июня 2027', note: 'набор открыт' },
-          { when: '19–24 сентября 2027', note: 'осталось 5 мест' },
+          { when: '08.06.2027 – 13.06.2027', note: 'набор открыт' },
+          { when: '19.09.2027 – 24.09.2027', note: 'осталось 5 мест' },
         ],
         includes: [
           'Сопровождение гида и психолога',
@@ -877,7 +877,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '10–19 сентября 2027', note: 'набор открыт' },
+          { when: '10.09.2027 – 19.09.2027', note: 'набор открыт' },
         ],
         includes: [
           'Сопровождение гида и психолога',
@@ -1302,7 +1302,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: 'May 28 – Jun 12, 2027', note: 'open for booking' }],
+        dates: [{ when: '28.05.2027 – 12.06.2027', note: 'open for booking' }],
         includes: [
           'Guide and psychologist with the group throughout',
           'Tibet permits and visa support',
@@ -1388,7 +1388,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: 'Apr 8–17, 2027', note: 'open for booking' }],
+        dates: [{ when: '08.04.2027 – 17.04.2027', note: 'open for booking' }],
         includes: [
           'Guide and psychologist with the group',
           'Hotel accommodation with breakfasts',
@@ -1473,7 +1473,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: 'Mar 27 – Apr 4, 2027', note: 'open for booking' }],
+        dates: [{ when: '27.03.2027 – 04.04.2027', note: 'open for booking' }],
         includes: [
           'Guide and psychologist with the group',
           'Bhutan visa and SDF fee',
@@ -1558,8 +1558,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: 'Oct 21–28, 2026', note: 'open for booking' },
-          { when: 'Mar 7–14, 2027', note: 'open for booking' },
+          { when: '21.10.2026 – 28.10.2026', note: 'open for booking' },
+          { when: '07.03.2027 – 14.03.2027', note: 'open for booking' },
         ],
         includes: [
           'Guide and psychologist with the group',
@@ -1745,8 +1745,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: 'Jun 8–13, 2027', note: 'open for booking' },
-          { when: 'Sep 19–24, 2027', note: '5 spots left' },
+          { when: '08.06.2027 – 13.06.2027', note: 'open for booking' },
+          { when: '19.09.2027 – 24.09.2027', note: '5 spots left' },
         ],
         includes: [
           'Guide and psychologist with the group',
@@ -1834,7 +1834,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: 'Sep 10–19, 2027', note: 'open for booking' },
+          { when: '10.09.2027 – 19.09.2027', note: 'open for booking' },
         ],
         includes: [
           'Guide and psychologist with the group',

@@ -213,7 +213,7 @@ export default function TourDetailPage() {
             <div className="mt-8 grid max-w-[1100px] grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-3 lg:flex lg:items-start lg:justify-between lg:gap-10">
               <div>
                 <dt className={metaLabel}>{t.tours.meta.start}</dt>
-                <dd className="mt-1 whitespace-pre-line text-[18px] leading-[26px] text-[#fafafa]">{tour.start.replace(' – ', '\n')}</dd>
+                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
               </div>
               <div>
                 <dt className={metaLabel}>{t.tours.meta.days}</dt>
