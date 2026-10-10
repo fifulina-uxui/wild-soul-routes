@@ -163,7 +163,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
-      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию\ndо 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
+      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию\nдо 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
       crewNames: { guide: 'Гид', psych: 'Психолог', both: 'Гид + психолог' },
       items: [
         {
