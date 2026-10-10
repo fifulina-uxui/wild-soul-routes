@@ -31,7 +31,7 @@ export default function DirectionsPage() {
       </section>
 
       {/* Направления широкими полосами с фото — как туры */}
-      <div className="flex flex-col gap-4 px-4 pb-4 pt-8 md:px-6">
+      <div className="flex flex-col gap-4 px-4 pb-20 pt-8 md:px-6">
         {t.directionsPage.cards.map((card) => (
           <Reveal key={card.country}>
             <article className="group relative min-h-[55vh] overflow-hidden">
@@ -65,28 +65,6 @@ export default function DirectionsPage() {
             </article>
           </Reveal>
         ))}
-      </div>
-
-      {/* Все регионы списком */}
-      <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-20">
-        <Reveal>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-            {t.directionsPage.listLabel}
-          </h2>
-        </Reveal>
-        <Reveal className="mt-8">
-          <ul className="grid grid-cols-1 border-t border-[rgb(255_255_255/15%)] sm:grid-cols-2">
-            {t.directions.items.map((d) => (
-              <li
-                key={d.name}
-                className="flex items-baseline justify-between gap-4 border-b border-[rgb(255_255_255/15%)] py-5 sm:odd:pr-8 sm:even:pl-8"
-              >
-                <span className="text-[24px] font-bold leading-[30px] text-[#fafafa]">{d.name}</span>
-                <span className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">{d.count}</span>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
       </div>
     </Subpage>
   )
