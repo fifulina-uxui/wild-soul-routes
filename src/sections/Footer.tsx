@@ -22,8 +22,8 @@ export default function Footer() {
                 {item.label}
               </Link>
             ))}
-            <Link to="/contacts" className="transition-colors duration-200 hover:text-[#fafafa]">
-              {t.lead.heading}
+            <Link to="/privacy" className="transition-colors duration-200 hover:text-[#fafafa]">
+              {lang === 'ru' ? 'Политика конфиденциальности' : 'Privacy policy'}
             </Link>
           </nav>
 
