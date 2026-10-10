@@ -250,6 +250,20 @@ export const content: Record<'ru' | 'en', PageContent> = {
           image: 'images/tour-georgia.jpg',
           crew: 'both',
         },
+        {
+          id: 'capetown',
+          coords: '33.92° S · 18.42° E — ЮАР',
+          title: 'ЮАР: Кейптаун и мыс Доброй Надежды',
+          description:
+            'Столовая гора над городом, пингвины на Боулдерс-Бич, винные долины Стелленбоша и дорога к самому юго-западному мысу Африки.',
+          days: '10 дней',
+          price: '3 490 $',
+          priceEarly: '3 390 $',
+          start: '10.09.2027 – 19.09.2027',
+          highlight: 'Столовая гора',
+          image: 'images/tour-capetown.jpg',
+          crew: 'both',
+        },
       ],
     },
     toursPage: {
@@ -510,6 +524,33 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'Вечерние встречи группы',
         ],
       },
+      {
+        id: 'capetown',
+        intro:
+          'Десять дней на юго-западной оконечности Африки: Кейптаун и Столовая гора, пингвины на Боулдерс-Бич, винные долины Стелленбоша и дорога к мысу Доброй Надежды. Маршрут без спешки — с океаном, горами и вечерними встречами группы.',
+        program: [
+          { day: 'День 1', text: 'Прилёт в Кейптаун. Набережная V&A Waterfront и первый ужин с видом на гавань.' },
+          { day: 'День 2', text: 'Подъём на Столовую гору. Панорамы города и океана, закат на Сигнальном холме.' },
+          { day: 'День 3', text: 'Кейп-Пойнт и мыс Доброй Надежды — самая юго-западная точка Африки.' },
+          { day: 'День 4', text: 'Боулдерс-Бич: колония очковых пингвинов. Вечер в районе Вудсток.' },
+          { day: 'День 5', text: 'Винные долины: Стелленбош и Франшхук, дегустации на семейных винодельнях.' },
+          { day: 'День 6', text: 'Свободный день в Кейптауне: пляжи Клифтона, рынки и кофейни.' },
+          { day: 'День 7', text: 'Побережье Чепменс-Пик — одна из красивейших дорог мира. Закат в Хаут-Бей.' },
+          { day: 'День 8', text: 'Ботанический сад Кирстенбош и район Бо-Каап с разноцветными домами.' },
+          { day: 'День 9', text: 'Сафари в заповеднике у Кейптауна: жирафы, зебры и антилопы на рассвете.' },
+          { day: 'День 10', text: 'Вылет домой.' },
+        ],
+        dates: [
+          { when: '10–19 сентября 2027', note: 'набор открыт' },
+        ],
+        includes: [
+          'Сопровождение гида и психолога',
+          'Проживание: бутик-отели в Кейптауне',
+          'Все трансферы и экскурсии по программе',
+          'Дегустации в Стелленбоше и сафари',
+          'Вечерние встречи группы',
+        ],
+      },
     ],
     directionsPage: {
       heading: 'Направления',
@@ -520,7 +561,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { country: 'Непал', text: 'Ступы Катманду и рассветы над Аннапурной.', image: 'images/tour-nepal.jpg' },
         { country: 'Бутан', text: 'Дзонги, перевал Дочу-Ла и монастырь Такцанг на скале.', image: 'images/tour-bhutan.jpg' },
         { country: 'Грузия', text: 'Кахетия, Сванетия и Военно-грузинская дорога.', image: 'images/tour-georgia.jpg' },
-        { country: 'ЮАР', text: 'Кейптаун, сафари и мыс Доброй Надежды.', image: 'images/hero.jpg' },
+        { country: 'ЮАР', text: 'Кейптаун, сафари и мыс Доброй Надежды.', image: 'images/tour-capetown.jpg' },
       ],
     },
     directions: {
@@ -533,7 +574,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { name: 'Непал', count: '4 маршрута' },
         { name: 'Бутан', count: '1 маршрут' },
         { name: 'Грузия', count: '1 маршрут' },
-        { name: 'ЮАР', count: 'скоро' },
+        { name: 'ЮАР', count: '1 маршрут' },
       ],
     },
     why: {
@@ -800,6 +841,20 @@ export const content: Record<'ru' | 'en', PageContent> = {
           image: 'images/tour-georgia.jpg',
           crew: 'both',
         },
+        {
+          id: 'capetown',
+          coords: '33.92° S · 18.42° E — South Africa',
+          title: 'South Africa: Cape Town & the Cape of Good Hope',
+          description:
+            'Table Mountain above the city, penguins at Boulders Beach, the wine valleys of Stellenbosch and the road to Africa’s south-westernmost point.',
+          days: '10 days',
+          price: '$3,490',
+          priceEarly: '$3,390',
+          start: '10.09.2027 – 19.09.2027',
+          highlight: 'Table Mountain',
+          image: 'images/tour-capetown.jpg',
+          crew: 'both',
+        },
       ],
     },
     toursPage: {
@@ -1060,6 +1115,33 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'Evening group meetings',
         ],
       },
+      {
+        id: 'capetown',
+        intro:
+          'Ten days at the south-western tip of Africa: Cape Town and Table Mountain, penguins at Boulders Beach, the wine valleys of Stellenbosch and the road to the Cape of Good Hope. An unhurried route — with the ocean, the mountains and evening group meetings.',
+        program: [
+          { day: 'Day 1', text: 'Arrival in Cape Town. V&A Waterfront and the first dinner overlooking the harbour.' },
+          { day: 'Day 2', text: 'Ascent of Table Mountain. City and ocean panoramas, sunset from Signal Hill.' },
+          { day: 'Day 3', text: 'Cape Point and the Cape of Good Hope — the south-westernmost point of Africa.' },
+          { day: 'Day 4', text: 'Boulders Beach: the African penguin colony. Evening in Woodstock.' },
+          { day: 'Day 5', text: 'Wine country: Stellenbosch and Franschhoek, tastings at family estates.' },
+          { day: 'Day 6', text: 'A free day in Cape Town: Clifton beaches, markets and coffee shops.' },
+          { day: 'Day 7', text: 'Chapman’s Peak Drive — one of the world’s most beautiful roads. Sunset at Hout Bay.' },
+          { day: 'Day 8', text: 'Kirstenbosch Botanical Garden and the colourful houses of Bo-Kaap.' },
+          { day: 'Day 9', text: 'Safari at a reserve near Cape Town: giraffes, zebras and antelopes at dawn.' },
+          { day: 'Day 10', text: 'Flight home.' },
+        ],
+        dates: [
+          { when: 'Sep 10–19, 2027', note: 'open for booking' },
+        ],
+        includes: [
+          'Guide and psychologist with the group',
+          'Accommodation: boutique hotels in Cape Town',
+          'All transfers and excursions of the program',
+          'Stellenbosch tastings and the safari',
+          'Evening group meetings',
+        ],
+      },
     ],
     directionsPage: {
       heading: 'Destinations',
@@ -1070,7 +1152,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { country: 'Nepal', text: 'The stupas of Kathmandu and sunrises over Annapurna.', image: 'images/tour-nepal.jpg' },
         { country: 'Bhutan', text: 'Dzongs, the Dochu-La pass and the Tiger’s Nest on a cliff.', image: 'images/tour-bhutan.jpg' },
         { country: 'Georgia', text: 'Kakheti, Svaneti and the Georgian Military Highway.', image: 'images/tour-georgia.jpg' },
-        { country: 'South Africa', text: 'Cape Town, safaris and the Cape of Good Hope.', image: 'images/hero.jpg' },
+        { country: 'South Africa', text: 'Cape Town, safaris and the Cape of Good Hope.', image: 'images/tour-capetown.jpg' },
       ],
     },
     directions: {
@@ -1083,7 +1165,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { name: 'Nepal', count: '4 routes' },
         { name: 'Bhutan', count: '1 route' },
         { name: 'Georgia', count: '1 route' },
-        { name: 'South Africa', count: 'coming soon' },
+        { name: 'South Africa', count: '1 route' },
       ],
     },
     why: {
