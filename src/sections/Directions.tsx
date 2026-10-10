@@ -45,7 +45,7 @@ export default function Directions() {
                     {d.name}
                   </span>
                   <span className="text-[14px] leading-5 text-[rgb(250_250_250/55%)] transition-colors duration-200 group-hover:text-[#fafafa]">
-                    {d.count} →
+                    {d.count}
                   </span>
                 </Link>
               </li>
