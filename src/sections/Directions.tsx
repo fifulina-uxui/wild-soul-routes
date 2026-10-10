@@ -35,14 +35,19 @@ export default function Directions() {
             {t.directions.items.map((d) => (
               <li
                 key={d.name}
-                className="group flex items-baseline justify-between gap-4 border-b border-[rgb(255_255_255/15%)] py-5 transition-colors duration-200 hover:border-[#fafafa] sm:odd:border-r sm:odd:pr-8 sm:even:pl-8"
+                className="group border-b border-[rgb(255_255_255/15%)] transition-colors duration-200 hover:border-[#fafafa] sm:odd:border-r sm:odd:pr-8 sm:even:pl-8"
               >
-                <span className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
-                  {d.name}
-                </span>
-                <span className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                  {d.count}
-                </span>
+                <Link
+                  to={`/tours?c=${d.name}`}
+                  className="flex items-baseline justify-between gap-4 py-5"
+                >
+                  <span className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+                    {d.name}
+                  </span>
+                  <span className="text-[14px] leading-5 text-[rgb(250_250_250/55%)] transition-colors duration-200 group-hover:text-[#fafafa]">
+                    {d.count} →
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>

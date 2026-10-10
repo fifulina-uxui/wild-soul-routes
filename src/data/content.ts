@@ -74,7 +74,7 @@ export interface PageContent {
     heading: string
     text: string
     all: string
-    items: { name: string; count: string }[]
+    items: { name: string; count: string; slug: string }[]
   }
   directionsPage: {
     heading: string
@@ -570,11 +570,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
       text: 'Мы работаем только с регионами, которые знаем лично. Каждое направление — это проверенные гиды, понятная логистика и маршруты, которые мы регулярно обновляем.',
       all: 'Все направления',
       items: [
-        { name: 'Тибет', count: '1 маршрут' },
-        { name: 'Непал', count: '4 маршрута' },
-        { name: 'Бутан', count: '1 маршрут' },
-        { name: 'Грузия', count: '1 маршрут' },
-        { name: 'ЮАР', count: '1 маршрут' },
+        { name: 'Тибет', count: '1 маршрут', slug: 'tibet' },
+        { name: 'Непал', count: '4 маршрута', slug: 'nepal' },
+        { name: 'Бутан', count: '1 маршрут', slug: 'bhutan' },
+        { name: 'Грузия', count: '1 маршрут', slug: 'georgia' },
+        { name: 'ЮАР', count: '1 маршрут', slug: 'south-africa' },
       ],
     },
     why: {
@@ -1161,11 +1161,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
       text: 'We only work in regions we know first-hand. Every destination means trusted guides, clear logistics and routes we update regularly.',
       all: 'All destinations',
       items: [
-        { name: 'Tibet', count: '1 route' },
-        { name: 'Nepal', count: '4 routes' },
-        { name: 'Bhutan', count: '1 route' },
-        { name: 'Georgia', count: '1 route' },
-        { name: 'South Africa', count: '1 route' },
+        { name: 'Tibet', count: '1 route', slug: 'tibet' },
+        { name: 'Nepal', count: '4 routes', slug: 'nepal' },
+        { name: 'Bhutan', count: '1 route', slug: 'bhutan' },
+        { name: 'Georgia', count: '1 route', slug: 'georgia' },
+        { name: 'South Africa', count: '1 route', slug: 'south-africa' },
       ],
     },
     why: {
