@@ -934,7 +934,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'География',
       heading: 'Направления',
       text: 'Мы работаем только с регионами, которые знаем лично. Каждое направление — это проверенные гиды, понятная логистика и маршруты, которые мы регулярно обновляем.',
-      all: 'Все направления',
+      all: 'О направлениях',
       items: [
         { name: 'Тибет', count: '1 маршрут', slug: 'tibet' },
         { name: 'Непал', count: '4 маршрута', slug: 'nepal' },
@@ -1891,7 +1891,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Geography',
       heading: 'Destinations',
       text: 'We only work in regions we know first-hand. Every destination means trusted guides, clear logistics and routes we update regularly.',
-      all: 'All destinations',
+      all: 'About destinations',
       items: [
         { name: 'Tibet', count: '1 route', slug: 'tibet' },
         { name: 'Nepal', count: '4 routes', slug: 'nepal' },
