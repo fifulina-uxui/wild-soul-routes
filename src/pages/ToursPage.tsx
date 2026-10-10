@@ -114,7 +114,7 @@ export default function ToursPage() {
                     {tour.description}
                   </p>
 
-                  <div className="mt-8 grid grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+                  <div className="mt-8 grid grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:flex lg:items-start lg:justify-between lg:gap-10">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.start}
@@ -149,7 +149,7 @@ export default function ToursPage() {
                         {t.tours.crewNames[tour.crew]}
                       </dd>
                     </div>
-                    <div className="col-span-2 mt-4 flex lg:col-span-1 lg:mt-0 lg:justify-end">
+                    <div className="col-span-2 mt-4 flex lg:mt-0">
                       <Link
                         to={`/tours/${tour.id}`}
                         className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
