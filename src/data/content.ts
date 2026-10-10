@@ -10,6 +10,7 @@ export interface Tour {
   highlight: string
   image: string
   crew: 'guide' | 'psych' | 'both'
+  spots: string
 }
 
 export interface TourDetail {
@@ -179,6 +180,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Эверест',
           image: 'images/tour-tibet.jpg',
           crew: 'both',
+          spots: 'осталось 4 места',
         },
         {
           id: 'nepal',
@@ -193,6 +195,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Катманду',
           image: 'images/tour-nepal.jpg',
           crew: 'both',
+          spots: 'осталось 6 мест',
         },
         {
           id: 'nepal-bhutan',
@@ -207,6 +210,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Тигриное гнездо',
           image: 'images/tour-bhutan.jpg',
           crew: 'both',
+          spots: 'осталось 3 места',
         },
         {
           id: 'nepal-tour',
@@ -221,6 +225,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Нагаркот',
           image: 'images/tour-nepal.jpg',
           crew: 'guide',
+          spots: 'осталось 5 мест',
         },
         {
           id: 'nepal-trek',
@@ -235,6 +240,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Эверест',
           image: 'images/tour-everest.jpg',
           crew: 'guide',
+          spots: 'осталось 7 мест',
         },
         {
           id: 'georgia',
@@ -249,6 +255,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Кахетия',
           image: 'images/tour-georgia.jpg',
           crew: 'both',
+          spots: 'осталось 5 мест',
         },
         {
           id: 'capetown',
@@ -263,6 +270,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Столовая гора',
           image: 'images/tour-capetown.jpg',
           crew: 'both',
+          spots: 'осталось 8 мест',
         },
       ],
     },
@@ -345,7 +353,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '28.05.2027 – 12.06.2027', note: 'осталось 5 мест' }],
+        dates: [{ when: '28.05.2027 – 12.06.2027', note: 'осталось 4 места' }],
         includes: [
           'Сопровождение гида и психолога всю дорогу',
           'Пермиты на Тибет и визовая поддержка',
@@ -431,7 +439,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '08.04.2027 – 17.04.2027', note: 'осталось 5 мест' }],
+        dates: [{ when: '08.04.2027 – 17.04.2027', note: 'осталось 6 мест' }],
         includes: [
           'Сопровождение гида и психолога',
           'Проживание в отелях с завтраками',
@@ -516,7 +524,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '27.03.2027 – 04.04.2027', note: 'осталось 5 мест' }],
+        dates: [{ when: '27.03.2027 – 04.04.2027', note: 'осталось 3 места' }],
         includes: [
           'Сопровождение гида и психолога',
           'Виза в Бутан и сбор SDF',
@@ -601,7 +609,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '21.10.2026 – 28.10.2026', note: 'набор открыт' },
+          { when: '21.10.2026 – 28.10.2026', note: 'осталось 5 мест' },
           { when: '07.03.2027 – 14.03.2027', note: 'набор открыт' },
         ],
         includes: [
@@ -699,7 +707,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '20.04.2027 – 09.05.2027', note: 'осталось 5 мест' }],
+        dates: [{ when: '20.04.2027 – 09.05.2027', note: 'осталось 7 мест' }],
         includes: [
           'две ночи в отеле в Катманду, размещение двухместное',
           'встреча и проводы в аэропорту Катманду',
@@ -877,7 +885,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '10.09.2027 – 19.09.2027', note: 'осталось 5 мест' },
+          { when: '10.09.2027 – 19.09.2027', note: 'осталось 8 мест' },
         ],
         includes: [
           'Сопровождение гида и психолога',
@@ -1136,6 +1144,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Everest',
           image: 'images/tour-tibet.jpg',
           crew: 'both',
+          spots: '4 spots left',
         },
         {
           id: 'nepal',
@@ -1150,6 +1159,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Kathmandu',
           image: 'images/tour-nepal.jpg',
           crew: 'both',
+          spots: '6 spots left',
         },
         {
           id: 'nepal-bhutan',
@@ -1164,6 +1174,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Tiger’s Nest',
           image: 'images/tour-bhutan.jpg',
           crew: 'both',
+          spots: '3 spots left',
         },
         {
           id: 'nepal-tour',
@@ -1178,6 +1189,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Nagarkot',
           image: 'images/tour-nepal.jpg',
           crew: 'guide',
+          spots: '5 spots left',
         },
         {
           id: 'nepal-trek',
@@ -1192,6 +1204,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Everest',
           image: 'images/tour-everest.jpg',
           crew: 'guide',
+          spots: '7 spots left',
         },
         {
           id: 'georgia',
@@ -1206,6 +1219,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Kakheti',
           image: 'images/tour-georgia.jpg',
           crew: 'both',
+          spots: '5 spots left',
         },
         {
           id: 'capetown',
@@ -1220,6 +1234,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Table Mountain',
           image: 'images/tour-capetown.jpg',
           crew: 'both',
+          spots: '8 spots left',
         },
       ],
     },
@@ -1302,7 +1317,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '28.05.2027 – 12.06.2027', note: '5 spots left' }],
+        dates: [{ when: '28.05.2027 – 12.06.2027', note: '4 spots left' }],
         includes: [
           'Guide and psychologist with the group throughout',
           'Tibet permits and visa support',
@@ -1388,7 +1403,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '08.04.2027 – 17.04.2027', note: '5 spots left' }],
+        dates: [{ when: '08.04.2027 – 17.04.2027', note: '6 spots left' }],
         includes: [
           'Guide and psychologist with the group',
           'Hotel accommodation with breakfasts',
@@ -1473,7 +1488,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '27.03.2027 – 04.04.2027', note: '5 spots left' }],
+        dates: [{ when: '27.03.2027 – 04.04.2027', note: '3 spots left' }],
         includes: [
           'Guide and psychologist with the group',
           'Bhutan visa and SDF fee',
@@ -1558,7 +1573,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '21.10.2026 – 28.10.2026', note: 'open for booking' },
+          { when: '21.10.2026 – 28.10.2026', note: '5 spots left' },
           { when: '07.03.2027 – 14.03.2027', note: 'open for booking' },
         ],
         includes: [
@@ -1656,7 +1671,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
         },
-        dates: [{ when: '20.04.2027 – 09.05.2027', note: '5 spots left' }],
+        dates: [{ when: '20.04.2027 – 09.05.2027', note: '7 spots left' }],
         includes: [
           'two nights in a Kathmandu hotel, double occupancy',
           'airport pick-up and drop-off in Kathmandu',
@@ -1834,7 +1849,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
         },
         dates: [
-          { when: '10.09.2027 – 19.09.2027', note: '5 spots left' },
+          { when: '10.09.2027 – 19.09.2027', note: '8 spots left' },
         ],
         includes: [
           'Guide and psychologist with the group',
