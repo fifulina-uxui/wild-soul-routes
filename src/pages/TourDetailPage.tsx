@@ -384,50 +384,42 @@ export default function TourDetailPage() {
         )}
       </section>
 
-      {/* Особенности тура */}
-      {detail.features && (
-        <section className={section}>
-          <Reveal>
-            <h2 className={h2}>{t.tourDetail.features}</h2>
-            <div className="max-w-[720px]">
-              <ListItems items={detail.features} />
-            </div>
-          </Reveal>
+      {/* Условия бронирования и скидки — два блока рядом */}
+      {(detail.booking || detail.discounts) && (
+        <section
+          className={`mx-auto grid max-w-[1200px] grid-cols-1 gap-14 px-5 pt-14 md:gap-10 md:px-8 md:pt-20 ${
+            detail.discounts ? 'md:grid-cols-2' : ''
+          }`}
+        >
+          {detail.booking && (
+            <Reveal>
+              <h2 className={h2}>{t.tourDetail.booking}</h2>
+              <ListItems items={detail.booking} />
+            </Reveal>
+          )}
+          {detail.discounts && (
+            <Reveal>
+              <h2 className={h2}>{t.tourDetail.discounts}</h2>
+              <ListItems items={detail.discounts} />
+            </Reveal>
+          )}
         </section>
       )}
 
-      {/* Форма заявки + условия бронирования слева */}
+      {/* Форма заявки + особенности тура слева */}
       <LeadForm
         submitLabel={t.tourDetail.signup}
         aside={
-          detail.booking || detail.discounts ? (
-            <div className="flex flex-col gap-8">
-              {detail.booking && (
-                <div>
-                  <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
-                    {t.tourDetail.booking}
-                  </h2>
-                  <div className="mt-5 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
-                    {detail.booking.map((p) => (
-                      <p key={p.slice(0, 48)} className="text-[16px] leading-6 text-[rgb(250_250_250/70%)]">
-                        {p}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {detail.discounts && (
-                <div>
-                  <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
-                    {t.tourDetail.discounts}
-                  </h2>
-                  <ul className="mt-5 flex flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-5 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                    {detail.discounts.map((d) => (
-                      <li key={d}>{d}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+          detail.features ? (
+            <div>
+              <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+                {t.tourDetail.features}
+              </h2>
+              <ul className="mt-5 flex flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-5 text-[16px] leading-6 text-[rgb(250_250_250/70%)]">
+                {detail.features.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
             </div>
           ) : undefined
         }

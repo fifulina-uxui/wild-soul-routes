@@ -1074,9 +1074,9 @@ export const content: Record<'ru' | 'en', PageContent> = {
       form: {
         name: 'Имя и фамилия',
         namePlaceholder: 'Как к вам обращаться',
-        telegram: 'Напишите номер Telegram для связи',
+        telegram: 'Номер Telegram для связи',
         telegramPlaceholder: 'Ваш номер телефона',
-        telegramNick: 'Напишите никнейм в Telegram для связи',
+        telegramNick: 'Никнейм в Telegram для связи',
         telegramNickPlaceholder: '@username',
         email: 'Email',
         emailPlaceholder: 'you@example.com',
