@@ -415,7 +415,7 @@ export default function TourDetailPage() {
               <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
                 {t.tourDetail.features}
               </h2>
-              <ul className="mt-5 flex flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-5 text-[16px] leading-6 text-[rgb(250_250_250/70%)]">
+              <ul className="mt-8 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
                 {detail.features.map((f) => (
                   <li key={f}>{f}</li>
                 ))}
