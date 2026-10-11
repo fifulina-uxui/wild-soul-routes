@@ -154,7 +154,7 @@ const metaLabel = 'text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(2
 const ctaPrimary =
   'inline-flex min-h-[48px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
 
-function StickyCta() {
+function StickyCta({ priceEarly, price }: { priceEarly: string; price: string }) {
   const { t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [leadInView, setLeadInView] = useState(false)
@@ -186,6 +186,12 @@ function StickyCta() {
     >
       <div className="mx-auto max-w-[1200px] px-4 md:px-8">
         <div className="floating-glass rounded-[8px] p-4">
+          <p className="mb-3 text-center text-[16px] font-bold leading-6 text-[#fafafa]">
+            {priceEarly}{' '}
+            <span className="text-[14px] font-normal leading-5 text-[rgb(250_250_250/45%)] line-through">
+              {price}
+            </span>
+          </p>
           <a href="#lead" className={`${ctaPrimary} w-full`}>
             {t.cta.lead}
           </a>
@@ -472,7 +478,7 @@ export default function TourDetailPage() {
         }
       />
 
-      <StickyCta />
+      <StickyCta priceEarly={tour.priceEarly} price={tour.price} />
     </Subpage>
   )
 }
