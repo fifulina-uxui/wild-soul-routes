@@ -6,7 +6,10 @@ import { Reveal } from './Reveal'
 const inputClass =
   'h-14 w-full rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none'
 
-export default function LeadForm({ submitLabel, aside }: { submitLabel?: string; aside?: ReactNode }) {
+const labelClass = 'mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]'
+
+/** Сама форма заявки без обёртки — используется и в секции, и в диалоге */
+export function LeadFormFields({ submitLabel }: { submitLabel?: string }) {
   const [sent, setSent] = useState(false)
   const { t } = useLang()
 
@@ -14,6 +17,86 @@ export default function LeadForm({ submitLabel, aside }: { submitLabel?: string;
     e.preventDefault()
     setSent(true)
   }
+
+  if (sent) {
+    return (
+      <div className="flex min-h-[280px] flex-col items-start justify-center gap-4 rounded-[16px] bg-[#121212] p-8">
+        <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+          {t.lead.success.title}
+        </h3>
+        <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+          {t.lead.success.text}
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={onSubmit} className="flex flex-col gap-4">
+      <div>
+        <label htmlFor="lead-name" className={labelClass}>
+          {t.lead.form.name}
+        </label>
+        <input id="lead-name" name="name" required placeholder={t.lead.form.namePlaceholder} className={inputClass} />
+      </div>
+      <div>
+        <label htmlFor="lead-telegram" className={labelClass}>
+          {t.lead.form.telegram}
+        </label>
+        <input
+          id="lead-telegram"
+          name="telegram"
+          type="text"
+          placeholder={t.lead.form.telegramPlaceholder}
+          className={inputClass}
+        />
+      </div>
+      <div>
+        <label htmlFor="lead-email" className={labelClass}>
+          {t.lead.form.email}
+        </label>
+        <input
+          id="lead-email"
+          name="email"
+          type="email"
+          required
+          placeholder={t.lead.form.emailPlaceholder}
+          className={inputClass}
+        />
+      </div>
+      <div>
+        <label htmlFor="lead-comment" className={labelClass}>
+          {t.lead.form.comment}
+        </label>
+        <textarea
+          id="lead-comment"
+          name="comment"
+          rows={3}
+          placeholder={t.lead.form.commentPlaceholder}
+          className="w-full resize-none rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 py-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none"
+        />
+      </div>
+      <button
+        type="submit"
+        className="mt-2 inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
+      >
+        {submitLabel ?? t.cta.submit}
+      </button>
+      <p className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
+        {t.lead.form.legal}{' '}
+        <Link
+          to="/privacy"
+          className="underline decoration-[rgb(250_250_250/40%)] underline-offset-4 transition-colors duration-200 hover:text-[#fafafa]"
+        >
+          {t.lead.form.legalLink}
+        </Link>
+      </p>
+    </form>
+  )
+}
+
+export default function LeadForm({ submitLabel, aside }: { submitLabel?: string; aside?: ReactNode }) {
+  const { t } = useLang()
 
   return (
     <section id="lead" className="bg-black">
@@ -42,77 +125,7 @@ export default function LeadForm({ submitLabel, aside }: { submitLabel?: string;
 
           <Reveal>
             <div id="lead-form" className="scroll-mt-24">
-            {sent ? (
-              <div className="flex min-h-[280px] flex-col items-start justify-center gap-4 rounded-[16px] bg-[#121212] p-8">
-                <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
-                  {t.lead.success.title}
-                </h3>
-                <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                  {t.lead.success.text}
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={onSubmit} className="flex flex-col gap-4">
-                <div>
-                  <label htmlFor="lead-name" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {t.lead.form.name}
-                  </label>
-                  <input id="lead-name" name="name" required placeholder={t.lead.form.namePlaceholder} className={inputClass} />
-                </div>
-                <div>
-                  <label htmlFor="lead-telegram" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {t.lead.form.telegram}
-                  </label>
-                  <input
-                    id="lead-telegram"
-                    name="telegram"
-                    type="text"
-                    placeholder={t.lead.form.telegramPlaceholder}
-                    className={inputClass}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lead-email" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {t.lead.form.email}
-                  </label>
-                  <input
-                    id="lead-email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder={t.lead.form.emailPlaceholder}
-                    className={inputClass}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lead-comment" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {t.lead.form.comment}
-                  </label>
-                  <textarea
-                    id="lead-comment"
-                    name="comment"
-                    rows={3}
-                    placeholder={t.lead.form.commentPlaceholder}
-                    className="w-full resize-none rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 py-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="mt-2 inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
-                >
-                  {submitLabel ?? t.cta.submit}
-                </button>
-                <p className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                  {t.lead.form.legal}{' '}
-                  <Link
-                    to="/privacy"
-                    className="underline decoration-[rgb(250_250_250/40%)] underline-offset-4 transition-colors duration-200 hover:text-[#fafafa]"
-                  >
-                    {t.lead.form.legalLink}
-                  </Link>
-                </p>
-              </form>
-            )}
+              <LeadFormFields submitLabel={submitLabel} />
             </div>
           </Reveal>
         </div>

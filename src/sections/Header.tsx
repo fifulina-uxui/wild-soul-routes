@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router'
+import { NavLink, useLocation } from 'react-router'
 import { useLang } from '../i18n'
+import { useLeadDialog } from './LeadDialog'
 import LangSwitcher from './LangSwitcher'
 import Logo from './Logo'
 
@@ -17,6 +18,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const { t } = useLang()
   const { pathname } = useLocation()
+  const openLead = useLeadDialog()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 160)
@@ -72,9 +74,9 @@ export default function Header() {
             <div className="hidden lg:block">
               <LangSwitcher />
             </div>
-            <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
+            <button type="button" onClick={() => openLead()} className={`hidden sm:inline-block ${ctaClass}`}>
               {t.cta.lead}
-            </Link>
+            </button>
             {burger('lg:hidden')}
           </div>
         </div>
@@ -104,9 +106,9 @@ export default function Header() {
               <div className="hidden md:block">
                 <LangSwitcher compact />
               </div>
-              <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
+              <button type="button" onClick={() => openLead()} className={`hidden sm:inline-block ${ctaClass}`}>
                 {t.cta.lead}
-              </Link>
+              </button>
               {burger('md:hidden')}
             </div>
           </div>
@@ -155,13 +157,16 @@ export default function Header() {
         </nav>
 
         <div className="px-6 pb-8 md:px-8">
-          <Link
-            to="/contacts#lead"
-            onClick={() => setOpen(false)}
+          <button
+            type="button"
+            onClick={() => {
+              setOpen(false)
+              openLead()
+            }}
             className={`flex min-h-[48px] w-full items-center justify-center ${ctaClass}`}
           >
             {t.cta.lead}
-          </Link>
+          </button>
         </div>
       </div>
     </>

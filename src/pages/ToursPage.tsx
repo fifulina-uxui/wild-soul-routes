@@ -4,6 +4,7 @@ import { Link, useSearchParams } from 'react-router'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { useLang } from '../i18n'
+import { useLeadDialog } from '../sections/LeadDialog'
 import { content, type PageContent } from '../data/content'
 
 const countriesOf = (dict: PageContent) =>
@@ -20,6 +21,7 @@ const countriesOf = (dict: PageContent) =>
 
 export default function ToursPage() {
   const { t, lang } = useLang()
+  const openLead = useLeadDialog()
   // Фильтр живёт в адресной строке: клик по стране меняет ?c=...,
   // поэтому URL и список не расходятся и переживают обновление страницы
   const [searchParams, setSearchParams] = useSearchParams()
@@ -186,12 +188,13 @@ export default function ToursPage() {
       <div className="mx-auto max-w-[1200px] px-5 pb-20 md:px-8">
         <Reveal>
           <div className="flex justify-center border-t border-[rgb(255_255_255/15%)] pt-10">
-            <Link
-              to="/contacts#lead"
+            <button
+              type="button"
+              onClick={() => openLead()}
               className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
             >
               {t.cta.lead}
-            </Link>
+            </button>
           </div>
         </Reveal>
       </div>

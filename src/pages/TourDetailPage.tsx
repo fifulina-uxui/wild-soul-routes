@@ -5,6 +5,7 @@ import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { BackButton } from '../components/BackButton'
 import LeadForm from '../sections/LeadForm'
+import { useLeadDialog } from '../sections/LeadDialog'
 import { useLang } from '../i18n'
 
 const PER_PAGE = 9
@@ -170,6 +171,7 @@ const ctaPrimary =
 
 function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: string; price: string }) {
   const { t } = useLang()
+  const openLead = useLeadDialog()
   const [scrolled, setScrolled] = useState(false)
   const [leadInView, setLeadInView] = useState(false)
 
@@ -214,9 +216,9 @@ function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: st
               {t.tours.meta.priceEarly}
             </p>
           </div>
-          <a href="#lead-form" className={`${ctaPrimary} w-full sm:w-auto`}>
+          <button type="button" onClick={() => openLead(title)} className={`${ctaPrimary} w-full sm:w-auto`}>
             {t.cta.lead}
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -239,6 +241,7 @@ function ListItems({ items }: { items: string[] }) {
 export default function TourDetailPage() {
   const { t } = useLang()
   const { id } = useParams()
+  const openLead = useLeadDialog()
 
   const tour = t.tours.items.find((item) => item.id === id)
   const detail = t.tourDetails.find((item) => item.id === id)
@@ -305,9 +308,9 @@ export default function TourDetailPage() {
                 </dd>
               </div>
               <div className="col-span-2 mt-4 flex sm:col-span-3 lg:mt-0">
-                <a href="#lead-form" className={`${ctaPrimary} w-full sm:w-auto`}>
+                <button type="button" onClick={() => openLead(tour.title)} className={`${ctaPrimary} w-full sm:w-auto`}>
                   {t.tourDetail.signup}
-                </a>
+                </button>
               </div>
             </div>
           </Reveal>
@@ -434,9 +437,9 @@ export default function TourDetailPage() {
         <Reveal>
           <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-10 md:flex-row md:items-end md:justify-between">
             {priceBlock}
-            <a href="#lead-form" className={ctaPrimary}>
+            <button type="button" onClick={() => openLead(tour.title)} className={ctaPrimary}>
               {t.tourDetail.signup}
-            </a>
+            </button>
           </div>
         </Reveal>
       </section>

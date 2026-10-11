@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router'
+import { LeadDialogProvider } from './sections/LeadDialog'
 import Home from './pages/Home'
 import ToursPage from './pages/ToursPage'
 import TourDetailPage from './pages/TourDetailPage'
@@ -26,7 +27,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <>
+    <LeadDialogProvider>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -39,6 +40,6 @@ export default function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
-    </>
+    </LeadDialogProvider>
   )
 }
