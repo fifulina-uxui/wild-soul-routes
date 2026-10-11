@@ -42,7 +42,7 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
       {children}
       {open && (
         <div
-          className="fixed inset-0 z-[110] flex items-end justify-center bg-black/80 p-4 backdrop-blur-sm sm:items-center"
+          className="fixed inset-0 z-[110] flex items-end justify-center bg-black/80 backdrop-blur-sm animate-[fade-in_0.25s_ease-out] sm:items-center sm:p-4"
           onClick={() => setOpen(false)}
         >
           <div
@@ -50,11 +50,13 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
             aria-modal="true"
             aria-label={tourTitle ?? t.lead.heading}
             onClick={(e) => e.stopPropagation()}
-            className="max-h-[88svh] w-full max-w-[520px] overflow-y-auto overscroll-contain rounded-[8px] border border-[rgb(255_255_255/15%)] bg-[#0a0a0a]"
+            className="max-h-[92svh] w-full overflow-y-auto overscroll-contain rounded-t-[16px] border border-b-0 border-[rgb(255_255_255/15%)] bg-[#0a0a0a] animate-[drawer-up_0.3s_ease-out] sm:max-h-[88svh] sm:max-w-[520px] sm:rounded-[8px] sm:border-b sm:animate-[fade-in_0.2s_ease-out]"
           >
             {/* Отступы на внутренней обёртке: padding-bottom самого скролл-контейнера
                 браузеры могут обрезать, а у обёртки — нет */}
-            <div className="p-6 pb-10 sm:p-10 sm:pb-12">
+            <div className="p-6 pb-10 pt-3 sm:p-10 sm:pb-12">
+              {/* Ручка drawer'а — только на мобильных */}
+              <div aria-hidden="true" className="mx-auto mb-5 h-1 w-10 rounded-full bg-[rgb(255_255_255/25%)] sm:hidden" />
               <div className="mb-6 flex items-start justify-between gap-4">
                 <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
                   {tourTitle ?? t.lead.heading}

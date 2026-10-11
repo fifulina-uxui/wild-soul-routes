@@ -140,4 +140,22 @@
     background: #fafafa;
     color: #000;
   }
+
+  @keyframes drawer-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
