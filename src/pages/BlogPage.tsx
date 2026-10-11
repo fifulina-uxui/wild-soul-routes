@@ -31,7 +31,7 @@ export default function BlogPage() {
       </section>
 
       {/* Статьи карточками — как блок блога на главной */}
-      <div className="mx-auto max-w-[1200px] px-5 pb-10 pt-5 md:px-8 md:pb-14">
+      <div className="mx-auto max-w-[1200px] px-5 pb-20 pt-5 md:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {t.journal.items.map((post) => (
             <Reveal key={post.id}>
