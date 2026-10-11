@@ -18,7 +18,7 @@ export default function BlogPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/20" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-6 md:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-3 md:px-8">
           <Reveal>
             <h1 className="text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
               {t.nav.find((n) => n.href === '/blog')?.label}
@@ -31,7 +31,7 @@ export default function BlogPage() {
       </section>
 
       {/* Статьи карточками — как блок блога на главной */}
-      <div className="mx-auto max-w-[1200px] px-5 pb-10 pt-10 md:px-8 md:pb-14">
+      <div className="mx-auto max-w-[1200px] px-5 pb-10 pt-5 md:px-8 md:pb-14">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {t.journal.items.map((post) => (
             <Reveal key={post.id}>

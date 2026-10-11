@@ -18,7 +18,7 @@ export default function DirectionsPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/20" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-6 md:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-3 md:px-8">
           <Reveal>
             <h1 className="text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
               {t.directionsPage.heading}
@@ -31,7 +31,7 @@ export default function DirectionsPage() {
       </section>
 
       {/* Направления широкими полосами с фото — как туры */}
-      <div className="flex flex-col gap-4 px-4 pb-20 pt-10 md:px-6">
+      <div className="flex flex-col gap-4 px-4 pb-20 pt-5 md:px-6">
         {t.directionsPage.cards.map((card) => (
           <Reveal key={card.country}>
             <article className="group relative min-h-[55vh] overflow-hidden">

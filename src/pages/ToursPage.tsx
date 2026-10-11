@@ -45,7 +45,7 @@ export default function ToursPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/20" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-6 md:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-3 md:px-8">
           <Reveal>
             <h1 className="text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
               {t.toursPage.heading}
@@ -58,7 +58,7 @@ export default function ToursPage() {
       </section>
 
       {/* Фильтры по направлениям */}
-      <div className="mx-auto max-w-[1200px] px-5 pt-10 md:px-8">
+      <div className="mx-auto max-w-[1200px] px-5 pt-5 md:px-8">
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
