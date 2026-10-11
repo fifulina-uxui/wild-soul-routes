@@ -53,7 +53,7 @@ export default function Header() {
     <>
       {/* Шапка поверх фотографии */}
       <header className="absolute inset-x-0 top-0 z-30">
-        <div className="mx-auto flex max-w-[1316px] items-center gap-6 px-6 py-4 md:px-8">
+        <div className="mx-auto flex max-w-[1316px] items-center gap-6 px-4 py-4 md:px-8">
           <div className="flex flex-1 items-center">
             <Logo />
           </div>
@@ -68,11 +68,11 @@ export default function Header() {
               </NavLink>
             ))}
           </nav>
-          <div className="flex flex-1 items-center justify-end gap-5">
+          <div className="flex flex-1 items-center justify-end gap-3 lg:gap-5">
             <div className="hidden lg:block">
               <LangSwitcher />
             </div>
-            <Link to="/contacts" className={`${ctaClass} max-sm:px-4`}>
+            <Link to="/contacts" className={`${ctaClass} max-sm:px-3 max-sm:text-[14px]`}>
               {t.cta.lead}
             </Link>
             {burger('lg:hidden')}
@@ -100,11 +100,11 @@ export default function Header() {
                 </NavLink>
               ))}
             </nav>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 md:gap-4">
               <div className="hidden md:block">
                 <LangSwitcher compact />
               </div>
-              <Link to="/contacts" className={`${ctaClass} max-sm:px-4`}>
+              <Link to="/contacts" className={`${ctaClass} max-sm:px-3 max-sm:text-[14px]`}>
                 {t.cta.lead}
               </Link>
               {burger('md:hidden')}
