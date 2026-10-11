@@ -5,7 +5,7 @@ import LangSwitcher from './LangSwitcher'
 import Logo from './Logo'
 
 const ctaClass =
-  'rounded-[4px] bg-[#fafafa] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
+  'whitespace-nowrap rounded-[4px] bg-[#fafafa] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
 
 const navClass = (active: boolean, size: string) =>
   `rounded-md px-2 py-1 ${size} transition-colors duration-200 hover:text-[#fafafa] ${
