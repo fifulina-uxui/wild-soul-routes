@@ -4,7 +4,6 @@ import { Link, useSearchParams } from 'react-router'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { useLang } from '../i18n'
-import { useLeadDialog } from '../sections/LeadDialog'
 import { content, type PageContent } from '../data/content'
 
 const countriesOf = (dict: PageContent) =>
@@ -21,7 +20,6 @@ const countriesOf = (dict: PageContent) =>
 
 export default function ToursPage() {
   const { t, lang } = useLang()
-  const openLead = useLeadDialog()
   // Фильтр живёт в адресной строке: клик по стране меняет ?c=...,
   // поэтому URL и список не расходятся и переживают обновление страницы
   const [searchParams, setSearchParams] = useSearchParams()
@@ -169,20 +167,13 @@ export default function ToursPage() {
                         {t.tours.crewNames[tour.crew]}
                       </dd>
                     </div>
-                    <div className="col-span-2 mt-4 flex flex-col gap-3 sm:flex-row lg:mt-0">
+                    <div className="col-span-2 mt-4 lg:mt-0">
                       <Link
                         to={`/tours/${tour.id}`}
                         className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
                       >
                         {t.cta.more}
                       </Link>
-                      <button
-                        type="button"
-                        onClick={() => openLead(tour.title)}
-                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/40%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
-                      >
-                        {t.cta.lead}
-                      </button>
                     </div>
                   </div>
                 </div>
