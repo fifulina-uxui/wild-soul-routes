@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { asset } from '../lib/asset'
 import { Link, useSearchParams } from 'react-router'
 import Subpage from './Subpage'
@@ -7,8 +7,11 @@ import { useLang } from '../i18n'
 
 export default function ToursPage() {
   const { t } = useLang()
-  const [searchParams] = useSearchParams()
-  const [country, setCountry] = useState<string | null>(searchParams.get('c'))
+  // Фильтр живёт в адресной строке: клик по стране меняет ?c=...,
+  // поэтому URL и список не расходятся и переживают обновление страницы
+  const [searchParams, setSearchParams] = useSearchParams()
+  const country = searchParams.get('c')
+  const selectCountry = (c: string | null) => setSearchParams(c ? { c } : {})
 
   const countries = useMemo(
     () =>
@@ -62,7 +65,7 @@ export default function ToursPage() {
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setCountry(null)}
+            onClick={() => selectCountry(null)}
             className={`inline-flex min-h-[42px] items-center justify-center rounded-[4px] border px-8 py-2 text-[16px] font-bold leading-[26px] transition-colors duration-200 ${
               country === null
                 ? 'border-[#fafafa] bg-[#fafafa] text-[rgb(0_0_0/87%)] hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
@@ -75,7 +78,7 @@ export default function ToursPage() {
             <button
               key={c}
               type="button"
-              onClick={() => setCountry(c)}
+              onClick={() => selectCountry(c)}
               className={`inline-flex min-h-[42px] items-center justify-center rounded-[4px] border px-8 py-2 text-[16px] font-bold leading-[26px] transition-colors duration-200 ${
                 country === c
                   ? 'border-[#fafafa] bg-[#fafafa] text-[rgb(0_0_0/87%)] hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
