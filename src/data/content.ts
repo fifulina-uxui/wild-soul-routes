@@ -102,7 +102,7 @@ export interface PageContent {
     label: string
     heading: string
     text: string
-    items: { initials: string; name: string; role: string; text: string; instagram: string }[]
+    items: { initials: string; name: string; role: string; text: string; instagram: string; photo?: string }[]
   }
   lead: {
     label: string

@@ -1,4 +1,5 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 import { Reveal } from './Reveal'
 
 export default function Team() {
@@ -23,9 +24,20 @@ export default function Team() {
           {t.team.items.map((m) => (
             <Reveal key={m.name}>
               <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#121212] text-[14px] font-bold text-[rgb(250_250_250/70%)]">
-                  {m.initials}
-                </span>
+                <div className="relative aspect-square w-full max-w-[240px] overflow-hidden bg-[rgb(255_255_255/4%)]">
+                  {m.photo ? (
+                    <img
+                      src={asset(m.photo)}
+                      alt={m.name}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  ) : (
+                    <span className="absolute inset-0 flex items-center justify-center text-[32px] font-bold text-[rgb(250_250_250/30%)]">
+                      {m.initials}
+                    </span>
+                  )}
+                </div>
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="text-[20px] font-bold leading-7 text-[#fafafa]">{m.name}</h3>
                   <a
