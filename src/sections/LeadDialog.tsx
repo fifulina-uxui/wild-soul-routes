@@ -50,27 +50,29 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
             aria-modal="true"
             aria-label={tourTitle ?? t.lead.heading}
             onClick={(e) => e.stopPropagation()}
-            className="max-h-[88svh] w-full max-w-[520px] overflow-y-auto rounded-[8px] border border-[rgb(255_255_255/15%)] bg-[#0a0a0a] p-6 sm:p-10"
+            className="max-h-[88svh] w-full max-w-[520px] overflow-y-auto overscroll-contain rounded-[8px] border border-[rgb(255_255_255/15%)] bg-[#0a0a0a]"
           >
-            <div className="mb-6 flex items-start justify-between gap-4">
-              <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
-                {tourTitle ?? t.lead.heading}
-              </h2>
-              <button
-                type="button"
-                aria-label="Close"
-                autoFocus
-                onClick={() => setOpen(false)}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[4px] text-[#fafafa] transition-colors duration-200 hover:bg-[rgb(255_255_255/10%)]"
-              >
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <path d="M1 1l16 16M17 1L1 17" />
-                </svg>
-              </button>
+            {/* Отступы на внутренней обёртке: padding-bottom самого скролл-контейнера
+                браузеры могут обрезать, а у обёртки — нет */}
+            <div className="p-6 pb-10 sm:p-10 sm:pb-12">
+              <div className="mb-6 flex items-start justify-between gap-4">
+                <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
+                  {tourTitle ?? t.lead.heading}
+                </h2>
+                <button
+                  type="button"
+                  aria-label="Close"
+                  autoFocus
+                  onClick={() => setOpen(false)}
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[4px] text-[#fafafa] transition-colors duration-200 hover:bg-[rgb(255_255_255/10%)]"
+                >
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M1 1l16 16M17 1L1 17" />
+                  </svg>
+                </button>
+              </div>
+              <LeadFormFields key={instance} submitLabel={tourTitle ? t.tourDetail.signup : t.cta.lead} tourTitle={tourTitle ?? undefined} />
             </div>
-            <LeadFormFields key={instance} submitLabel={tourTitle ? t.tourDetail.signup : t.cta.lead} tourTitle={tourTitle ?? undefined} />
-            {/* Страховочный нижний отступ: в скроллящемся контейнере padding-bottom может игнорироваться */}
-            <div aria-hidden="true" className="h-4" />
           </div>
         </div>
       )}
