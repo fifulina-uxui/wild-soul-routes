@@ -162,7 +162,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
-      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию\nдо 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
+      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
       crewNames: { guide: 'Гид', psych: 'Психолог', both: 'Гид + психолог' },
       items: [
         {
@@ -1122,7 +1122,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     tours: {
       label: 'Routes',
       heading: 'Upcoming tours',
-      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking\nuntil Dec 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Format' },
+      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Format' },
       crewNames: { guide: 'Guide', psych: 'Psychologist', both: 'Guide + psychologist' },
       items: [
         {
