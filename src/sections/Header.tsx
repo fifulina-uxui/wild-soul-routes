@@ -136,7 +136,7 @@ export default function Header() {
               to={item.href}
               style={{ transitionDelay: open ? `${80 + i * 50}ms` : '0ms' }}
               className={({ isActive }) =>
-                `py-3 text-[32px] font-bold leading-[1.15] tracking-[-0.5px] transition-all duration-300 ${
+                `py-3 text-[20px] font-normal leading-[1.3] transition-all duration-300 ${
                   open ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
                 } ${isActive ? 'text-[#fafafa]' : 'text-[rgb(250_250_250/55%)] hover:text-[#fafafa]'}`
               }
