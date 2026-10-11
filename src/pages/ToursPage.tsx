@@ -105,7 +105,7 @@ export default function ToursPage() {
       </div>
 
       {/* Список туров карточками с фото-фоном — как на главной */}
-      <div className="flex flex-col gap-4 px-4 pb-10 pt-8 md:px-6">
+      <div className="flex flex-col gap-4 px-4 pb-20 pt-8 md:px-6">
         {items.map((tour) => (
           <Reveal key={tour.id}>
             <article className="group relative min-h-[55vh] overflow-hidden">
@@ -169,13 +169,20 @@ export default function ToursPage() {
                         {t.tours.crewNames[tour.crew]}
                       </dd>
                     </div>
-                    <div className="col-span-2 mt-4 flex lg:mt-0">
+                    <div className="col-span-2 mt-4 flex flex-col gap-3 sm:flex-row lg:mt-0">
                       <Link
                         to={`/tours/${tour.id}`}
                         className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
                       >
                         {t.cta.more}
                       </Link>
+                      <button
+                        type="button"
+                        onClick={() => openLead(tour.title)}
+                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/40%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+                      >
+                        {t.cta.lead}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -183,21 +190,6 @@ export default function ToursPage() {
             </article>
           </Reveal>
         ))}
-      </div>
-
-      {/* Кнопка заявки в конце списка */}
-      <div className="mx-auto max-w-[1200px] px-5 pb-20 md:px-8">
-        <Reveal>
-          <div className="flex justify-center border-t border-[rgb(255_255_255/15%)] pt-10">
-            <button
-              type="button"
-              onClick={() => openLead()}
-              className="inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
-            >
-              {t.cta.lead}
-            </button>
-          </div>
-        </Reveal>
       </div>
     </Subpage>
   )
