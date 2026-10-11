@@ -204,7 +204,7 @@ function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: st
 
 function ListItems({ items }: { items: string[] }) {
   return (
-    <ul className="mt-8 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
+    <ul className="mt-4 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
       {items.map((item) => (
         <li key={item.slice(0, 48)} className={`flex gap-3 ${bodyText}`}>
           <span className="text-[rgb(250_250_250/40%)]">—</span>
@@ -305,7 +305,7 @@ export default function TourDetailPage() {
         <section className={section}>
           <Reveal>
             <h2 className={h2}>{t.tourDetail.dates}</h2>
-            <div className="mt-8 max-w-[720px] border-t border-[rgb(255_255_255/15%)]">
+            <div className="mt-4 max-w-[720px] border-t border-[rgb(255_255_255/15%)]">
               {detail.dates.map((date) => (
                 <div
                   key={date.when}
@@ -346,7 +346,7 @@ export default function TourDetailPage() {
         <Reveal>
           <h2 className={h2}>{t.tourDetail.program}</h2>
         </Reveal>
-        <div className="mt-8 border-t border-[rgb(255_255_255/15%)]">
+        <div className="mt-4 border-t border-[rgb(255_255_255/15%)]">
           {detail.program.map((step) => (
             <Reveal key={step.day}>
               <div className="grid grid-cols-1 gap-2 border-b border-[rgb(255_255_255/15%)] py-5 md:grid-cols-[240px_1fr] md:gap-10">
@@ -363,7 +363,7 @@ export default function TourDetailPage() {
         <section className={section}>
           <Reveal>
             <h2 className={h2}>{t.tourDetail.guide}</h2>
-            <div className="mt-8 flex flex-col-reverse gap-8 sm:flex-row sm:items-start sm:gap-10">
+            <div className="mt-4 flex flex-col-reverse gap-8 sm:flex-row sm:items-start sm:gap-10">
               <div className="flex flex-1 flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-6">
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
@@ -469,7 +469,7 @@ export default function TourDetailPage() {
               <h2 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
                 {t.tourDetail.features}
               </h2>
-              <ul className="mt-8 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+              <ul className="mt-4 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
                 {detail.features.map((f) => (
                   <li key={f}>{f}</li>
                 ))}
