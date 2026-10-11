@@ -41,6 +41,7 @@ export default function LeadForm({ submitLabel, aside }: { submitLabel?: string;
           </Reveal>
 
           <Reveal>
+            <div id="lead-form" className="scroll-mt-24">
             {sent ? (
               <div className="flex min-h-[280px] flex-col items-start justify-center gap-4 rounded-[16px] bg-[#121212] p-8">
                 <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
@@ -112,6 +113,7 @@ export default function LeadForm({ submitLabel, aside }: { submitLabel?: string;
                 </p>
               </form>
             )}
+            </div>
           </Reveal>
         </div>
       </div>

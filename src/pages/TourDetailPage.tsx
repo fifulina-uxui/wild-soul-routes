@@ -206,7 +206,7 @@ function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: st
               {t.tours.meta.priceEarly}
             </p>
           </div>
-          <a href="#lead" className={`${ctaPrimary} w-full sm:w-auto`}>
+          <a href="#lead-form" className={`${ctaPrimary} w-full sm:w-auto`}>
             {t.cta.lead}
           </a>
         </div>
@@ -297,7 +297,7 @@ export default function TourDetailPage() {
                 </dd>
               </div>
               <div className="col-span-2 mt-4 flex sm:col-span-3 lg:mt-0">
-                <a href="#lead" className={`${ctaPrimary} w-full sm:w-auto`}>
+                <a href="#lead-form" className={`${ctaPrimary} w-full sm:w-auto`}>
                   {t.tourDetail.signup}
                 </a>
               </div>
@@ -426,7 +426,7 @@ export default function TourDetailPage() {
         <Reveal>
           <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-10 md:flex-row md:items-end md:justify-between">
             {priceBlock}
-            <a href="#lead" className={ctaPrimary}>
+            <a href="#lead-form" className={ctaPrimary}>
               {t.tourDetail.signup}
             </a>
           </div>
