@@ -10,6 +10,12 @@ import { useLang } from '../i18n'
 const PER_PAGE = 9
 // Несимметричная раскладка: сумма 24 = 4 ряда по 6 колонок
 const SPANS = [4, 2, 2, 2, 2, 3, 3, 4, 2]
+// Мобильная раскладка: два вертикальных фото, затем одно широкое — как в референсе
+const MOBILE_SPANS = [
+  'col-span-1 row-span-2',
+  'col-span-1 row-span-2',
+  'col-span-2',
+]
 const spanClass: Record<number, string> = {
   2: 'sm:col-span-2',
   3: 'sm:col-span-3',
@@ -53,13 +59,13 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
 
   return (
     <div className="mt-10 scroll-mt-24" ref={topRef}>
-      <div className="grid grid-cols-2 auto-rows-[140px] gap-2 sm:auto-rows-[220px] sm:grid-cols-6 sm:gap-3">
+      <div className="grid grid-flow-dense grid-cols-2 auto-rows-[140px] gap-2 sm:auto-rows-[220px] sm:grid-cols-6 sm:gap-3">
         {shown.map((img, i) => (
           <button
             key={`${img}-${i}`}
             type="button"
             onClick={() => setOpen(page * PER_PAGE + i)}
-            className={`group relative cursor-zoom-in overflow-hidden ${spanClass[SPANS[i % SPANS.length]] ?? 'sm:col-span-2'}`}
+            className={`group relative cursor-zoom-in overflow-hidden ${MOBILE_SPANS[i % MOBILE_SPANS.length]} sm:row-span-1 ${spanClass[SPANS[i % SPANS.length]] ?? 'sm:col-span-2'}`}
           >
             <img
               src={asset(img)}
