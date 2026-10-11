@@ -69,7 +69,9 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex flex-1 items-center justify-end gap-5">
-            <LangSwitcher />
+            <div className="hidden lg:block">
+              <LangSwitcher />
+            </div>
             <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
               {t.cta.lead}
             </Link>
@@ -99,7 +101,9 @@ export default function Header() {
               ))}
             </nav>
             <div className="flex items-center gap-4">
-              <LangSwitcher compact />
+              <div className="hidden md:block">
+                <LangSwitcher compact />
+              </div>
               <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
                 {t.cta.lead}
               </Link>
