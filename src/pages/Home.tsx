@@ -21,8 +21,8 @@ export default function Home() {
         <Tours />
         <Directions />
         <Why />
-        <Journal />
         <Team />
+        <Journal />
         <section className="mx-auto max-w-[1200px] px-5 pb-16 md:px-8 md:pb-24">
           <Reveal>
             <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-14 md:flex-row md:items-center md:justify-between">
