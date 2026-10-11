@@ -24,6 +24,7 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!open) return
+    const previouslyFocused = document.activeElement as HTMLElement | null
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false)
     }
@@ -32,6 +33,7 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
     return () => {
       window.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
+      previouslyFocused?.focus()
     }
   }, [open])
 
@@ -57,6 +59,7 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
               <button
                 type="button"
                 aria-label="Close"
+                autoFocus
                 onClick={() => setOpen(false)}
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[4px] text-[#fafafa] transition-colors duration-200 hover:bg-[rgb(255_255_255/10%)]"
               >
@@ -65,7 +68,7 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
                 </svg>
               </button>
             </div>
-            <LeadFormFields key={instance} submitLabel={tourTitle ? t.tourDetail.signup : t.cta.lead} />
+            <LeadFormFields key={instance} submitLabel={tourTitle ? t.tourDetail.signup : t.cta.lead} tourTitle={tourTitle ?? undefined} />
           </div>
         </div>
       )}

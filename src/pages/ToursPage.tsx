@@ -116,6 +116,7 @@ export default function ToursPage() {
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-black/40 sm:hidden" />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
 
               <div className="relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8">

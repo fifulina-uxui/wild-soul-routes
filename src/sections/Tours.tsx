@@ -1,10 +1,12 @@
 import { Link } from 'react-router'
 import { asset } from '../lib/asset'
 import { useLang } from '../i18n'
+import { useLeadDialog } from './LeadDialog'
 import { Reveal } from './Reveal'
 
 export default function Tours() {
   const { t } = useLang()
+  const openLead = useLeadDialog()
 
   // Четыре ближайших тура по дате начала (формат «27 марта – 4 апреля 2027» / «Mar 27 – Apr 4, 2027»)
   const MONTHS: Record<string, number> = {
@@ -12,22 +14,33 @@ export default function Tours() {
     июля: 7, августа: 8, сентября: 9, октября: 10, ноября: 11, декабря: 12,
     jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
   }
-  const ts = (d: string) => {
+  const parseDate = (d: string): number | null => {
     // Формат «27.03.2027 – …»
     const num = d.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/)
     if (num) return Number(num[3]) * 10000 + Number(num[2]) * 100 + Number(num[1])
     // Формат «27 марта – 4 апреля 2027» / «Mar 27 – Apr 4, 2027»
     const day = Number(d.match(/\d+/)?.[0] ?? 1)
     const word = (d.match(/[а-яА-ЯA-Za-z]+/)?.[0] ?? '').toLowerCase()
-    const month = MONTHS[word] ?? MONTHS[word.slice(0, 3)] ?? 1
+    const month = MONTHS[word] ?? MONTHS[word.slice(0, 3)]
     const year = Number(d.match(/\d{4}/)?.[0] ?? 0)
+    if (!month || !year) return null
     return year * 10000 + month * 100 + day
   }
-  // Ближайшие туры на главной — четыре актуальных, по дате начала
-  const NEAREST_IDS = ['nepal-bhutan', 'nepal', 'nepal-trek', 'tibet']
-  const nearest = t.tours.items
-    .filter((tour) => NEAREST_IDS.includes(tour.id))
-    .sort((a, b) => ts(a.start) - ts(b.start))
+  const ts = (d: string) => parseDate(d) ?? 99999999 // «Скоро» и прочее — в конец списка
+  // Дата окончания — вторая дата в диапазоне «28.05.2027 – 12.06.2027»
+  const endTs = (d: string) => {
+    const parts = d.split('–').map((s) => s.trim())
+    const end = parseDate(parts[parts.length - 1] ?? d)
+    return end ?? 99999999 // нераспознанное («Скоро») считаем предстоящим
+  }
+  const today = (() => {
+    const n = new Date()
+    return n.getFullYear() * 10000 + (n.getMonth() + 1) * 100 + n.getDate()
+  })()
+  // Ближайшие туры на главной — четыре предстоящих, по дате начала;
+  // завершившиеся поездки не показываем
+  const upcoming = t.tours.items.filter((tour) => endTs(tour.start) >= today)
+  const nearest = upcoming.sort((a, b) => ts(a.start) - ts(b.start)).slice(0, 4)
 
   return (
     <section id="tours" className="bg-black">
@@ -53,6 +66,11 @@ export default function Tours() {
       </div>
 
       <div className="flex flex-col gap-4 px-4 md:px-6">
+        {nearest.length === 0 && (
+          <p className="mx-auto w-full max-w-[1200px] px-1 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)] md:px-2">
+            {t.tours.empty}
+          </p>
+        )}
         {nearest.map((tour, i) => (
           <Reveal key={tour.id}>
             <article className="group relative min-h-[70vh] overflow-hidden">
@@ -69,6 +87,8 @@ export default function Tours() {
                     : 'bg-gradient-to-l from-black/75 via-black/30 to-transparent'
                 }`}
               />
+              {/* На мобильном текст занимает всю ширину — добавляем равномерную вуаль */}
+              <div className="absolute inset-0 bg-black/40 sm:hidden" />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
 
               <div
@@ -134,12 +154,13 @@ export default function Tours() {
                     >
                       {t.cta.more}
                     </Link>
-                    <Link
-                      to="/contacts"
+                    <button
+                      type="button"
+                      onClick={() => openLead(tour.title)}
                       className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
                     >
                       {t.cta.lead}
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>

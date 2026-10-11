@@ -4,21 +4,45 @@ import { useLang } from '../i18n'
 import { Reveal } from './Reveal'
 
 const inputClass =
-  'h-14 w-full rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none'
+  'h-14 w-full rounded-[4px] border border-[rgb(255_255_255/40%)] bg-transparent px-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/60%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none'
 
 const labelClass = 'mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]'
 
 /** Сама форма заявки без обёртки — используется и в секции, и в диалоге */
-export function LeadFormFields({ submitLabel }: { submitLabel?: string }) {
-  const [sent, setSent] = useState(false)
-  const { t } = useLang()
+export function LeadFormFields({ submitLabel, tourTitle }: { submitLabel?: string; tourTitle?: string }) {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const { t, lang } = useLang()
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSent(true)
+    if (status === 'sending') return
+    const endpoint = import.meta.env.VITE_LEAD_ENDPOINT as string | undefined
+    const data = new FormData(e.currentTarget)
+    const payload = {
+      name: data.get('name'),
+      telegram: data.get('telegram'),
+      email: data.get('email'),
+      comment: data.get('comment'),
+      tour: tourTitle ?? null,
+      lang,
+      page: window.location.href,
+    }
+    setStatus('sending')
+    try {
+      if (!endpoint) throw new Error('VITE_LEAD_ENDPOINT is not configured')
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
   }
 
-  if (sent) {
+  if (status === 'sent') {
     return (
       <div className="flex min-h-[280px] flex-col items-start justify-center gap-4 rounded-[16px] bg-[#121212] p-8">
         <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
@@ -73,15 +97,21 @@ export function LeadFormFields({ submitLabel }: { submitLabel?: string }) {
           name="comment"
           rows={3}
           placeholder={t.lead.form.commentPlaceholder}
-          className="w-full resize-none rounded-[4px] border border-[rgb(255_255_255/23%)] bg-transparent px-4 py-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/40%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none"
+          className="w-full resize-none rounded-[4px] border border-[rgb(255_255_255/40%)] bg-transparent px-4 py-4 text-[16px] leading-6 text-[#fafafa] placeholder:text-[rgb(250_250_250/60%)] transition-colors duration-200 focus:border-[#fafafa] focus:outline-none"
         />
       </div>
       <button
         type="submit"
-        className="mt-2 inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
+        disabled={status === 'sending'}
+        className="mt-2 inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] disabled:cursor-wait disabled:opacity-60"
       >
-        {submitLabel ?? t.cta.submit}
+        {status === 'sending' ? t.lead.form.sending : (submitLabel ?? t.cta.submit)}
       </button>
+      {status === 'error' && (
+        <p role="alert" className="text-[14px] leading-5 text-[#f2b8b8]">
+          {t.lead.form.error}
+        </p>
+      )}
       <p className="text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
         {t.lead.form.legal}{' '}
         <Link

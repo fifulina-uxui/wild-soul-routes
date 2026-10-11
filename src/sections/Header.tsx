@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router'
 import { useLang } from '../i18n'
 import { useLeadDialog } from './LeadDialog'
@@ -19,6 +19,8 @@ export default function Header() {
   const { t } = useLang()
   const { pathname } = useLocation()
   const openLead = useLeadDialog()
+  const closeRef = useRef<HTMLButtonElement>(null)
+  const burgerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 160)
@@ -28,21 +30,37 @@ export default function Header() {
   }, [])
 
   // Закрывать меню при переходе на другую страницу
-  useEffect(() => setOpen(false), [pathname])
+  // (паттерн «корректировка состояния при рендере» вместо эффекта)
+  const [prevPath, setPrevPath] = useState(pathname)
+  if (prevPath !== pathname) {
+    setPrevPath(pathname)
+    if (open) setOpen(false)
+  }
 
-  // Блокировать скролл страницы, пока открыто меню
+  // Блокировать скролл страницы, пока открыто меню; Escape закрывает;
+  // фокус уходит на крестик и возвращается на бургер
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
+    if (!open) return
+    closeRef.current?.focus()
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
+      burgerRef.current?.focus()
     }
   }, [open])
 
   const burger = (className: string) => (
     <button
       type="button"
+      ref={burgerRef}
       onClick={() => setOpen(true)}
       aria-label="Открыть меню"
+      aria-expanded={open}
       className={`flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-[4px] transition-colors duration-200 hover:bg-[rgb(255_255_255/10%)] ${className}`}
     >
       <span className="h-[2px] w-5 bg-[#fafafa]" />
@@ -84,6 +102,8 @@ export default function Header() {
 
       {/* Плавающая стеклянная панель при скролле — как у Starlink: логотип + CTA */}
       <div
+        inert={!scrolled}
+        aria-hidden={!scrolled}
         className={`fixed inset-x-0 top-4 z-40 transition-all duration-300 ${
           scrolled ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0'
         }`}
@@ -117,6 +137,11 @@ export default function Header() {
 
       {/* Мобильное меню на весь экран */}
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Меню"
+        inert={!open}
+        aria-hidden={!open}
         className={`fixed inset-0 z-50 flex flex-col bg-black/95 backdrop-blur-xl transition-opacity duration-300 lg:hidden ${
           open ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
@@ -125,6 +150,7 @@ export default function Header() {
           <Logo />
           <button
             type="button"
+            ref={closeRef}
             onClick={() => setOpen(false)}
             aria-label="Закрыть меню"
             className="flex h-10 w-10 items-center justify-center rounded-[4px] transition-colors duration-200 hover:bg-[rgb(255_255_255/10%)]"

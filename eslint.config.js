@@ -20,4 +20,12 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // Вендорные ui-компоненты и контексты намеренно экспортируют
+    // и компоненты, и хуки/константы — правило fast-refresh к ним не применяем
+    files: ['src/components/ui/**', 'src/i18n.tsx', 'src/sections/LeadDialog.tsx', 'src/sections/LeadForm.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ])

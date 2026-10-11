@@ -45,8 +45,10 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
     topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [page])
 
+  const lightboxClosed = open === null
+
   useEffect(() => {
-    if (open === null) return
+    if (lightboxClosed) return
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(null)
       if (e.key === 'ArrowRight') setOpen((v) => (v === null ? v : Math.min(images.length - 1, v + 1)))
@@ -58,7 +60,7 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
       window.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
     }
-  }, [open === null, images.length])
+  }, [lightboxClosed, images.length])
 
   const pagerBtn =
     'inline-flex min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-6 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] disabled:pointer-events-none disabled:opacity-30'
@@ -109,12 +111,16 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
 
       {open !== null && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={alt}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-10"
           onClick={() => setOpen(null)}
         >
           <button
             type="button"
             aria-label="Close"
+            autoFocus
             onClick={() => setOpen(null)}
             className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-[4px] bg-[rgb(255_255_255/12%)] text-[#fafafa] backdrop-blur-md transition-colors duration-200 hover:bg-[rgb(255_255_255/25%)]"
           >
@@ -196,6 +202,8 @@ function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: st
 
   return (
     <div
+      inert={!show}
+      aria-hidden={!show}
       className={`fixed inset-x-0 bottom-4 z-40 transition-all duration-300 ${
         show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
       }`}

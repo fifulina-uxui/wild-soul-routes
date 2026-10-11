@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-1 border-t border-[rgb(255_255_255/10%)] pt-4 text-[12px] leading-5 text-[rgb(250_250_250/40%)] md:flex-row md:justify-between">
+        <div className="mt-6 flex flex-col gap-1 border-t border-[rgb(255_255_255/10%)] pt-4 text-[12px] leading-5 text-[rgb(250_250_250/60%)] md:flex-row md:justify-between">
           <span>© 2026 Wild Soul Routes</span>
           <span>{t.footer.tagline}</span>
         </div>
