@@ -24,7 +24,7 @@ export default function Team() {
           {t.team.items.map((m) => (
             <Reveal key={m.name}>
               <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">
-                <div className="relative aspect-square w-full max-w-[240px] overflow-hidden bg-[rgb(255_255_255/4%)]">
+                <div className="relative aspect-square w-full max-w-[120px] overflow-hidden bg-[rgb(255_255_255/4%)]">
                   {m.photo ? (
                     <img
                       src={asset(m.photo)}

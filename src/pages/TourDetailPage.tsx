@@ -393,7 +393,7 @@ export default function TourDetailPage() {
                 <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{detail.guide.role}</p>
                 <p className={bodyText}>{detail.guide.text}</p>
               </div>
-              <div className="relative aspect-square w-full max-w-[120px] shrink-0 overflow-hidden bg-[rgb(255_255_255/4%)] sm:max-w-[240px]">
+              <div className="relative aspect-square w-full max-w-[120px] shrink-0 overflow-hidden bg-[rgb(255_255_255/4%)]">
                 {detail.guide.photo ? (
                   <img
                     src={asset(detail.guide.photo)}
