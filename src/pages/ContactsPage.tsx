@@ -17,6 +17,7 @@ export default function ContactsPage() {
 
   return (
     <Subpage>
+      <LeadForm />
       <section className="bg-black">
         <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
           <Reveal>
@@ -51,7 +52,6 @@ export default function ContactsPage() {
           </div>
         </div>
       </section>
-      <LeadForm />
     </Subpage>
   )
 }
