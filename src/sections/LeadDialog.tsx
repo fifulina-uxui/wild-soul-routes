@@ -50,7 +50,7 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
             aria-modal="true"
             aria-label={tourTitle ?? t.lead.heading}
             onClick={(e) => e.stopPropagation()}
-            className="max-h-[88svh] w-full max-w-[520px] overflow-y-auto rounded-[8px] border border-[rgb(255_255_255/15%)] bg-[#0a0a0a] p-6 sm:p-8"
+            className="max-h-[88svh] w-full max-w-[520px] overflow-y-auto rounded-[8px] border border-[rgb(255_255_255/15%)] bg-[#0a0a0a] p-6 sm:p-10"
           >
             <div className="mb-6 flex items-start justify-between gap-4">
               <h2 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">
@@ -69,6 +69,8 @@ export function LeadDialogProvider({ children }: { children: ReactNode }) {
               </button>
             </div>
             <LeadFormFields key={instance} submitLabel={tourTitle ? t.tourDetail.signup : t.cta.lead} tourTitle={tourTitle ?? undefined} />
+            {/* Страховочный нижний отступ: в скроллящемся контейнере padding-bottom может игнорироваться */}
+            <div aria-hidden="true" className="h-4" />
           </div>
         </div>
       )}
