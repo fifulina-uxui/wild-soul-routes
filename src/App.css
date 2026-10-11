@@ -25,6 +25,14 @@
   transform: none;
 }
 
+/* На мобильных — мягче: только плавное проявление без сдвига снизу */
+@media (max-width: 640px) {
+  .reveal {
+    transform: none;
+    transition: opacity 350ms ease;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
