@@ -20,7 +20,9 @@ function ScrollToTop() {
         return
       }
     }
-    window.scrollTo(0, 0)
+    // Мгновенный сброс: при smooth-поведении браузер иначе анимирует
+    // прокрутку от низа предыдущей страницы, и переход выглядит рывком
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname, hash])
   return null
 }
