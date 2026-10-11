@@ -154,7 +154,7 @@ const metaLabel = 'text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(2
 const ctaPrimary =
   'inline-flex min-h-[48px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
 
-function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: string; price: string }) {
+function StickyCta() {
   const { t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [leadInView, setLeadInView] = useState(false)
@@ -180,20 +180,13 @@ function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: st
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-4 z-40 transition-all duration-300 ${
+      className={`fixed inset-x-0 bottom-4 z-40 transition-all duration-300 sm:hidden ${
         show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
       }`}
     >
       <div className="mx-auto max-w-[1200px] px-4 md:px-8">
-        <div className="floating-glass flex items-center justify-between gap-4 rounded-[8px] p-4">
-          <div className="hidden min-w-0 sm:block">
-            <p className="truncate text-[16px] font-bold leading-6 text-[#fafafa]">{title}</p>
-            <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">
-              {priceEarly}{' '}
-              <span className="text-[rgb(250_250_250/45%)] line-through">{price}</span>
-            </p>
-          </div>
-          <a href="#lead" className={`${ctaPrimary} w-full sm:w-auto`}>
+        <div className="floating-glass rounded-[8px] p-4">
+          <a href="#lead" className={`${ctaPrimary} w-full`}>
             {t.cta.lead}
           </a>
         </div>
@@ -479,7 +472,7 @@ export default function TourDetailPage() {
         }
       />
 
-      <StickyCta title={tour.title} priceEarly={tour.priceEarly} price={tour.price} />
+      <StickyCta />
     </Subpage>
   )
 }
