@@ -114,8 +114,6 @@ export interface PageContent {
       namePlaceholder: string
       telegram: string
       telegramPlaceholder: string
-      telegramNick: string
-      telegramNickPlaceholder: string
       email: string
       emailPlaceholder: string
       comment: string
@@ -1078,12 +1076,10 @@ export const content: Record<'ru' | 'en', PageContent> = {
         '— Отмена с полным возвратом за 30 дней до тура',
       ],
       form: {
-        name: 'Имя и фамилия',
+        name: 'Имя',
         namePlaceholder: 'Как к вам обращаться',
-        telegram: 'Номер Telegram для связи',
-        telegramPlaceholder: 'Ваш номер телефона',
-        telegramNick: 'Никнейм в Telegram для связи',
-        telegramNickPlaceholder: '@username',
+        telegram: 'Номер или никнейм в Telegram',
+        telegramPlaceholder: 'Ваш номер телефона или @username',
         email: 'Email',
         emailPlaceholder: 'you@example.com',
         comment: 'Доп. комментарии',
@@ -2040,12 +2036,10 @@ export const content: Record<'ru' | 'en', PageContent> = {
         '— Full refund for cancellations 30 days before the tour',
       ],
       form: {
-        name: 'Full name',
+        name: 'Name',
         namePlaceholder: 'What should we call you',
-        telegram: 'Your Telegram number for contact',
-        telegramPlaceholder: 'Your phone number',
-        telegramNick: 'Your Telegram username for contact',
-        telegramNickPlaceholder: '@username',
+        telegram: 'Telegram number or username',
+        telegramPlaceholder: 'Your phone number or @username',
         email: 'Email',
         emailPlaceholder: 'you@example.com',
         comment: 'Additional comments',

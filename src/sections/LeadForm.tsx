@@ -65,20 +65,8 @@ export default function LeadForm({ submitLabel, aside }: { submitLabel?: string;
                   <input
                     id="lead-telegram"
                     name="telegram"
-                    type="tel"
-                    placeholder={t.lead.form.telegramPlaceholder}
-                    className={inputClass}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lead-telegram-nick" className="mb-2 block text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {t.lead.form.telegramNick}
-                  </label>
-                  <input
-                    id="lead-telegram-nick"
-                    name="telegramNick"
                     type="text"
-                    placeholder={t.lead.form.telegramNickPlaceholder}
+                    placeholder={t.lead.form.telegramPlaceholder}
                     className={inputClass}
                   />
                 </div>
