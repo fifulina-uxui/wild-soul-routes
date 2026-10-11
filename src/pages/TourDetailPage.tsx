@@ -31,10 +31,18 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
   const shown = images.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)
   const { t } = useLang()
 
-  const goToPage = (next: number) => {
-    setPage(next)
+  const goToPage = (next: number) => setPage(next)
+
+  // Скроллим к началу галереи после перерисовки, а не до —
+  // иначе на мобильном сетка сжимается и попадаем на текст ниже
+  const firstRender = useRef(true)
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false
+      return
+    }
     topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  }, [page])
 
   useEffect(() => {
     if (open === null) return
