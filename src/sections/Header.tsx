@@ -138,6 +138,7 @@ export default function Header() {
             <NavLink
               key={item.href}
               to={item.href}
+              onClick={() => setOpen(false)}
               style={{ transitionDelay: open ? `${80 + i * 50}ms` : '0ms' }}
               className={({ isActive }) =>
                 `py-3 text-[20px] font-normal leading-[1.3] transition-all duration-300 ${
@@ -156,6 +157,7 @@ export default function Header() {
         <div className="px-6 pb-8 md:px-8">
           <Link
             to="/contacts#lead"
+            onClick={() => setOpen(false)}
             className={`flex min-h-[48px] w-full items-center justify-center ${ctaClass}`}
           >
             {t.cta.lead}

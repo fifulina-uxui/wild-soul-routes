@@ -357,7 +357,7 @@ export default function TourDetailPage() {
       {detail.gallery && (
         <section className={section}>
           <Reveal>
-            <TourGallery images={detail.gallery} alt={tour.title} />
+            <TourGallery key={tour.id} images={detail.gallery} alt={tour.title} />
           </Reveal>
         </section>
       )}
@@ -500,7 +500,7 @@ export default function TourDetailPage() {
         }
       />
 
-      <StickyCta title={tour.title} priceEarly={tour.priceEarly} price={tour.price} />
+      <StickyCta key={tour.id} title={tour.title} priceEarly={tour.priceEarly} price={tour.price} />
     </Subpage>
   )
 }

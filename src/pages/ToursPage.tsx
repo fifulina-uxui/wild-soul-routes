@@ -1,39 +1,50 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { asset } from '../lib/asset'
 import { Link, useSearchParams } from 'react-router'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
 import { useLang } from '../i18n'
+import { content, type PageContent } from '../data/content'
+
+const countriesOf = (dict: PageContent) =>
+  Array.from(
+    new Set(
+      dict.tours.items.flatMap((tour) =>
+        tour.coords
+          .split('— ')[1]
+          .split('·')
+          .map((c) => c.trim()),
+      ),
+    ),
+  )
 
 export default function ToursPage() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   // Фильтр живёт в адресной строке: клик по стране меняет ?c=...,
   // поэтому URL и список не расходятся и переживают обновление страницы
   const [searchParams, setSearchParams] = useSearchParams()
   const country = searchParams.get('c')
   const selectCountry = (c: string | null) => setSearchParams(c ? { c } : {})
 
-  const countries = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          t.tours.items.flatMap((tour) =>
-            tour.coords
-              .split('— ')[1]
-              .split('·')
-              .map((c) => c.trim()),
-          ),
-        ),
-      ),
-    [t],
-  )
-  const items = country
+  const countries = useMemo(() => countriesOf(t), [t])
+
+  // В адресе лежит локализованное название страны — при смене языка
+  // переводим его по индексу в другом словаре, иначе список стал бы пустым
+  useEffect(() => {
+    if (!country || countries.includes(country)) return
+    const other = lang === 'ru' ? countriesOf(content.en) : countriesOf(content.ru)
+    const idx = other.indexOf(country)
+    setSearchParams(idx >= 0 && countries[idx] ? { c: countries[idx] } : {}, { replace: true })
+  }, [country, countries, lang, setSearchParams])
+
+  const activeCountry = country && countries.includes(country) ? country : null
+  const items = activeCountry
     ? t.tours.items.filter((tour) =>
         tour.coords
           .split('— ')[1]
           .split('·')
           .map((c) => c.trim())
-          .includes(country),
+          .includes(activeCountry),
       )
     : t.tours.items
 
