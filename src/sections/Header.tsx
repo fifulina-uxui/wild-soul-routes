@@ -72,7 +72,7 @@ export default function Header() {
             <div className="hidden lg:block">
               <LangSwitcher />
             </div>
-            <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
+            <Link to="/contacts" className={`${ctaClass} max-sm:px-4`}>
               {t.cta.lead}
             </Link>
             {burger('lg:hidden')}
@@ -104,7 +104,7 @@ export default function Header() {
               <div className="hidden md:block">
                 <LangSwitcher compact />
               </div>
-              <Link to="/contacts" className={`hidden sm:inline-block ${ctaClass}`}>
+              <Link to="/contacts" className={`${ctaClass} max-sm:px-4`}>
                 {t.cta.lead}
               </Link>
               {burger('md:hidden')}
