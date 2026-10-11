@@ -196,6 +196,9 @@ function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: st
                 {price}
               </span>
             </p>
+            <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">
+              {t.tours.meta.priceEarly}
+            </p>
           </div>
           <a href="#lead" className={`${ctaPrimary} w-full sm:w-auto`}>
             {t.cta.lead}
