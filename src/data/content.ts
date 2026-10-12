@@ -354,6 +354,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: '28 мая – 12 июня 2027', note: 'осталось 4 места' }],
         includes: [
@@ -440,6 +441,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: '8–17 апреля 2027', note: 'осталось 6 мест' }],
         includes: [
@@ -525,6 +527,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: '27 марта – 4 апреля 2027', note: 'осталось 3 места' }],
         includes: [
@@ -609,6 +612,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [
           { when: '21–28 октября 2026', note: 'осталось 5 мест' },
@@ -708,6 +712,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: '20 апреля – 9 мая 2027', note: 'осталось 7 мест' }],
         includes: [
@@ -796,6 +801,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [
           { when: '8–13 июня 2027', note: 'набор открыт' },
@@ -885,6 +891,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: 'Скоро', note: '' }],
         includes: [
@@ -1057,6 +1064,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         {
           initials: 'ОБ',
           name: 'Олеся Берендеева',
+          photo: 'images/team-olesya.jpg',
           role: 'Гид, автор маршрутов',
           text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
           instagram: 'https://www.instagram.com/oberendeeva',
@@ -1317,6 +1325,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: 'May 28 – June 12, 2027', note: '4 spots left' }],
         includes: [
@@ -1403,6 +1412,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: 'April 8–17, 2027', note: '6 spots left' }],
         includes: [
@@ -1488,6 +1498,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: 'March 27 – April 4, 2027', note: '3 spots left' }],
         includes: [
@@ -1572,6 +1583,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [
           { when: 'October 21–28, 2026', note: '5 spots left' },
@@ -1671,6 +1683,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: 'April 20 – May 9, 2027', note: '7 spots left' }],
         includes: [
@@ -1759,6 +1772,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [
           { when: 'June 8–13, 2027', note: 'open for booking' },
@@ -1848,6 +1862,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
+          photo: 'images/team-olesya.jpg',
         },
         dates: [{ when: 'Coming soon', note: '' }],
         includes: [
@@ -2020,6 +2035,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         {
           initials: 'OB',
           name: 'Olesya Berendeeva',
+          photo: 'images/team-olesya.jpg',
           role: 'Guide, route designer',
           text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
           instagram: 'https://www.instagram.com/oberendeeva',
