@@ -24,7 +24,7 @@ const spanClass: Record<number, string> = {
   6: 'sm:col-span-6',
 }
 
-function TourGallery({ images, alt }: { images: string[]; alt: string }) {
+function TourGallery({ images, alts, alt }: { images: string[]; alts?: string[]; alt: string }) {
   const [page, setPage] = useState(0)
   const [open, setOpen] = useState<number | null>(null)
   const topRef = useRef<HTMLDivElement>(null)
@@ -80,7 +80,7 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
           >
             <img
               src={asset(img)}
-              alt={alt}
+              alt={alts?.[page * PER_PAGE + i] ?? alt}
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
             />
@@ -144,7 +144,7 @@ function TourGallery({ images, alt }: { images: string[]; alt: string }) {
           </button>
           <img
             src={asset(images[open])}
-            alt={alt}
+            alt={alts?.[open] ?? alt}
             onClick={(e) => e.stopPropagation()}
             className="max-h-full max-w-full object-contain"
           />
@@ -368,7 +368,7 @@ export default function TourDetailPage() {
       {detail.gallery && (
         <section className={section}>
           <Reveal>
-            <TourGallery key={tour.id} images={detail.gallery} alt={tour.title} />
+            <TourGallery key={tour.id} images={detail.gallery} alts={detail.galleryAlts} alt={tour.title} />
           </Reveal>
         </section>
       )}
