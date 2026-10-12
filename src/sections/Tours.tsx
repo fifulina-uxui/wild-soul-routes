@@ -15,10 +15,7 @@ export default function Tours() {
     jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
   }
   const parseDate = (d: string): number | null => {
-    // Формат «27.03.2027 – …»
-    const num = d.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/)
-    if (num) return Number(num[3]) * 10000 + Number(num[2]) * 100 + Number(num[1])
-    // Формат «27 марта – 4 апреля 2027» / «Mar 27 – Apr 4, 2027»
+    // «27 марта – 4 апреля 2027» / «March 27 – April 4, 2027» / «8–17 апреля 2027»
     const day = Number(d.match(/\d+/)?.[0] ?? 1)
     const word = (d.match(/[а-яА-ЯA-Za-z]+/)?.[0] ?? '').toLowerCase()
     const month = MONTHS[word] ?? MONTHS[word.slice(0, 3)]
@@ -27,11 +24,19 @@ export default function Tours() {
     return year * 10000 + month * 100 + day
   }
   const ts = (d: string) => parseDate(d) ?? 99999999 // «Скоро» и прочее — в конец списка
-  // Дата окончания — вторая дата в диапазоне «28.05.2027 – 12.06.2027»
+  // Дата окончания — день и месяц могут быть только в начале строки:
+  // «21–28 октября 2026», «May 28 – June 12, 2027» — берём последний месяц,
+  // год и число, стоящее непосредственно перед годом
   const endTs = (d: string) => {
-    const parts = d.split('–').map((s) => s.trim())
-    const end = parseDate(parts[parts.length - 1] ?? d)
-    return end ?? 99999999 // нераспознанное («Скоро») считаем предстоящим
+    const year = Number(d.match(/\d{4}/)?.[0] ?? 0)
+    const dayMatch = d.match(/(\d{1,2})\D{0,10}\d{4}/)
+    const words = d.toLowerCase().match(/[а-яёa-z]+/g) ?? []
+    const months = words
+      .map((w) => MONTHS[w] ?? MONTHS[w.slice(0, 3)])
+      .filter((m): m is number => Boolean(m))
+    const month = months[months.length - 1]
+    if (!year || !dayMatch || !month) return 99999999 // «Скоро» считаем предстоящим
+    return year * 10000 + month * 100 + Number(dayMatch[1])
   }
   const today = (() => {
     const n = new Date()
