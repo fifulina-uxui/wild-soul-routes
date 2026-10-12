@@ -166,7 +166,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
       empty: 'Сейчас все группы в пути. Оставьте заявку — сообщим о новых датах первыми.',
-      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31 декабря 2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
+      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
       crewNames: { guide: 'Гид', psych: 'Психолог', both: 'Гид + психолог' },
       items: [
         {
@@ -381,7 +381,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -468,7 +468,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -554,7 +554,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -642,7 +642,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -745,7 +745,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -831,7 +831,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -918,7 +918,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'В случае отказа от участия менее чем за 60 дней до начала путешествия предоплата становится невозвратной.',
         ],
         discounts: [
-          'Цена по раннему бронированию — 2 290 $ до 31 декабря 2026',
+          'Цена по раннему бронированию — 2 290 $ до 31.12.2026',
           'Wild Soul Club: специальные условия для тех, кто путешествует с нами снова и приводит друзей',
           'Приведи друга: путешествуете вместе — каждый получает скидку 50 $, можно пригласить до двух друзей и получить скидку 100 $',
           'Собираетесь компанией от 5 человек? Для группы подготовим специальные условия',
@@ -1138,7 +1138,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Routes',
       heading: 'Upcoming tours',
       empty: 'All groups are on the road right now. Leave a request and we will tell you about new dates first.',
-      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until December 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Format' },
+      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Format' },
       crewNames: { guide: 'Guide', psych: 'Psychologist', both: 'Guide + psychologist' },
       items: [
         {
@@ -1353,7 +1353,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
@@ -1440,7 +1440,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
@@ -1526,7 +1526,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
@@ -1614,7 +1614,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
@@ -1717,7 +1717,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
@@ -1803,7 +1803,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
@@ -1890,7 +1890,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'If you cancel less than 60 days before the start of the journey, the prepayment becomes non-refundable.',
         ],
         discounts: [
-          'Early bird price — $2,290 until December 31, 2026',
+          'Early bird price — $2,290 until Dec 31, 2026',
           'Wild Soul Club: special terms for those who travel with us again and bring friends',
           'Bring a friend: travelling together — each of you gets a $50 discount; invite up to two friends and get $100 off',
           'Coming as a group of 5 or more? We will prepare special terms for the group',
