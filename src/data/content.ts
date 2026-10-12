@@ -159,8 +159,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
     hero: {
       tagline: 'Путешествия с душой',
       title: 'Маршруты, которые хочется прожить',
-      subtitle: 'Отправляемся исследовать мир и себя в дороге.',
-      subtitle2: 'С группой и психологом или в треке с инструктором.',
+      subtitle: 'Нас двое — психолог и опытный гид.',
+      subtitle2: 'Ведём группы сами. Идём исследовать мир и себя.',
     },
     tours: {
       label: 'Маршруты',
@@ -1122,8 +1122,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
     hero: {
       tagline: 'Travel with soul',
       title: 'Routes you will want to live',
-      subtitle: 'We set out to explore the world and ourselves on the road.',
-      subtitle2: 'With a group and a psychologist, or on a trek with an instructor.',
+      subtitle: 'We are two — a psychologist and an experienced guide.',
+      subtitle2: 'We lead every group ourselves, exploring the world and ourselves.',
     },
     tours: {
       label: 'Routes',
