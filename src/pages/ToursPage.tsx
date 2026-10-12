@@ -135,9 +135,6 @@ export default function ToursPage() {
                         {t.tours.meta.start}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
-                      {tour.spots && (
-                        <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">{tour.spots}</p>
-                      )}
                     </div>
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">

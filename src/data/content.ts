@@ -182,7 +182,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Эверест',
           image: 'images/tour-tibet.jpg',
           crew: 'both',
-          spots: 'осталось 4 места',
+          spots: '',
         },
         {
           id: 'nepal',
@@ -197,7 +197,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Катманду',
           image: 'images/tour-nepal.jpg',
           crew: 'both',
-          spots: 'осталось 6 мест',
+          spots: '',
         },
         {
           id: 'nepal-bhutan',
@@ -212,7 +212,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Тигриное гнездо',
           image: 'images/tour-bhutan.jpg',
           crew: 'both',
-          spots: 'осталось 3 места',
+          spots: '',
         },
         {
           id: 'nepal-tour',
@@ -227,7 +227,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Нагаркот',
           image: 'images/tour-nepal.jpg',
           crew: 'guide',
-          spots: 'осталось 5 мест',
+          spots: '',
         },
         {
           id: 'nepal-trek',
@@ -242,7 +242,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Эверест',
           image: 'images/tour-everest.jpg',
           crew: 'guide',
-          spots: 'осталось 7 мест',
+          spots: '',
         },
         {
           id: 'georgia',
@@ -257,7 +257,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Кахетия',
           image: 'images/tour-georgia.jpg',
           crew: 'both',
-          spots: 'осталось 5 мест',
+          spots: '',
         },
         {
           id: 'capetown',
@@ -356,7 +356,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: '28 мая – 12 июня 2027', note: 'осталось 4 места' }],
+        dates: [{ when: '28 мая – 12 июня 2027', note: '' }],
         includes: [
           'Сопровождение гида и психолога всю дорогу',
           'Пермиты на Тибет и визовая поддержка',
@@ -443,7 +443,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: '8–17 апреля 2027', note: 'осталось 6 мест' }],
+        dates: [{ when: '8–17 апреля 2027', note: '' }],
         includes: [
           'Сопровождение гида и психолога',
           'Проживание в отелях с завтраками',
@@ -529,7 +529,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: '27 марта – 4 апреля 2027', note: 'осталось 3 места' }],
+        dates: [{ when: '27 марта – 4 апреля 2027', note: '' }],
         includes: [
           'Сопровождение гида и психолога',
           'Виза в Бутан и сбор SDF',
@@ -615,7 +615,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           photo: 'images/team-olesya.jpg',
         },
         dates: [
-          { when: '21–28 октября 2026', note: 'осталось 5 мест' },
+          { when: '21–28 октября 2026', note: '' },
           { when: '7–14 марта 2027', note: 'набор открыт' },
         ],
         includes: [
@@ -714,7 +714,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: '20 апреля – 9 мая 2027', note: 'осталось 7 мест' }],
+        dates: [{ when: '20 апреля – 9 мая 2027', note: '' }],
         includes: [
           'две ночи в отеле в Катманду, размещение двухместное',
           'встреча и проводы в аэропорту Катманду',
@@ -805,7 +805,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         dates: [
           { when: '8–13 июня 2027', note: 'набор открыт' },
-          { when: '19–24 сентября 2027', note: 'осталось 5 мест' },
+          { when: '19–24 сентября 2027', note: '' },
         ],
         includes: [
           'Сопровождение гида и психолога',
@@ -1154,7 +1154,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Everest',
           image: 'images/tour-tibet.jpg',
           crew: 'both',
-          spots: '4 spots left',
+          spots: '',
         },
         {
           id: 'nepal',
@@ -1169,7 +1169,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Kathmandu',
           image: 'images/tour-nepal.jpg',
           crew: 'both',
-          spots: '6 spots left',
+          spots: '',
         },
         {
           id: 'nepal-bhutan',
@@ -1184,7 +1184,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Tiger’s Nest',
           image: 'images/tour-bhutan.jpg',
           crew: 'both',
-          spots: '3 spots left',
+          spots: '',
         },
         {
           id: 'nepal-tour',
@@ -1199,7 +1199,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Nagarkot',
           image: 'images/tour-nepal.jpg',
           crew: 'guide',
-          spots: '5 spots left',
+          spots: '',
         },
         {
           id: 'nepal-trek',
@@ -1214,7 +1214,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Everest',
           image: 'images/tour-everest.jpg',
           crew: 'guide',
-          spots: '7 spots left',
+          spots: '',
         },
         {
           id: 'georgia',
@@ -1229,7 +1229,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           highlight: 'Kakheti',
           image: 'images/tour-georgia.jpg',
           crew: 'both',
-          spots: '5 spots left',
+          spots: '',
         },
         {
           id: 'capetown',
@@ -1328,7 +1328,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: 'May 28 – June 12, 2027', note: '4 spots left' }],
+        dates: [{ when: 'May 28 – June 12, 2027', note: '' }],
         includes: [
           'Guide and psychologist with the group throughout',
           'Tibet permits and visa support',
@@ -1415,7 +1415,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: 'April 8–17, 2027', note: '6 spots left' }],
+        dates: [{ when: 'April 8–17, 2027', note: '' }],
         includes: [
           'Guide and psychologist with the group',
           'Hotel accommodation with breakfasts',
@@ -1501,7 +1501,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: 'March 27 – April 4, 2027', note: '3 spots left' }],
+        dates: [{ when: 'March 27 – April 4, 2027', note: '' }],
         includes: [
           'Guide and psychologist with the group',
           'Bhutan visa and SDF fee',
@@ -1587,7 +1587,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           photo: 'images/team-olesya.jpg',
         },
         dates: [
-          { when: 'October 21–28, 2026', note: '5 spots left' },
+          { when: 'October 21–28, 2026', note: '' },
           { when: 'March 7–14, 2027', note: 'open for booking' },
         ],
         includes: [
@@ -1686,7 +1686,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           instagram: 'https://www.instagram.com/oberendeeva',
           photo: 'images/team-olesya.jpg',
         },
-        dates: [{ when: 'April 20 – May 9, 2027', note: '7 spots left' }],
+        dates: [{ when: 'April 20 – May 9, 2027', note: '' }],
         includes: [
           'two nights in a Kathmandu hotel, double occupancy',
           'airport pick-up and drop-off in Kathmandu',
@@ -1777,7 +1777,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         dates: [
           { when: 'June 8–13, 2027', note: 'open for booking' },
-          { when: 'September 19–24, 2027', note: '5 spots left' },
+          { when: 'September 19–24, 2027', note: '' },
         ],
         includes: [
           'Guide and psychologist with the group',
