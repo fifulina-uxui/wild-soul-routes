@@ -800,11 +800,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'групповая аптечка',
         ],
         excludes: [
-          'международный перелёт',
-          'страховка на все дни путешествия с вертолётной эвакуацией — обязательно!',
+          'международный перелёт — от 500 $',
+          'страховка на все дни трека с вертолётной эвакуацией — обязательно! от 120 $, помогаем с оформлением',
           'виза в Непал — 50 $',
           'питание в Катманду и на треке (включая интернет, душ и зарядку аккумуляторов) — 35–50 $ в день',
-          'чаевые портерам и местному гиду',
+          'чаевые портерам и местному гиду — 100 $ с участника',
           'дополнительные ночи в Катманду при необходимости',
           'одноместное размещение',
           'все прочие расходы, не указанные в программе',
@@ -1059,23 +1059,19 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     why: {
       label: 'Подход',
-      heading: 'Почему путешествуют с нами',
+      heading: 'Почему с нами?',
       items: [
         {
-          title: 'Внимание к каждому',
-          text: 'Мы рядом на всех этапах путешествия, знаем своих участников и учитываем то, что важно именно вам.',
+          title: 'Потому что нас двое',
+          text: 'Олеся отвечает за маршрут и безопасность, Виктория — за психологическую работу и атмосферу в группе. Наши взгляды дополняют друг друга.',
         },
         {
-          title: 'Опыт, которому можно доверять',
-          text: 'Годами путешествуем сами и создаём маршруты, заранее продумывая логистику, детали и безопасность.',
+          title: 'Потому что мы верим в перемены, но не обещаем чудес',
+          text: 'Мы создаём условия, в которых могут появиться новые мысли, решения и возможности.',
         },
         {
-          title: 'Групповая работа с психологом',
-          text: 'Мы создаём путешествия, где тур сочетается с настоящей терапевтической работой. Если вы готовы к трансформации — нам по пути.',
-        },
-        {
-          title: 'Время почувствовать место',
-          text: 'Не пытаемся увидеть всё за раз. Оставляем время для прогулок, общения, культуры и погружения в место.',
+          title: 'Потому что мы опираемся на опыт и знания',
+          text: 'В путешествиях — на многолетнюю практику, в психологии — на профессиональное образование и научный подход. Без мистики и эзотерики.',
         },
       ],
     },
@@ -1870,11 +1866,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           'group first-aid kit',
         ],
         excludes: [
-          'international flight',
-          'insurance for all days of the trip with helicopter evacuation — mandatory!',
+          'international flight — from $500',
+          'insurance for all days of the trek with helicopter evacuation — mandatory! from $120, we help with the paperwork',
           'Nepal visa — $50',
           'meals in Kathmandu and on the trek (including internet, showers and battery charging) — $35–50 per day',
-          'tips for porters and the local guide',
+          'tips for porters and the local guide — $100 per participant',
           'extra nights in Kathmandu if needed',
           'single occupancy',
           'any other expenses not listed in the program',
@@ -2129,23 +2125,19 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     why: {
       label: 'Approach',
-      heading: 'Why travel with us',
+      heading: 'Why us?',
       items: [
         {
-          title: 'Attention to everyone',
-          text: 'We are by your side at every stage of the journey, we know our travellers and take into account what matters to you personally.',
+          title: 'Because there are two of us',
+          text: 'Olesya is in charge of the route and safety, Viktoria — of the psychological work and the atmosphere in the group. Our perspectives complement each other.',
         },
         {
-          title: 'Experience you can trust',
-          text: 'We have been travelling ourselves for years and design our routes thinking through logistics, details and safety in advance.',
+          title: 'Because we believe in change, but promise no miracles',
+          text: 'We create conditions in which new thoughts, decisions and possibilities can appear.',
         },
         {
-          title: 'Group work with a psychologist',
-          text: 'We create journeys where the tour is combined with real therapeutic work. If you are ready for a transformation — we are on the same path.',
-        },
-        {
-          title: 'Time to feel the place',
-          text: 'We do not try to see everything at once. We leave time for walks, conversations, culture and immersion in the place.',
+          title: 'Because we rely on experience and knowledge',
+          text: 'In travel — on many years of practice; in psychology — on professional education and a scientific approach. No mysticism or esotericism.',
         },
       ],
     },

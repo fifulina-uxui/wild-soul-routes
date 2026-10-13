@@ -6,7 +6,7 @@ export default function Directions() {
   const { t } = useLang()
 
   return (
-    <section id="directions" className="bg-black">
+    <section id="directions">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
           <div className="flex flex-wrap items-start justify-between gap-6">

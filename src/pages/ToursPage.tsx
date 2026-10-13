@@ -106,7 +106,7 @@ export default function ToursPage() {
       <div className="flex flex-col gap-4 px-4 pb-20 pt-8 md:px-6">
         {items.map((tour) => (
           <Reveal key={tour.id}>
-            <article className="group relative min-h-[55vh] overflow-hidden">
+            <article className="group relative min-h-[55vh] overflow-hidden rounded-[8px]">
               <img
                 src={asset(tour.image)}
                 alt={tour.title}

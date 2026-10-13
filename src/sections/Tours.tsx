@@ -48,7 +48,7 @@ export default function Tours() {
   const nearest = upcoming.sort((a, b) => ts(a.start) - ts(b.start)).slice(0, 4)
 
   return (
-    <section id="tours" className="bg-black">
+    <section id="tours">
       <div className="mx-auto max-w-[1200px] px-5 pb-7 pt-14 md:px-8 md:pt-24">
         <Reveal>
           <div className="flex flex-wrap items-start justify-between gap-6">
@@ -78,7 +78,7 @@ export default function Tours() {
         )}
         {nearest.map((tour, i) => (
           <Reveal key={tour.id}>
-            <article className="group relative min-h-[70vh] overflow-hidden">
+            <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
               <img
                 src={asset(tour.image)}
                 alt={tour.title}

@@ -76,7 +76,7 @@ function TourGallery({ images, alts, alt }: { images: string[]; alts?: string[];
             key={`${img}-${i}`}
             type="button"
             onClick={() => setOpen(page * PER_PAGE + i)}
-            className={`group relative cursor-zoom-in overflow-hidden ${MOBILE_SPANS[i % MOBILE_SPANS.length]} sm:row-span-1 ${spanClass[SPANS[i % SPANS.length]] ?? 'sm:col-span-2'}`}
+            className={`group relative cursor-zoom-in overflow-hidden rounded-[8px] ${MOBILE_SPANS[i % MOBILE_SPANS.length]} sm:row-span-1 ${spanClass[SPANS[i % SPANS.length]] ?? 'sm:col-span-2'}`}
           >
             <img
               src={asset(img)}
@@ -146,7 +146,7 @@ function TourGallery({ images, alts, alt }: { images: string[]; alts?: string[];
             src={asset(images[open])}
             alt={alts?.[open] ?? alt}
             onClick={(e) => e.stopPropagation()}
-            className="max-h-full max-w-full object-contain"
+            className="max-h-full max-w-full rounded-[8px] object-contain"
           />
           <button
             type="button"
@@ -420,7 +420,7 @@ export default function TourDetailPage() {
                 <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{detail.guide.role}</p>
                 <p className={bodyText}>{detail.guide.text}</p>
               </div>
-              <div className="relative aspect-square w-full max-w-[120px] shrink-0 overflow-hidden bg-[rgb(255_255_255/4%)]">
+              <div className="relative aspect-square w-full max-w-[120px] shrink-0 overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]">
                 {detail.guide.photo ? (
                   <img
                     src={asset(detail.guide.photo)}

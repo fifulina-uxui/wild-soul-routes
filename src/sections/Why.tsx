@@ -5,7 +5,7 @@ export default function Why() {
   const { t } = useLang()
 
   return (
-    <section id="why" className="bg-black">
+    <section id="why">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
           <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
@@ -16,7 +16,7 @@ export default function Why() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {t.why.items.map((f, i) => (
             <Reveal key={f.title}>
               <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">

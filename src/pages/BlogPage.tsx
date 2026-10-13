@@ -36,7 +36,7 @@ export default function BlogPage() {
           {t.journal.items.map((post) => (
             <Reveal key={post.id}>
               <Link to={`/blog/${post.id}`} className="group flex h-full flex-col">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden rounded-[8px]">
                   <img
                     src={asset(post.image)}
                     alt={post.title}

@@ -8,13 +8,16 @@ import Journal from '../sections/Journal'
 import Team from '../sections/Team'
 import { Reveal } from '../sections/Reveal'
 import Footer from '../sections/Footer'
+import HorizonShape from '../sections/HorizonShape'
 import { useLang } from '../i18n'
 
 export default function Home() {
   const { t } = useLang()
 
   return (
-    <div className="bg-black text-[#fafafa]">
+    // Фон у body чёрный — bg-black на обёртке убран, чтобы фигура была видна
+    <div className="text-[#fafafa]">
+      <HorizonShape />
       <Header />
       <main>
         <Hero />

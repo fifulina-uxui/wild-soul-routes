@@ -7,7 +7,7 @@ export default function Journal() {
   const { t } = useLang()
 
   return (
-    <section id="journal" className="bg-black">
+    <section id="journal">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
           <div className="flex flex-wrap items-start justify-between gap-6">
@@ -32,7 +32,7 @@ export default function Journal() {
           {t.journal.items.map((post) => (
             <Reveal key={post.id}>
               <Link to={`/blog/${post.id}`} className="group flex h-full flex-col">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden rounded-[8px]">
                   <img
                     src={asset(post.image)}
                     alt={post.title}

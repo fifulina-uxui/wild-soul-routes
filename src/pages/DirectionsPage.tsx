@@ -34,7 +34,7 @@ export default function DirectionsPage() {
       <div className="flex flex-col gap-4 px-4 pb-20 pt-5 md:px-6">
         {t.directionsPage.cards.map((card) => (
           <Reveal key={card.country}>
-            <article className="group relative min-h-[55vh] overflow-hidden">
+            <article className="group relative min-h-[55vh] overflow-hidden rounded-[8px]">
               <img
                 src={asset(card.image)}
                 alt={card.country}

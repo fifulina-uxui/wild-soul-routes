@@ -6,7 +6,7 @@ export default function Team() {
   const { t } = useLang()
 
   return (
-    <section id="team" className="bg-black">
+    <section id="team">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
           <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
@@ -24,7 +24,7 @@ export default function Team() {
           {t.team.items.map((m) => (
             <Reveal key={m.name}>
               <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">
-                <div className="relative aspect-square w-full max-w-[120px] overflow-hidden bg-[rgb(255_255_255/4%)]">
+                <div className="relative aspect-square w-full max-w-[120px] overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]">
                   {m.photo ? (
                     <img
                       src={asset(m.photo)}
