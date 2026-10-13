@@ -112,20 +112,19 @@ export default function Tours() {
                     {tour.description}
                   </p>
 
-                  <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-3">
+                  <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-4">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.start}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
-                      <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">{tour.days}</p>
                     </div>
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.group}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
-                        {t.tours.crewNames[tour.crew]}
+                        {t.tours.meta.groupSize}
                       </dd>
                     </div>
                     <div>
@@ -141,6 +140,14 @@ export default function Tours() {
                       <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">
                         {t.tours.meta.priceEarly}
                       </p>
+                    </div>
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.crew}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
+                        {t.tours.crewNames[tour.crew]}
+                      </dd>
                     </div>
                   </dl>
 

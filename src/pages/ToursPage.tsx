@@ -135,14 +135,13 @@ export default function ToursPage() {
                         {t.tours.meta.start}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
-                      <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">{tour.days}</p>
                     </div>
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
                         {t.tours.meta.group}
                       </dt>
                       <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
-                        {t.tours.crewNames[tour.crew]}
+                        {t.tours.meta.groupSize}
                       </dd>
                     </div>
                     <div>
@@ -158,6 +157,14 @@ export default function ToursPage() {
                       <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">
                         {t.tours.meta.priceEarly}
                       </p>
+                    </div>
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.crew}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
+                        {t.tours.crewNames[tour.crew]}
+                      </dd>
                     </div>
                     <div className="col-span-2 mt-4 lg:mt-0">
                       <Link
