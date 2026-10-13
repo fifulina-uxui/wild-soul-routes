@@ -150,11 +150,13 @@
     }
   }
 
-  /* Абстрактная фигура «горизонт» — позади контента главной страницы */
+  /* Абстрактная фигура «горизонт» — позади контента главной страницы.
+     z-index: 0, а контент поднят обёрткой .z-10: с отрицательным z
+     фигура ушла бы под чёрный фон, спроецированный с body на canvas */
   .horizon-shape {
     position: fixed;
     inset: 0;
-    z-index: -10;
+    z-index: 0;
     overflow: hidden;
     pointer-events: none;
   }
@@ -166,7 +168,7 @@
     height: 170vmax;
     transform: translate(-50%, 0);
     border-radius: 9999px;
-    border: 1px solid rgb(250 250 250 / 7%);
+    border: 1px solid rgb(250 250 250 / 10%);
   }
   .horizon-ring::before {
     /* второй, внутренний контур — глубина */
@@ -174,7 +176,7 @@
     position: absolute;
     inset: 14%;
     border-radius: inherit;
-    border: 1px solid rgb(250 250 250 / 4%);
+    border: 1px solid rgb(250 250 250 / 6%);
   }
   .horizon-glow {
     position: absolute;
@@ -184,7 +186,7 @@
     height: 90vmin;
     transform: translate(-50%, -50%);
     border-radius: 9999px;
-    background: radial-gradient(closest-side, rgb(250 250 250 / 6%), transparent 70%);
+    background: radial-gradient(closest-side, rgb(250 250 250 / 8%), transparent 70%);
   }
   .horizon-orbit {
     position: absolute;

@@ -85,6 +85,13 @@ export interface PageContent {
     listLabel: string
     cards: { country: string; text: string; image: string }[]
   }
+  about: {
+    label: string
+    heading: string
+    intro: string
+    people: { name: string; role: string; photo: string; text: string }[]
+    outro: string
+  }
   why: {
     label: string
     heading: string
@@ -1056,6 +1063,26 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { name: 'Грузия', count: '1 маршрут', slug: 'georgia' },
         { name: 'ЮАР', count: '1 маршрут', slug: 'south-africa' },
       ],
+    },
+    about: {
+      label: 'О проекте',
+      heading: 'Мы — Олеся Берендеева и Виктория Анисимова',
+      intro: 'Гид и психолог. Создаём путешествия, в которых важны не только места на карте, но и впечатления, встречи и открытия, которые остаются с нами.',
+      people: [
+        {
+          name: 'Олеся',
+          role: 'Гид, автор маршрутов',
+          photo: 'images/team-olesya.jpg',
+          text: 'Олеся много лет путешествует, водит группы в горы и исследует мир. В Непале она побывала больше 15 раз и давно мечтала создавать собственные маршруты.',
+        },
+        {
+          name: 'Виктория',
+          role: 'Клинический и семейный психолог',
+          photo: 'images/team-viktoria.jpg',
+          text: 'Виктория много лет работала с группами как коуч и бизнес-тренер, а затем получила образование психолога и клинического психолога. Она знает, как много может дать групповая работа, и верит, что путешествия открывают для неё новые возможности.',
+        },
+      ],
+      outro: 'Так появился Wild Soul Routes — проект, в котором мы объединили любовь к путешествиям и интерес к человеку.',
     },
     why: {
       label: 'Подход',
@@ -2122,6 +2149,26 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { name: 'Georgia', count: '1 route', slug: 'georgia' },
         { name: 'South Africa', count: '1 route', slug: 'south-africa' },
       ],
+    },
+    about: {
+      label: 'About',
+      heading: 'We are Olesya Berendeeva and Viktoria Anisimova',
+      intro: 'A guide and a psychologist. We create journeys where what matters is not only the places on the map, but the impressions, encounters and discoveries that stay with us.',
+      people: [
+        {
+          name: 'Olesya',
+          role: 'Guide, route designer',
+          photo: 'images/team-olesya.jpg',
+          text: 'Olesya has been travelling for many years, leading groups in the mountains and exploring the world. She has been to Nepal more than 15 times and has long dreamed of designing her own routes.',
+        },
+        {
+          name: 'Viktoria',
+          role: 'Clinical and family psychologist',
+          photo: 'images/team-viktoria.jpg',
+          text: 'Viktoria worked with groups for many years as a coach and business trainer, then trained as a psychologist and a clinical psychologist. She knows how much group work can give — and believes that travel opens up new possibilities for it.',
+        },
+      ],
+      outro: 'That is how Wild Soul Routes was born — a project where we combined a love of travel with an interest in the person.',
     },
     why: {
       label: 'Approach',
