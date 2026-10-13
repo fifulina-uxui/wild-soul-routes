@@ -42,7 +42,7 @@ export interface PageContent {
     label: string
     heading: string
     empty: string
-    meta: { days: string; price: string; priceEarly: string; start: string; highlight: string; crew: string }
+    meta: { group: string; price: string; priceEarly: string; start: string; highlight: string }
     crewNames: { guide: string; psych: string; both: string }
     items: Tour[]
   }
@@ -167,7 +167,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
       empty: 'Сейчас все группы в пути. Оставьте заявку — сообщим о новых датах первыми.',
-      meta: { days: 'Длительность', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
+      meta: { group: 'Группа', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное' },
       crewNames: { guide: 'Гид', psych: 'Психолог', both: 'Гид + психолог' },
       items: [
         {
@@ -1237,7 +1237,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Routes',
       heading: 'Upcoming tours',
       empty: 'All groups are on the road right now. Leave a request and we will tell you about new dates first.',
-      meta: { days: 'Duration', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Format' },
+      meta: { group: 'Group', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight' },
       crewNames: { guide: 'Guide', psych: 'Psychologist', both: 'Guide + psychologist' },
       items: [
         {

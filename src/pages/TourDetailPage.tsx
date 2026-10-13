@@ -294,10 +294,13 @@ export default function TourDetailPage() {
               <div>
                 <dt className={metaLabel}>{t.tours.meta.start}</dt>
                 <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.start}</dd>
+                <p className="mt-1 text-[12px] leading-4 text-[#fafafa]">{tour.days}</p>
               </div>
               <div>
-                <dt className={metaLabel}>{t.tours.meta.days}</dt>
-                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{tour.days}</dd>
+                <dt className={metaLabel}>{t.tours.meta.group}</dt>
+                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
+                  {t.tours.crewNames[tour.crew]}
+                </dd>
               </div>
               <div>
                 <dt className={metaLabel}>{t.tours.meta.price}</dt>
@@ -308,12 +311,6 @@ export default function TourDetailPage() {
                   </span>
                 </dd>
                 <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">{t.tours.meta.priceEarly}</p>
-              </div>
-              <div>
-                <dt className={metaLabel}>{t.tours.meta.crew}</dt>
-                <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
-                  {t.tours.crewNames[tour.crew]}
-                </dd>
               </div>
               <div className="col-span-2 mt-4 flex sm:col-span-3 lg:mt-0">
                 <button type="button" onClick={() => openLead(tour.title)} className={`${ctaPrimary} w-full sm:w-auto`}>
