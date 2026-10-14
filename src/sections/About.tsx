@@ -9,15 +9,17 @@ export default function About() {
     <section id="about">
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
-          <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-            {t.about.label}
-          </p>
-          <h2 className="mt-2 max-w-[720px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
-            {t.about.heading}
-          </h2>
-          <p className="mt-4 max-w-[600px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-            {t.about.intro}
-          </p>
+          <div className="text-center">
+            <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+              {t.about.label}
+            </p>
+            <h2 className="mx-auto mt-2 max-w-[720px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+              {t.about.heading}
+            </h2>
+            <p className="mx-auto mt-4 max-w-[600px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+              {t.about.intro}
+            </p>
+          </div>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-8">

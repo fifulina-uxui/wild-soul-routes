@@ -1066,8 +1066,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     about: {
       label: 'О проекте',
-      heading: 'Мы — Олеся Берендеева и Виктория Анисимова',
-      intro: 'Гид и психолог. Создаём путешествия, в которых важны не только места на карте, но и впечатления, встречи и открытия, которые остаются с нами.',
+      heading: 'Гид и психолог',
+      intro: 'Мы — Олеся Берендеева и Виктория Анисимова. Создаём путешествия, в которых важны не только места на карте, но и впечатления, встречи и открытия, которые остаются с нами.',
       people: [
         {
           name: 'Олеся',
@@ -2152,8 +2152,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
     },
     about: {
       label: 'About',
-      heading: 'We are Olesya Berendeeva and Viktoria Anisimova',
-      intro: 'A guide and a psychologist. We create journeys where what matters is not only the places on the map, but the impressions, encounters and discoveries that stay with us.',
+      heading: 'A guide and a psychologist',
+      intro: 'We are Olesya Berendeeva and Viktoria Anisimova. We create journeys where what matters is not only the places on the map, but the impressions, encounters and discoveries that stay with us.',
       people: [
         {
           name: 'Olesya',
