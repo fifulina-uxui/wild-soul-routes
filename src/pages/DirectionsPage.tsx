@@ -19,14 +19,15 @@ export default function DirectionsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/20" />
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-3 md:px-8">
-          <Reveal>
-            <h1 className="text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
-              {t.directionsPage.heading}
-            </h1>
-            <p className="mt-4 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-              {t.directionsPage.subtitle}
-            </p>
-          </Reveal>
+          <h1 className="hero-in text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
+            {t.directionsPage.heading}
+          </h1>
+          <p
+            className="hero-in mt-4 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]"
+            style={{ animationDelay: '160ms' }}
+          >
+            {t.directionsPage.subtitle}
+          </p>
         </div>
       </section>
 

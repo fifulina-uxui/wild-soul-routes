@@ -125,34 +125,54 @@ export function LeadFormFields({ submitLabel, tourTitle }: { submitLabel?: strin
   )
 }
 
-export default function LeadForm({ submitLabel, aside }: { submitLabel?: string; aside?: ReactNode }) {
+export default function LeadForm({ submitLabel, aside, loadAnim }: { submitLabel?: string; aside?: ReactNode; loadAnim?: boolean }) {
   const { t } = useLang()
+
+  // loadAnim — страница открывается этой секцией (Контакты): заголовок и форма
+  // появляются каскадом сразу при загрузке, а не по скроллу
+  const heading = aside ?? (
+    <>
+      <p className="hero-in text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+        {t.lead.label}
+      </p>
+      <h2
+        className="hero-in mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]"
+        style={{ animationDelay: '160ms' }}
+      >
+        {t.lead.heading}
+      </h2>
+      <p
+        className="hero-in mt-4 max-w-[504px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]"
+        style={{ animationDelay: '320ms' }}
+      >
+        {t.lead.text}
+      </p>
+    </>
+  )
+
+  const form = (
+    <div id="lead-form" className="scroll-mt-24">
+      <LeadFormFields submitLabel={submitLabel} />
+    </div>
+  )
 
   return (
     <section id="lead" className="bg-black">
       <div className="mx-auto max-w-[1200px] px-5 py-16 md:px-8 md:py-24">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
-          <Reveal>
-            {aside ?? (
-              <>
-                <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-                  {t.lead.label}
-                </p>
-                <h2 className="mt-2 text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
-                  {t.lead.heading}
-                </h2>
-                <p className="mt-4 max-w-[504px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                  {t.lead.text}
-                </p>
-              </>
-            )}
-          </Reveal>
-
-          <Reveal>
-            <div id="lead-form" className="scroll-mt-24">
-              <LeadFormFields submitLabel={submitLabel} />
-            </div>
-          </Reveal>
+          {loadAnim ? (
+            <>
+              <div>{heading}</div>
+              <div className="hero-in" style={{ animationDelay: '450ms' }}>
+                {form}
+              </div>
+            </>
+          ) : (
+            <>
+              <Reveal>{aside ?? heading}</Reveal>
+              <Reveal>{form}</Reveal>
+            </>
+          )}
         </div>
       </div>
     </section>
