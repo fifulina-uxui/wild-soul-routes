@@ -102,6 +102,7 @@ export interface PageContent {
   why: {
     label: string
     heading: string
+    text: string
     items: { title: string; text: string }[]
   }
   journal: {
@@ -1150,6 +1151,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     why: {
       label: 'Подход',
       heading: 'Почему с нами?',
+      text: 'Мы берём на себя маршрут и создаём пространство, где можно замедлиться, услышать себя и увидеть новые возможности.',
       items: [
         {
           title: 'Потому что нас двое',
@@ -1270,7 +1272,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
       text: 'Расскажите, какой формат вам ближе — тур с гидом и психологом, трек с гидом или выездная группа с психологом. В течение рабочего дня ответим, предложим даты и смету. Если пока не определились, просто оставьте контакты — поможем выбрать.',
       bullets: [
         '— Отвечаем в течение рабочего дня',
-        '— Бронь без предоплаты в течение 3 дней',
         '— Отмена с полным возвратом за 30 дней до тура',
       ],
       form: {
@@ -2292,6 +2293,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     why: {
       label: 'Approach',
       heading: 'Why us?',
+      text: 'We take care of the route and create a space where you can slow down, hear yourself and see new possibilities.',
       items: [
         {
           title: 'Because there are two of us',
@@ -2412,7 +2414,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
       text: 'Tell us which format suits you best — a tour with a guide and a psychologist, a trek with a guide, or a residential group with a psychologist. Within one business day we will reply with suggested dates and an estimate. If you have not decided yet, just leave your contacts — we will help you choose.',
       bullets: [
         '— We reply within one business day',
-        '— Booking held for 3 days with no prepayment',
         '— Full refund for cancellations 30 days before the tour',
       ],
       form: {
