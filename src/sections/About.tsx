@@ -25,8 +25,8 @@ export default function About() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-8">
           {t.about.people.map((p) => (
             <Reveal key={p.name}>
-              <div className="h-full overflow-hidden rounded-[12px] bg-[rgb(255_255_255/4%)]">
-                <div className="relative aspect-[3/2] w-full overflow-hidden">
+              <div className="h-full">
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[12px]">
                   <img
                     src={asset(p.photo)}
                     alt={p.name}
@@ -34,7 +34,7 @@ export default function About() {
                     className="absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
-                <div className="p-6 md:p-8">
+                <div className="pt-5">
                   <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">{p.name}</h3>
                   <p className="mt-1 text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{p.role}</p>
                   <p className="mt-4 text-[16px] leading-[24px] text-[rgb(250_250_250/55%)]">{p.text}</p>
