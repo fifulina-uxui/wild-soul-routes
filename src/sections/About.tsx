@@ -45,9 +45,11 @@ export default function About() {
         </div>
 
         <Reveal>
-          <p className="mt-12 max-w-[720px] border-t border-[rgb(255_255_255/15%)] pt-6 text-[18px] leading-[26px] text-[#fafafa]">
-            {t.about.outro}
-          </p>
+          <div className="mt-12 border-t border-[rgb(255_255_255/15%)] pt-6 text-center">
+            <p className="mx-auto max-w-[720px] text-[18px] leading-[26px] text-[#fafafa]">
+              {t.about.outro}
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>
