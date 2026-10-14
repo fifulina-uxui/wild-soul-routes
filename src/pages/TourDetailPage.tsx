@@ -63,7 +63,7 @@ function TourGallery({ images, alts, alt }: { images: string[]; alts?: string[];
   }, [lightboxClosed, images.length])
 
   const pagerBtn =
-    'inline-flex min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-6 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] disabled:pointer-events-none disabled:opacity-30'
+    'inline-flex min-h-[42px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-6 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] disabled:pointer-events-none disabled:opacity-30'
 
   const navBtn =
     'absolute top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[rgb(255_255_255/12%)] text-[#fafafa] backdrop-blur-md transition-colors duration-200 hover:bg-[rgb(255_255_255/25%)] disabled:pointer-events-none disabled:opacity-30'
@@ -173,7 +173,7 @@ const h2 = 'text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]'
 const bodyText = 'text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]'
 const metaLabel = 'text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]'
 const ctaPrimary =
-  'inline-flex min-h-[48px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
+  'inline-flex min-h-[42px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
 
 function StickyCta({ title, start, priceEarly, price }: { title: string; start: string; priceEarly: string; price: string }) {
   const { t } = useLang()

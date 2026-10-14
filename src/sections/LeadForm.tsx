@@ -103,7 +103,7 @@ export function LeadFormFields({ submitLabel, tourTitle }: { submitLabel?: strin
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-2 inline-flex min-h-[48px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] disabled:cursor-wait disabled:opacity-60"
+        className="mt-2 inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] disabled:cursor-wait disabled:opacity-60"
       >
         {status === 'sending' ? t.lead.form.sending : (submitLabel ?? t.cta.submit)}
       </button>

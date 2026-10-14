@@ -72,7 +72,7 @@ export default function BlogArticlePage() {
             </p>
             <Link
               to="/tours"
-              className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
+              className="inline-flex min-h-[42px] shrink-0 items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
             >
               {t.cta.choose}
             </Link>

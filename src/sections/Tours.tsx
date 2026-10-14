@@ -62,7 +62,7 @@ export default function Tours() {
             </div>
             <Link
               to="/tours"
-              className="hidden min-h-[36.5px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:inline-flex"
+              className="hidden min-h-[42px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:inline-flex"
             >
               {t.tourDetail.back}
             </Link>
@@ -154,14 +154,14 @@ export default function Tours() {
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <Link
                       to={`/tours/${tour.id}`}
-                      className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
+                      className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
                     >
                       {t.cta.more}
                     </Link>
                     <button
                       type="button"
                       onClick={() => openLead(tour.title)}
-                      className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+                      className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
                     >
                       {t.cta.lead}
                     </button>
@@ -177,7 +177,7 @@ export default function Tours() {
         <Reveal>
           <Link
             to="/tours"
-            className="inline-flex min-h-[36.5px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-[6px] text-[16px] font-bold leading-[24.5px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa]"
+            className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa]"
           >
             {t.tourDetail.back}
           </Link>
