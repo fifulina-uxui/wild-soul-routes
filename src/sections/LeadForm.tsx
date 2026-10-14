@@ -144,11 +144,6 @@ export default function LeadForm({ submitLabel, aside }: { submitLabel?: string;
                 <p className="mt-4 max-w-[504px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
                   {t.lead.text}
                 </p>
-                <ul className="mt-8 flex flex-col gap-3 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
-                  {t.lead.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
               </>
             )}
           </Reveal>

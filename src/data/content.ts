@@ -125,7 +125,6 @@ export interface PageContent {
     label: string
     heading: string
     text: string
-    bullets: string[]
     form: {
       name: string
       namePlaceholder: string
@@ -1270,10 +1269,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Заявка',
       heading: 'Оставить заявку',
       text: 'Расскажите, какой формат вам ближе — тур с гидом и психологом, трек с гидом или выездная группа с психологом. В течение рабочего дня ответим, предложим даты и смету. Если пока не определились, просто оставьте контакты — поможем выбрать.',
-      bullets: [
-        '— Отвечаем в течение рабочего дня',
-        '— Отмена с полным возвратом за 30 дней до тура',
-      ],
       form: {
         name: 'Имя',
         namePlaceholder: 'Как к вам обращаться',
@@ -2412,10 +2407,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Request',
       heading: 'Plan my trip',
       text: 'Tell us which format suits you best — a tour with a guide and a psychologist, a trek with a guide, or a residential group with a psychologist. Within one business day we will reply with suggested dates and an estimate. If you have not decided yet, just leave your contacts — we will help you choose.',
-      bullets: [
-        '— We reply within one business day',
-        '— Full refund for cancellations 30 days before the tour',
-      ],
       form: {
         name: 'Name',
         namePlaceholder: 'What should we call you',
