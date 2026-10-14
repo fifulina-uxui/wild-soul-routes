@@ -22,8 +22,8 @@ export default function Home() {
         <About />
         <Formats />
         <Tours />
-        <Directions />
         <Why />
+        <Directions />
         <Journal />
         <section className="mx-auto max-w-[1200px] px-5 pb-16 md:px-8 md:pb-24">
           <Reveal>
