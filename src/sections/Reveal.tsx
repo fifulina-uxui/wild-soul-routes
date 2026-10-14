@@ -1,6 +1,14 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react'
 
-export function Reveal({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function Reveal({
+  children,
+  className = '',
+  delay = 0,
+}: {
+  children: ReactNode
+  className?: string
+  delay?: number
+}) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -24,6 +32,7 @@ export function Reveal({ children, className = '' }: { children: ReactNode; clas
     <div
       ref={ref}
       className={`reveal ${visible ? 'reveal--visible' : ''} ${className}`}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>
