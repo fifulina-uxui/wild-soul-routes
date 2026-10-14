@@ -40,7 +40,7 @@ export default function Hero() {
               {t.cta.choose}
             </a>
             <a
-              href="#why"
+              href="#format"
               className="inline-flex min-h-[42px] items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa]"
             >
               {t.cta.format}

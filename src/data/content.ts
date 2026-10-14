@@ -92,6 +92,12 @@ export interface PageContent {
     people: { name: string; role: string; photo: string; text: string }[]
     outro: string
   }
+  formats: {
+    label: string
+    heading: string
+    items: { title: string; text: string }[]
+    outro: string[]
+  }
   why: {
     label: string
     heading: string
@@ -1083,6 +1089,28 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
       ],
       outro: 'Так появился Wild Soul Routes — проект, в котором мы объединили любовь к путешествиям и интерес к человеку.',
+    },
+    formats: {
+      label: 'Форматы',
+      heading: 'Три способа путешествовать с нами',
+      items: [
+        {
+          title: 'Путешествия с гидом и психологом',
+          text: 'Исследуем страны, знакомимся с культурой и работаем в группе вместе с Викторией.',
+        },
+        {
+          title: 'Треккинги и горные маршруты',
+          text: 'Открываем красивые места и проживаем настоящие приключения вместе с Олесей.',
+        },
+        {
+          title: 'Выездные группы с психологом',
+          text: 'Остаёмся в одном месте и посвящаем время групповой работе, общению и исследованию себя.',
+        },
+      ],
+      outro: [
+        'Мы выбираем места, где есть природа, самобытная культура и настоящая жизнь страны. Сейчас это Непал, Тибет и Бутан. Дальше — Южная Африка и Патагония.',
+        'Каждое путешествие — это продуманный маршрут, небольшая группа и возможность быть собой.',
+      ],
     },
     why: {
       label: 'Подход',
@@ -2169,6 +2197,28 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
       ],
       outro: 'That is how Wild Soul Routes was born — a project where we combined a love of travel with an interest in the person.',
+    },
+    formats: {
+      label: 'Formats',
+      heading: 'Three ways to travel with us',
+      items: [
+        {
+          title: 'Journeys with a guide and a psychologist',
+          text: 'We explore countries, get to know the culture and work in a group together with Viktoria.',
+        },
+        {
+          title: 'Treks and mountain routes',
+          text: 'We discover beautiful places and live through real adventures together with Olesya.',
+        },
+        {
+          title: 'Residential groups with a psychologist',
+          text: 'We stay in one place and devote the time to group work, conversation and self-exploration.',
+        },
+      ],
+      outro: [
+        'We choose places with nature, a distinctive culture and the real life of the country. Right now these are Nepal, Tibet and Bhutan. Next — South Africa and Patagonia.',
+        'Every journey is a well-designed route, a small group and a chance to be yourself.',
+      ],
     },
     why: {
       label: 'Approach',

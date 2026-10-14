@@ -2,11 +2,11 @@ import { Link } from 'react-router'
 import Header from '../sections/Header'
 import Hero from '../sections/Hero'
 import About from '../sections/About'
+import Formats from '../sections/Formats'
 import Tours from '../sections/Tours'
 import Directions from '../sections/Directions'
 import Why from '../sections/Why'
 import Journal from '../sections/Journal'
-import Team from '../sections/Team'
 import { Reveal } from '../sections/Reveal'
 import Footer from '../sections/Footer'
 import { useLang } from '../i18n'
@@ -20,10 +20,10 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Formats />
         <Tours />
         <Directions />
         <Why />
-        <Team />
         <Journal />
         <section className="mx-auto max-w-[1200px] px-5 pb-16 md:px-8 md:pb-24">
           <Reveal>
