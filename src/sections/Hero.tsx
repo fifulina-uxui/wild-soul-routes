@@ -17,22 +17,34 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 py-16 max-sm:pb-6 md:px-8">
         <div className="max-w-[600px]">
-          <p className="text-[14px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/70%)]">
+          <p className="hero-in text-[14px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/70%)]">
             {t.hero.tagline}
           </p>
-          <h1 className="mt-4 text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
+          <h1
+            className="hero-in mt-4 text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]"
+            style={{ animationDelay: '100ms' }}
+          >
             {t.hero.title}
           </h1>
-          <p className="mt-4 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+          <p
+            className="hero-in mt-4 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]"
+            style={{ animationDelay: '200ms' }}
+          >
             {t.hero.subtitle}
           </p>
           {t.hero.subtitle2 && (
-            <p className="mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/55%)]">
+            <p
+              className="hero-in mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/55%)]"
+              style={{ animationDelay: '280ms' }}
+            >
               {t.hero.subtitle2}
             </p>
           )}
 
-          <div className="mt-[72px] flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
+          <div
+            className="hero-in mt-[72px] flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4"
+            style={{ animationDelay: '360ms' }}
+          >
             <a
               href="#tours"
               className="inline-flex min-h-[42px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]"
