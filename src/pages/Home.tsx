@@ -27,8 +27,11 @@ export default function Home() {
         <Journal />
         <section className="mx-auto max-w-[1200px] px-5 pb-16 md:px-8 md:pb-24">
           <Reveal>
-            <div className="flex flex-col gap-6 border-t border-[rgb(255_255_255/15%)] pt-14 md:flex-row md:items-center md:justify-between">
-              <p className="max-w-[420px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+            <div className="flex flex-col items-center gap-6 text-center">
+              <h2 className="max-w-[720px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+                {t.cta.consultHeading}
+              </h2>
+              <p className="max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
                 {t.cta.consultText}
               </p>
               <Link

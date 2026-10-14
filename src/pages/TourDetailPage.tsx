@@ -175,7 +175,7 @@ const metaLabel = 'text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(2
 const ctaPrimary =
   'inline-flex min-h-[48px] items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6]'
 
-function StickyCta({ title, priceEarly, price }: { title: string; priceEarly: string; price: string }) {
+function StickyCta({ title, start, priceEarly, price }: { title: string; start: string; priceEarly: string; price: string }) {
   const { t } = useLang()
   const openLead = useLeadDialog()
   const [scrolled, setScrolled] = useState(false)

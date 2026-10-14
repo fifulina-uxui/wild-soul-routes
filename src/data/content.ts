@@ -31,7 +31,7 @@ export interface TourDetail {
 
 export interface PageContent {
   nav: { href: string; label: string }[]
-  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string; consult: string; consultText: string }
+  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string; consult: string; consultHeading: string; consultText: string }
   hero: {
     tagline: string
     title: string
@@ -168,7 +168,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
       choose: 'Выбрать маршрут',
       format: 'Узнать о формате',
       consult: 'Получить консультацию',
-      consultText: 'Расскажите, куда хотите поехать, — ответим в течение рабочего дня.',
+      consultHeading: 'Ваше следующее путешествие начинается здесь',
+      consultText: 'Расскажите, куда хотите поехать, — поможем разобраться в деталях и ответим в течение рабочего дня.',
     },
     hero: {
       tagline: 'Путешествия с душой',
@@ -1302,7 +1303,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
       choose: 'Choose a route',
       format: 'About the format',
       consult: 'Get a consultation',
-      consultText: 'Tell us where you want to go — we will reply within one business day.',
+      consultHeading: 'Your next journey starts here',
+      consultText: 'Tell us where you want to go — we will help you sort out the details and reply within one business day.',
     },
     hero: {
       tagline: 'Travel with soul',
