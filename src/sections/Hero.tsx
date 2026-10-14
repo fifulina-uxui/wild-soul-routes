@@ -22,20 +22,20 @@ export default function Hero() {
           </p>
           <h1
             className="hero-in mt-4 text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]"
-            style={{ animationDelay: '100ms' }}
+            style={{ animationDelay: '160ms' }}
           >
             {t.hero.title}
           </h1>
           <p
             className="hero-in mt-4 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]"
-            style={{ animationDelay: '200ms' }}
+            style={{ animationDelay: '320ms' }}
           >
             {t.hero.subtitle}
           </p>
           {t.hero.subtitle2 && (
             <p
               className="hero-in mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/55%)]"
-              style={{ animationDelay: '280ms' }}
+              style={{ animationDelay: '450ms' }}
             >
               {t.hero.subtitle2}
             </p>
@@ -43,7 +43,7 @@ export default function Hero() {
 
           <div
             className="hero-in mt-[72px] flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4"
-            style={{ animationDelay: '360ms' }}
+            style={{ animationDelay: '580ms' }}
           >
             <a
               href="#tours"

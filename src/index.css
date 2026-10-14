@@ -163,11 +163,11 @@
     opacity: 1;
     transform: none;
   }
-  /* Появление текста hero при загрузке страницы: прозрачность + небольшой сдвиг */
+  /* Появление текста hero при загрузке страницы: прозрачность + заметный сдвиг */
   @keyframes hero-in {
     from {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(36px);
     }
     to {
       opacity: 1;
@@ -176,7 +176,7 @@
   }
   .hero-in {
     opacity: 0;
-    animation: hero-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation: hero-in 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
   @media (prefers-reduced-motion: reduce) {
     .reveal {
