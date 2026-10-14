@@ -211,17 +211,23 @@ function StickyCta({ title, start, priceEarly, price }: { title: string; start: 
       <div className="mx-auto max-w-[1200px] px-4 md:px-8">
         <div className="floating-glass flex flex-col gap-3 rounded-[8px] p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <div className="min-w-0 text-center sm:text-left">
-            <p className="hidden truncate text-[16px] font-bold leading-6 text-[#fafafa] sm:block">
+            <p className="hidden truncate text-[18px] font-bold leading-6 text-[#fafafa] sm:block">
               {title}
             </p>
-            <p className="text-[16px] font-bold leading-6 text-[#fafafa] sm:text-[14px] sm:font-normal sm:leading-5 sm:text-[rgb(250_250_250/70%)]">
+            <p className="hidden truncate text-[15px] leading-5 text-[rgb(250_250_250/70%)] sm:block">
+              {start}
+            </p>
+            <p className="text-[18px] font-bold leading-6 text-[#fafafa] sm:mt-1 sm:text-[16px]">
               {priceEarly}{' '}
-              <span className="text-[14px] font-normal leading-5 text-[rgb(250_250_250/45%)] line-through">
+              <span className="text-[15px] font-normal leading-5 text-[rgb(250_250_250/45%)] line-through">
                 {price}
+              </span>{' '}
+              <span className="text-[15px] font-normal leading-5 text-[rgb(250_250_250/85%)]">
+                {t.tours.meta.priceEarly}
               </span>
             </p>
-            <p className="mt-1 whitespace-pre-line text-[12px] leading-4 text-[#fafafa]">
-              {t.tours.meta.priceEarly}
+            <p className="mt-0.5 text-[14px] leading-5 text-[rgb(250_250_250/70%)] sm:hidden">
+              {start}
             </p>
           </div>
           <button type="button" onClick={() => openLead(title)} className={`${ctaPrimary} w-full sm:w-auto`}>
@@ -513,7 +519,7 @@ export default function TourDetailPage() {
         }
       />
 
-      <StickyCta key={tour.id} title={tour.title} priceEarly={tour.priceEarly} price={tour.price} />
+      <StickyCta key={tour.id} title={tour.title} start={tour.start} priceEarly={tour.priceEarly} price={tour.price} />
     </Subpage>
   )
 }
