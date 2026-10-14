@@ -149,46 +149,4 @@
       transform: translateY(0);
     }
   }
-
-  /* Векторная фигура «горы и солнце» — позади контента главной страницы.
-     Движется ТОЛЬКО при скролле (scroll-timeline), собственной анимации нет.
-     z-index: 0, а контент поднят обёрткой .z-10: с отрицательным z
-     фигура ушла бы под чёрный фон, спроецированный с body на canvas */
-  .horizon-shape {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
-  .horizon-figure {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    width: 110vmin;
-    max-width: none;
-    transform: translate(-50%, -50%);
-    opacity: 0.13;
-  }
-  @keyframes horizon-drift {
-    from {
-      transform: translate(-50%, calc(-50% + 14vh));
-    }
-    to {
-      transform: translate(-50%, calc(-50% - 14vh));
-    }
-  }
-
-  @supports (animation-timeline: scroll()) {
-    .horizon-figure {
-      animation: horizon-drift linear both;
-      animation-timeline: scroll(root);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .horizon-figure {
-      animation: none;
-    }
-  }
 }

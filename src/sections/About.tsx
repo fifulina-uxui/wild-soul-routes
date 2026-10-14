@@ -46,7 +46,7 @@ export default function About() {
 
         <Reveal>
           <div className="mt-12 border-t border-[rgb(255_255_255/15%)] pt-6 text-center">
-            <p className="mx-auto max-w-[720px] text-[18px] leading-[26px] text-[#fafafa]">
+            <p className="mx-auto max-w-[720px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
               {t.about.outro}
             </p>
           </div>
