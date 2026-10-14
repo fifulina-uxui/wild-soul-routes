@@ -472,17 +472,17 @@ export default function TourDetailPage() {
         )}
       </section>
 
-      {/* Условия бронирования и скидки — два блока рядом */}
-      {(detail.booking || detail.discounts) && (
+      {/* Особенности тура и скидки — два блока рядом */}
+      {(detail.features || detail.discounts) && (
         <section
           className={`mx-auto grid max-w-[1200px] grid-cols-1 gap-14 px-5 pt-14 md:gap-10 md:px-8 md:pt-20 ${
             detail.discounts ? 'md:grid-cols-2' : ''
           }`}
         >
-          {detail.booking && (
+          {detail.features && (
             <Reveal>
-              <h2 className={h2}>{t.tourDetail.booking}</h2>
-              <ListItems items={detail.booking} />
+              <h2 className={h2}>{t.tourDetail.features}</h2>
+              <ListItems items={detail.features} />
             </Reveal>
           )}
           {detail.discounts && (
@@ -494,18 +494,18 @@ export default function TourDetailPage() {
         </section>
       )}
 
-      {/* Форма заявки + особенности тура слева */}
+      {/* Форма заявки + условия бронирования слева */}
       <LeadForm
         submitLabel={t.tourDetail.signup}
         aside={
-          detail.features ? (
+          detail.booking ? (
             <div>
               <h2 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-                {t.tourDetail.features}
+                {t.tourDetail.booking}
               </h2>
               <ul className="mt-4 flex flex-col gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                {detail.features.map((f) => (
-                  <li key={f}>{f}</li>
+                {detail.booking.map((b) => (
+                  <li key={b.slice(0, 48)}>{b}</li>
                 ))}
               </ul>
             </div>
