@@ -1,12 +1,22 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 import { Reveal } from './Reveal'
 
 export default function Why() {
   const { t } = useLang()
 
   return (
-    <section id="why">
-      <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
+    <section id="why" className="relative overflow-hidden">
+      <img
+        src={asset('images/why-bg.jpg')}
+        alt="Взлётная полоса в Лукле среди гималайских гор"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
+
+      <div className="relative z-10 mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-24">
         <Reveal>
           <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
             {t.why.label}
