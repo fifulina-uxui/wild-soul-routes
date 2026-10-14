@@ -22,7 +22,8 @@ export default function About() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-8">
+        {/* На мобильном карточки в одну колонку — зазор больше (28px = 16px + 75%) */}
+        <div className="mt-12 grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-4 lg:gap-8">
           {t.about.people.map((p) => (
             <Reveal key={p.name}>
               <div className="h-full">

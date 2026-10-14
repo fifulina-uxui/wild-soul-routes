@@ -304,7 +304,7 @@ export default function TourDetailPage() {
               <div>
                 <dt className={metaLabel}>{t.tours.meta.group}</dt>
                 <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
-                  {t.tours.meta.groupSize}
+                  {tour.groupSize ?? t.tours.meta.groupSize}
                 </dd>
               </div>
               <div>
