@@ -1072,13 +1072,13 @@ export const content: Record<'ru' | 'en', PageContent> = {
         {
           name: 'Олеся',
           role: 'Гид, автор маршрутов',
-          photo: 'images/team-olesya.jpg',
+          photo: 'images/about-olesya.jpg',
           text: 'Олеся много лет путешествует, водит группы в горы и исследует мир. В Непале она побывала больше 15 раз и давно мечтала создавать собственные маршруты.',
         },
         {
           name: 'Виктория',
           role: 'Клинический и семейный психолог',
-          photo: 'images/team-viktoria.jpg',
+          photo: 'images/about-viktoria.jpg',
           text: 'Виктория много лет работала с группами как коуч и бизнес-тренер, а затем получила образование психолога и клинического психолога. Она знает, как много может дать групповая работа, и верит, что путешествия открывают для неё новые возможности.',
         },
       ],
@@ -2158,13 +2158,13 @@ export const content: Record<'ru' | 'en', PageContent> = {
         {
           name: 'Olesya',
           role: 'Guide, route designer',
-          photo: 'images/team-olesya.jpg',
+          photo: 'images/about-olesya.jpg',
           text: 'Olesya has been travelling for many years, leading groups in the mountains and exploring the world. She has been to Nepal more than 15 times and has long dreamed of designing her own routes.',
         },
         {
           name: 'Viktoria',
           role: 'Clinical and family psychologist',
-          photo: 'images/team-viktoria.jpg',
+          photo: 'images/about-viktoria.jpg',
           text: 'Viktoria worked with groups for many years as a coach and business trainer, then trained as a psychologist and a clinical psychologist. She knows how much group work can give — and believes that travel opens up new possibilities for it.',
         },
       ],

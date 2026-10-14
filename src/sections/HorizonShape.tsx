@@ -1,17 +1,13 @@
-// Декоративная фигура «горизонт» на главной: огромное тонкое кольцо со
-// свечением и орбитальной точкой. Лежит позади контента (контент поднят
-// обёрткой z-10 в Home), плывёт вверх по мере скролла страницы.
-// Движение — только transform/opacity: scroll-timeline работает на композиторе,
-// без JS; там, где scroll-timeline нет, фигура просто стоит на месте.
+import { asset } from '../lib/asset'
+
+// Векторная фигура «горы и солнце» на главной: большая line-иллюстрация
+// позади контента (контент поднят обёрткой z-10 в Home). Сама по себе
+// не движется — только плавно смещается вверх по мере скролла страницы
+// (CSS scroll-timeline, без JS; без его поддержки стоит на месте).
 export default function HorizonShape() {
   return (
     <div aria-hidden="true" className="horizon-shape">
-      <div className="horizon-glow" />
-      <div className="horizon-ring">
-        <div className="horizon-orbit">
-          <span />
-        </div>
-      </div>
+      <img src={asset('images/horizon.svg')} alt="" className="horizon-figure" />
     </div>
   )
 }

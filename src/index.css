@@ -150,7 +150,8 @@
     }
   }
 
-  /* Абстрактная фигура «горизонт» — позади контента главной страницы.
+  /* Векторная фигура «горы и солнце» — позади контента главной страницы.
+     Движется ТОЛЬКО при скролле (scroll-timeline), собственной анимации нет.
      z-index: 0, а контент поднят обёрткой .z-10: с отрицательным z
      фигура ушла бы под чёрный фон, спроецированный с body на canvas */
   .horizon-shape {
@@ -160,89 +161,33 @@
     overflow: hidden;
     pointer-events: none;
   }
-  .horizon-ring {
+  .horizon-figure {
     position: absolute;
     left: 50%;
-    top: 58%;
-    width: 170vmax;
-    height: 170vmax;
-    transform: translate(-50%, 0);
-    border-radius: 9999px;
-    border: 1px solid rgb(250 250 250 / 10%);
-  }
-  .horizon-ring::before {
-    /* второй, внутренний контур — глубина */
-    content: '';
-    position: absolute;
-    inset: 14%;
-    border-radius: inherit;
-    border: 1px solid rgb(250 250 250 / 6%);
-  }
-  .horizon-glow {
-    position: absolute;
-    left: 50%;
-    top: 42%;
-    width: 90vmin;
-    height: 90vmin;
+    top: 55%;
+    width: 110vmin;
+    max-width: none;
     transform: translate(-50%, -50%);
-    border-radius: 9999px;
-    background: radial-gradient(closest-side, rgb(250 250 250 / 8%), transparent 70%);
-  }
-  .horizon-orbit {
-    position: absolute;
-    inset: 0;
-    animation: horizon-orbit 140s linear infinite;
-  }
-  .horizon-orbit > span {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 6px;
-    height: 6px;
-    transform: translate(-50%, -50%);
-    border-radius: 9999px;
-    background: rgb(250 250 250 / 45%);
-    box-shadow: 0 0 12px 2px rgb(250 250 250 / 25%);
-  }
-  @keyframes horizon-orbit {
-    to {
-      transform: rotate(360deg);
-    }
+    opacity: 0.13;
   }
   @keyframes horizon-drift {
     from {
-      transform: translate(-50%, 12vh);
+      transform: translate(-50%, calc(-50% + 14vh));
     }
     to {
-      transform: translate(-50%, -20vh);
-    }
-  }
-  @keyframes horizon-glow-drift {
-    from {
-      transform: translate(-50%, -30%);
-      opacity: 0.5;
-    }
-    to {
-      transform: translate(-50%, -90%);
-      opacity: 1;
+      transform: translate(-50%, calc(-50% - 14vh));
     }
   }
 
   @supports (animation-timeline: scroll()) {
-    .horizon-ring {
+    .horizon-figure {
       animation: horizon-drift linear both;
-      animation-timeline: scroll(root);
-    }
-    .horizon-glow {
-      animation: horizon-glow-drift linear both;
       animation-timeline: scroll(root);
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .horizon-ring,
-    .horizon-glow,
-    .horizon-orbit {
+    .horizon-figure {
       animation: none;
     }
   }

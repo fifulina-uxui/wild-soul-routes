@@ -25,22 +25,20 @@ export default function About() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-8">
           {t.about.people.map((p) => (
             <Reveal key={p.name}>
-              <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">
-                <div className="flex items-center gap-4">
-                  <div className="relative aspect-square w-[72px] shrink-0 overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]">
-                    <img
-                      src={asset(p.photo)}
-                      alt={p.name}
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">{p.name}</h3>
-                    <p className="text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{p.role}</p>
-                  </div>
+              <div className="h-full overflow-hidden rounded-[12px] bg-[rgb(255_255_255/4%)]">
+                <div className="relative aspect-[3/2] w-full overflow-hidden">
+                  <img
+                    src={asset(p.photo)}
+                    alt={p.name}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
                 </div>
-                <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/55%)]">{p.text}</p>
+                <div className="p-6 md:p-8">
+                  <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">{p.name}</h3>
+                  <p className="mt-1 text-[14px] leading-5 text-[rgb(250_250_250/70%)]">{p.role}</p>
+                  <p className="mt-4 text-[16px] leading-[24px] text-[rgb(250_250_250/55%)]">{p.text}</p>
+                </div>
               </div>
             </Reveal>
           ))}
