@@ -77,10 +77,8 @@ export default function Tours() {
           </p>
         )}
         {nearest.map((tour, i) => (
-          // Sticky-стопка: карточка прилипает к верху, следующая при скролле наезжает поверх
-          <div key={tour.id} className="sticky" style={{ top: `${84 + i * 12}px` }}>
-            <Reveal delay={(i % 3) * 80}>
-              <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
+          <Reveal key={tour.id} delay={(i % 3) * 80}>
+            <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
               <img
                 src={asset(tour.image)}
                 alt={tour.title}
@@ -171,8 +169,7 @@ export default function Tours() {
                 </div>
               </div>
             </article>
-            </Reveal>
-          </div>
+          </Reveal>
         ))}
       </div>
 
