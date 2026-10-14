@@ -1259,7 +1259,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     lead: {
       label: 'Заявка',
       heading: 'Оставить заявку',
-      text: 'Расскажите, куда хотите поехать, — в течение рабочего дня предложим маршрут, даты и честную смету. Если планов пока нет, просто оставьте контакты: поможем выбрать.',
+      text: 'Расскажите, какой формат вам ближе — тур с гидом и психологом, трек с гидом или выездная группа с психологом. В течение рабочего дня ответим, предложим даты и смету. Если пока не определились, просто оставьте контакты — поможем выбрать.',
       bullets: [
         '— Отвечаем в течение рабочего дня',
         '— Бронь без предоплаты в течение 3 дней',
@@ -2394,7 +2394,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     lead: {
       label: 'Request',
       heading: 'Plan my trip',
-      text: 'Tell us where you want to go — within one business day we will suggest a route, dates and an honest estimate. No plans yet? Just leave your contacts and we will help you choose.',
+      text: 'Tell us which format suits you best — a tour with a guide and a psychologist, a trek with a guide, or a residential group with a psychologist. Within one business day we will reply with suggested dates and an estimate. If you have not decided yet, just leave your contacts — we will help you choose.',
       bullets: [
         '— We reply within one business day',
         '— Booking held for 3 days with no prepayment',
