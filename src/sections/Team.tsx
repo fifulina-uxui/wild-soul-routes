@@ -21,8 +21,8 @@ export default function Team() {
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-8">
-          {t.team.items.map((m) => (
-            <Reveal key={m.name}>
+          {t.team.items.map((m, i) => (
+            <Reveal key={m.name} delay={(i % 2) * 80}>
               <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">
                 <div className="relative aspect-square w-full max-w-[120px] overflow-hidden rounded-[8px] bg-[rgb(255_255_255/4%)]">
                   {m.photo ? (

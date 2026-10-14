@@ -29,8 +29,8 @@ export default function Journal() {
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
-          {t.journal.items.map((post) => (
-            <Reveal key={post.id}>
+          {t.journal.items.map((post, i) => (
+            <Reveal key={post.id} delay={(i % 3) * 80}>
               <Link to={`/blog/${post.id}`} className="group flex h-full flex-col">
                 <div className="overflow-hidden rounded-[8px]">
                   <img

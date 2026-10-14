@@ -24,8 +24,8 @@ export default function About() {
 
         {/* На мобильном карточки в одну колонку — зазор удвоен (56px) */}
         <div className="mt-12 grid grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-4 lg:gap-8">
-          {t.about.people.map((p) => (
-            <Reveal key={p.name}>
+          {t.about.people.map((p, i) => (
+            <Reveal key={p.name} delay={(i % 2) * 80}>
               <div className="h-full">
                 <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[12px]">
                   <img

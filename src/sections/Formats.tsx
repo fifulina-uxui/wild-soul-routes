@@ -30,8 +30,8 @@ export default function Formats() {
           </Reveal>
 
           <div className="flex flex-col gap-8">
-            {t.formats.items.map((f) => (
-              <Reveal key={f.title}>
+            {t.formats.items.map((f, i) => (
+              <Reveal key={f.title} delay={i * 80}>
                 <div className="flex h-full flex-col gap-3 border-t border-[rgb(255_255_255/15%)] pt-6">
                   <h3 className="text-[24px] font-bold leading-[30px] text-[#fafafa]">{f.title}</h3>
                   <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{f.text}</p>

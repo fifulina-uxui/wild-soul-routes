@@ -32,8 +32,8 @@ export default function DirectionsPage() {
 
       {/* Направления широкими полосами с фото — как туры */}
       <div className="flex flex-col gap-4 px-4 pb-20 pt-5 md:px-6">
-        {t.directionsPage.cards.map((card) => (
-          <Reveal key={card.country}>
+        {t.directionsPage.cards.map((card, i) => (
+          <Reveal key={card.country} delay={(i % 2) * 80}>
             <article className="group relative min-h-[55vh] overflow-hidden rounded-[8px]">
               <img
                 src={asset(card.image)}

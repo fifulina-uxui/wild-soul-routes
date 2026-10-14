@@ -33,8 +33,8 @@ export default function BlogPage() {
       {/* Статьи карточками — как блок блога на главной */}
       <div className="mx-auto max-w-[1200px] px-5 pb-20 pt-5 md:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
-          {t.journal.items.map((post) => (
-            <Reveal key={post.id}>
+          {t.journal.items.map((post, i) => (
+            <Reveal key={post.id} delay={(i % 3) * 80}>
               <Link to={`/blog/${post.id}`} className="group flex h-full flex-col">
                 <div className="overflow-hidden rounded-[8px]">
                   <img

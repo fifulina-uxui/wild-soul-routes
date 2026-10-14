@@ -77,7 +77,7 @@ export default function Tours() {
           </p>
         )}
         {nearest.map((tour, i) => (
-          <Reveal key={tour.id}>
+          <Reveal key={tour.id} delay={(i % 3) * 80}>
             <article className="group relative min-h-[70vh] overflow-hidden rounded-[8px]">
               <img
                 src={asset(tour.image)}
