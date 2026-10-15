@@ -3,14 +3,11 @@ export interface Tour {
   coords: string
   title: string
   description: string
-  days: string
   price: string
   priceEarly: string
   start: string
-  highlight: string
   image: string
   crew: 'guide' | 'psych' | 'both'
-  spots: string
   groupSize?: string
 }
 
@@ -32,7 +29,7 @@ export interface TourDetail {
 
 export interface PageContent {
   nav: { href: string; label: string }[]
-  cta: { lead: string; tours: string; more: string; submit: string; choose: string; format: string; consult: string; consultHeading: string; consultText: string }
+  cta: { lead: string; more: string; submit: string; choose: string; format: string; consult: string; consultHeading: string; consultText: string }
   hero: {
     tagline: string
     title: string
@@ -43,7 +40,7 @@ export interface PageContent {
     label: string
     heading: string
     empty: string
-    meta: { group: string; groupSize: string; price: string; priceEarly: string; start: string; highlight: string; crew: string }
+    meta: { group: string; groupSize: string; price: string; priceEarly: string; start: string; crew: string }
     crewNames: { guide: string; psych: string; both: string }
     items: Tour[]
   }
@@ -51,7 +48,6 @@ export interface PageContent {
     label: string
     heading: string
     subtitle: string
-    stats: string
     all: string
   }
   tourDetail: {
@@ -173,7 +169,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     ],
     cta: {
       lead: 'Оставить заявку',
-      tours: 'Смотреть туры',
+
       more: 'Подробнее',
       submit: 'Отправить заявку',
       choose: 'Выбрать маршрут',
@@ -192,7 +188,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Маршруты',
       heading: 'Ближайшие туры',
       empty: 'Сейчас все группы в пути. Оставьте заявку — сообщим о новых датах первыми.',
-      meta: { group: 'Группа', groupSize: 'до 12 человек', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', highlight: 'Главное', crew: 'Формат' },
+      meta: { group: 'Группа', groupSize: 'до 12 человек', price: 'Стоимость', priceEarly: 'по раннему бронированию до 31.12.2026', start: 'Даты', crew: 'Формат' },
       crewNames: { guide: 'Гид', psych: 'Психолог', both: 'Гид + психолог' },
       items: [
         {
@@ -201,14 +197,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Тибет: Сила Кайласа',
           description:
             'Эверест с севера, древние храмы и города, культура Тибета и кора вокруг священного Кайласа.',
-          days: '16 дней',
           price: '3 490 $',
           priceEarly: '3 390 $',
           start: '28 мая – 12 июня 2027',
-          highlight: 'Эверест',
           image: 'images/tour-tibet.webp',
           crew: 'both',
-          spots: '',
           groupSize: 'до 18 человек',
         },
         {
@@ -217,14 +210,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Непал: сердце Гималаев',
           description:
             'Непал с разных сторон: древние храмы Катманду, джунгли Читвана с носорогами и спокойная Покхара у озера с йогой и медитациями.',
-          days: '10 дней',
           price: '2 390 $',
           priceEarly: '2 290 $',
           start: '8–17 апреля 2027',
-          highlight: 'Катманду',
           image: 'images/tour-nepal.webp',
           crew: 'both',
-          spots: '',
           groupSize: 'до 16 человек',
         },
         {
@@ -233,14 +223,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Непал и Бутан: земля Дракона',
           description:
             'Древние монастыри Бутана, гималайские долины и традиционные деревни. 9 дней среди природы и культуры страны, где массовый туризм ещё не изменил привычный уклад жизни.',
-          days: '9 дней',
           price: '3 490 $',
           priceEarly: '3 390 $',
           start: '27 марта – 4 апреля 2027',
-          highlight: 'Тигриное гнездо',
           image: 'images/tour-bhutan.webp',
           crew: 'both',
-          spots: '',
           groupSize: 'до 18 человек',
         },
         {
@@ -249,14 +236,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Непал: путь к Эвересту',
           description:
             'Трек с прохождением трёх перевалов 5000+, посещение базового лагеря Эвереста, виды на четыре восьмитысячника.',
-          days: '20 дней',
           price: '2 390 $',
           priceEarly: '2 290 $',
           start: '20 апреля – 9 мая 2027',
-          highlight: 'Эверест',
           image: 'images/tour-everest.webp',
           crew: 'guide',
-          spots: '',
         },
         {
           id: 'capetown',
@@ -264,14 +248,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'ЮАР: Кейптаун и мыс Доброй Надежды',
           description:
             'Столовая гора над городом, пингвины на Боулдерс-Бич, винные долины Стелленбоша и дорога к самому юго-западному мысу Африки.',
-          days: '10 дней',
           price: '3 490 $',
           priceEarly: '3 390 $',
           start: 'Скоро',
-          highlight: 'Столовая гора',
           image: 'images/tour-capetown.webp',
           crew: 'both',
-          spots: '',
         },
       ],
     },
@@ -279,7 +260,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Каталог',
       heading: 'Туры',
       subtitle: 'Маршруты, которые мы прошли сами и готовы пройти с вами.',
-      stats: '6 туров · 5 направлений',
+
       all: 'Все',
     },
     tourDetail: {
@@ -1103,7 +1084,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     ],
     cta: {
       lead: 'Plan my trip',
-      tours: 'Explore tours',
+
       more: 'Learn more',
       submit: 'Send request',
       choose: 'Choose a route',
@@ -1122,7 +1103,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Routes',
       heading: 'Upcoming tours',
       empty: 'All groups are on the road right now. Leave a request and we will tell you about new dates first.',
-      meta: { group: 'Group', groupSize: 'up to 12 people', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', highlight: 'Highlight', crew: 'Format' },
+      meta: { group: 'Group', groupSize: 'up to 12 people', price: 'Price', priceEarly: 'early booking until Dec 31, 2026', start: 'Dates', crew: 'Format' },
       crewNames: { guide: 'Guide', psych: 'Psychologist', both: 'Guide + psychologist' },
       items: [
         {
@@ -1131,14 +1112,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Tibet: The Power of Kailash',
           description:
             'Everest from the north, ancient temples and towns, the culture of Tibet and the kora around sacred Kailash.',
-          days: '16 days',
           price: '$3,490',
           priceEarly: '$3,390',
           start: 'May 28 – June 12, 2027',
-          highlight: 'Everest',
           image: 'images/tour-tibet.webp',
           crew: 'both',
-          spots: '',
           groupSize: 'up to 18 people',
         },
         {
@@ -1147,14 +1125,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Nepal: Heart of the Himalayas',
           description:
             'Nepal from every side: the ancient temples of Kathmandu, the rhino jungles of Chitwan and peaceful Pokhara by the lake with yoga and meditation.',
-          days: '10 days',
           price: '$2,390',
           priceEarly: '$2,290',
           start: 'April 8–17, 2027',
-          highlight: 'Kathmandu',
           image: 'images/tour-nepal.webp',
           crew: 'both',
-          spots: '',
           groupSize: 'up to 16 people',
         },
         {
@@ -1163,14 +1138,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Nepal & Bhutan: Land of the Dragon',
           description:
             'Ancient monasteries of Bhutan, Himalayan valleys and traditional villages. 9 days among the nature and culture of a country where mass tourism has not yet changed the way of life.',
-          days: '9 days',
           price: '$3,490',
           priceEarly: '$3,390',
           start: 'March 27 – April 4, 2027',
-          highlight: 'Tiger’s Nest',
           image: 'images/tour-bhutan.webp',
           crew: 'both',
-          spots: '',
           groupSize: 'up to 18 people',
         },
         {
@@ -1179,14 +1151,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'Nepal: The Road to Everest',
           description:
             'A trek across three 5,000+ metre passes, a visit to Everest Base Camp and views of four eight-thousanders.',
-          days: '20 days',
           price: '$2,390',
           priceEarly: '$2,290',
           start: 'April 20 – May 9, 2027',
-          highlight: 'Everest',
           image: 'images/tour-everest.webp',
           crew: 'guide',
-          spots: '',
         },
         {
           id: 'capetown',
@@ -1194,14 +1163,11 @@ export const content: Record<'ru' | 'en', PageContent> = {
           title: 'South Africa: Cape Town & the Cape of Good Hope',
           description:
             'Table Mountain above the city, penguins at Boulders Beach, the wine valleys of Stellenbosch and the road to Africa’s south-westernmost point.',
-          days: '10 days',
           price: '$3,490',
           priceEarly: '$3,390',
           start: 'Coming soon',
-          highlight: 'Table Mountain',
           image: 'images/tour-capetown.webp',
           crew: 'both',
-          spots: '',
         },
       ],
     },
@@ -1209,7 +1175,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       label: 'Catalog',
       heading: 'Tours',
       subtitle: 'Routes we have travelled ourselves and are ready to share with you.',
-      stats: '6 tours · 5 destinations',
+
       all: 'All',
     },
     tourDetail: {

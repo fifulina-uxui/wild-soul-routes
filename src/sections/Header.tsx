@@ -42,6 +42,7 @@ export default function Header() {
     document.body.style.overflow = open ? 'hidden' : ''
     if (!open) return
     closeRef.current?.focus()
+    const burgerEl = burgerRef.current
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false)
     }
@@ -49,7 +50,7 @@ export default function Header() {
     return () => {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', onKey)
-      burgerRef.current?.focus()
+      burgerEl?.focus()
     }
   }, [open])
 
