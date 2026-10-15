@@ -1162,7 +1162,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Потому что мы опираемся на опыт и знания',
-          text: 'В путешествиях — на многолетнюю практику, в психологии — на профессиональное образование и научный подход. Без мистики и эзотерики.',
+          text: 'В путешествиях — на многолетнюю практику, в психологии — на профессиональное образование и научный подход.',
         },
       ],
     },
@@ -2300,7 +2300,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
         },
         {
           title: 'Because we rely on experience and knowledge',
-          text: 'In travel — on many years of practice; in psychology — on professional education and a scientific approach. No mysticism or esotericism.',
+          text: 'In travel — on many years of practice; in psychology — on professional education and a scientific approach.',
         },
       ],
     },
