@@ -18,6 +18,21 @@ const countriesOf = (dict: PageContent) =>
     ),
   )
 
+// Сортировка от ближайших туров: «Скоро» и прочее без даты — в конец списка
+const MONTHS: Record<string, number> = {
+  января: 1, февраля: 2, марта: 3, апреля: 4, мая: 5, июня: 6,
+  июля: 7, августа: 8, сентября: 9, октября: 10, ноября: 11, декабря: 12,
+  jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+}
+const startTs = (d: string): number => {
+  const day = Number(d.match(/\d+/)?.[0] ?? 1)
+  const word = (d.match(/[а-яА-ЯA-Za-z]+/)?.[0] ?? '').toLowerCase()
+  const month = MONTHS[word] ?? MONTHS[word.slice(0, 3)]
+  const year = Number(d.match(/\d{4}/)?.[0] ?? 0)
+  if (!month || !year) return 99999999
+  return year * 10000 + month * 100 + day
+}
+
 export default function ToursPage() {
   const { t, lang } = useLang()
   // Фильтр живёт в адресной строке: клик по стране меняет ?c=...,
@@ -38,7 +53,7 @@ export default function ToursPage() {
   }, [country, countries, lang, setSearchParams])
 
   const activeCountry = country && countries.includes(country) ? country : null
-  const items = activeCountry
+  const items = (activeCountry
     ? t.tours.items.filter((tour) =>
         tour.coords
           .split('— ')[1]
@@ -47,6 +62,9 @@ export default function ToursPage() {
           .includes(activeCountry),
       )
     : t.tours.items
+  )
+    .slice()
+    .sort((a, b) => startTs(a.start) - startTs(b.start))
 
   return (
     <Subpage flush>
