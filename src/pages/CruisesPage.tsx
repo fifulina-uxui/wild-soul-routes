@@ -38,35 +38,79 @@ export default function CruisesPage() {
         </div>
       </section>
 
-      {/* Круизы вместе с нами — будущие направления */}
+      {/* Круизы вместе с нами — карточки как на странице туров, дата «Скоро», остальное абстрактно */}
       <section className="mx-auto max-w-[1200px] px-5 pt-14 md:px-8 md:pt-24">
         <Reveal>
           <h2 className="text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
             {c.upcomingLabel}
           </h2>
         </Reveal>
-        <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
-          {c.upcoming.map((u, i) => (
-            <Reveal key={u.title} delay={(i % 3) * 80}>
-              <div className="flex h-full flex-col">
-                <div className="overflow-hidden rounded-[8px]">
-                  <img
-                    src={asset(u.image)}
-                    alt={u.title}
-                    loading="lazy"
-                    className="aspect-[16/10] w-full object-cover"
-                  />
-                </div>
-                <p className="mt-5 text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-                  {c.soon}
-                </p>
-                <h3 className="mt-2 text-[24px] font-bold leading-[30px] text-[#fafafa]">{u.title}</h3>
-                <p className="mt-2 text-[16px] leading-[24px] text-[rgb(250_250_250/55%)]">{u.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </section>
+
+      <div className="flex flex-col gap-4 px-4 pt-8 md:px-6">
+        {c.upcoming.map((u, i) => (
+          <Reveal key={u.title} delay={(i % 3) * 80}>
+            <article className="group relative min-h-[55vh] overflow-hidden rounded-[8px]">
+              <img
+                src={asset(u.image)}
+                alt={u.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-black/40 sm:hidden" />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
+
+              <div className="relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8">
+                <div className="w-full">
+                  <h3 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
+                    {u.title}
+                  </h3>
+                  <p className="mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                    {u.text}
+                  </p>
+
+                  <div className="mt-8 grid grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:flex lg:items-start lg:justify-between lg:gap-10">
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.start}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{c.soon}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.group}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">—</dd>
+                    </div>
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.price}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">—</dd>
+                    </div>
+                    <div>
+                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                        {t.tours.meta.crew}
+                      </dt>
+                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{c.leadTitle}</dd>
+                    </div>
+                    <div className="col-span-2 mt-4 lg:mt-0">
+                      <button
+                        type="button"
+                        onClick={() => openLead(`${c.leadTitle}: ${u.title}`)}
+                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
+                      >
+                        {t.cta.lead}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
 
       {/* Статьи */}
       <section className="mx-auto max-w-[1200px] px-5 pb-14 pt-14 md:px-8 md:pb-24 md:pt-24">
