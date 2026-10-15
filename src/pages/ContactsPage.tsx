@@ -51,11 +51,11 @@ export default function ContactsPage() {
               </Reveal>
             ))}
             <Reveal>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 lg:items-end">
                 <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)] lg:min-h-10">
                   {ru ? 'Соцсети' : 'Social media'}
                 </p>
-                <SocialIcons className="-ml-2 flex" />
+                <SocialIcons className="-ml-2 flex lg:-mr-2 lg:ml-0" />
               </div>
             </Reveal>
           </div>
