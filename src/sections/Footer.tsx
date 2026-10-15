@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import { contacts } from '../data/content'
 import { useLang } from '../i18n'
+import { SocialIcons } from '../components/SocialIcons'
 import Logo from './Logo'
 
 export default function Footer() {
@@ -27,7 +28,8 @@ export default function Footer() {
             </Link>
           </nav>
 
-          <div className="flex flex-col gap-1 text-[14px] leading-5 text-[rgb(250_250_250/55%)] md:items-end">
+          <div className="flex flex-col gap-2 text-[14px] leading-5 text-[rgb(250_250_250/55%)] md:items-end">
+            <SocialIcons className="flex md:-mr-2" />
             <span>
               {contacts.legal[lang]}, ID {contacts.id}
             </span>
