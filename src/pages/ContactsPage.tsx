@@ -30,7 +30,7 @@ export default function ContactsPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid max-w-[1100px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {rows.map((row) => (
               <Reveal key={row.label}>
                 <div className="flex flex-col gap-2">
