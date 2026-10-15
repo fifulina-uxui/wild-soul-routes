@@ -15,7 +15,7 @@ export default function CruisesPage() {
       {/* Полоса-hero */}
       <section className="relative flex h-[40vh] min-h-[300px] items-end overflow-hidden">
         <img
-          src={asset('images/tour-capetown.webp')}
+          src={asset('images/hero-cruises.webp')}
           alt={c.heading}
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
