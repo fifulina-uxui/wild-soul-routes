@@ -7,6 +7,7 @@ import Home from './pages/Home'
 const ToursPage = lazy(() => import('./pages/ToursPage'))
 const TourDetailPage = lazy(() => import('./pages/TourDetailPage'))
 const DirectionsPage = lazy(() => import('./pages/DirectionsPage'))
+const CruisesPage = lazy(() => import('./pages/CruisesPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage'))
 const ContactsPage = lazy(() => import('./pages/ContactsPage'))
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/tours" element={<ToursPage />} />
           <Route path="/tours/:id" element={<TourDetailPage />} />
           <Route path="/directions" element={<DirectionsPage />} />
+          <Route path="/cruises" element={<CruisesPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogArticlePage />} />
           <Route path="/contacts" element={<ContactsPage />} />

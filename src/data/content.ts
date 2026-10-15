@@ -86,6 +86,18 @@ export interface PageContent {
     listLabel: string
     cards: { country: string; text: string; image: string }[]
   }
+  cruisesPage: {
+    heading: string
+    intro: string
+    ctaHeading: string
+    instagram: string
+    instagramUrl: string
+    lead: string
+    leadTitle: string
+    upcomingLabel: string
+    upcomingText: string
+    articlesLabel: string
+  }
   about: {
     label: string
     heading: string
@@ -152,6 +164,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     nav: [
       { href: '/tours', label: 'Туры' },
       { href: '/directions', label: 'Направления' },
+      { href: '/cruises', label: 'Круизы' },
       { href: '/blog', label: 'Блог' },
       { href: '/contacts', label: 'Контакты' },
     ],
@@ -1084,6 +1097,18 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { country: 'ЮАР', text: 'Кейптаун и Столовая гора, сафари и мыс Доброй Надежды. Пингвины на Боулдерс-Бич и винные долины Стелленбоша. Десять дней на юго-западной оконечности Африки.', image: 'images/tour-capetown.webp' },
       ],
     },
+    cruisesPage: {
+      heading: 'Круизы по всему миру',
+      intro: 'От азиатских мегаполисов и берегов Новой Зеландии до Нила и ледяных просторов Антарктиды — мир круизов огромен, и в нём найдётся путешествие под вашу мечту. Олеся поможет подобрать круиз, выбрать маршрут и каюту, организовать бронирование и будет на связи на всех этапах подготовки к поездке.',
+      ctaHeading: 'Мечтаете о круизе? Давайте найдём ваш!',
+      instagram: 'Instagram о круизах',
+      instagramUrl: 'https://www.instagram.com/oberendeeva',
+      lead: 'Оставить заявку на круиз',
+      leadTitle: 'Круиз',
+      upcomingLabel: 'Круизы вместе с нами',
+      upcomingText: 'Программы в разработке — скоро будут',
+      articlesLabel: 'Статьи',
+    },
     directions: {
       label: 'География',
       heading: 'Направления',
@@ -1267,6 +1292,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
     nav: [
       { href: '/tours', label: 'Tours' },
       { href: '/directions', label: 'Destinations' },
+      { href: '/cruises', label: 'Cruises' },
       { href: '/blog', label: 'Blog' },
       { href: '/contacts', label: 'Contacts' },
     ],
@@ -2198,6 +2224,18 @@ export const content: Record<'ru' | 'en', PageContent> = {
         { country: 'Georgia', text: 'Kakheti, Svaneti and the Georgian Military Highway. Family wineries, mountain towers and feasts reserved for friends. Gastronomic routes away from the tourist trail.', image: 'images/tour-georgia.webp' },
         { country: 'South Africa', text: 'Cape Town and Table Mountain, safaris and the Cape of Good Hope. Penguins at Boulders Beach and the wine valleys of Stellenbosch. Ten days at the south-western tip of Africa.', image: 'images/tour-capetown.webp' },
       ],
+    },
+    cruisesPage: {
+      heading: 'Cruises worldwide',
+      intro: 'From Asian megacities and the shores of New Zealand to the Nile and the icy expanses of Antarctica — the world of cruising is vast, and there is a voyage for every dream. Olesya will help you pick a cruise, choose the route and the cabin, arrange the booking and stay in touch at every stage of preparing for the trip.',
+      ctaHeading: 'Dreaming of a cruise? Let us find yours!',
+      instagram: 'Instagram about cruises',
+      instagramUrl: 'https://www.instagram.com/oberendeeva',
+      lead: 'Request a cruise',
+      leadTitle: 'Cruise',
+      upcomingLabel: 'Cruises with us',
+      upcomingText: 'Programmes in the works — coming soon',
+      articlesLabel: 'Articles',
     },
     directions: {
       label: 'Geography',
