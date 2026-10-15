@@ -120,16 +120,23 @@ export default function ToursPage() {
 
               <div className="relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8">
                 <div className="w-full">
-                  <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-                    {tour.coords}
-                  </p>
-                  <h2 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-                    {tour.title}
-                  </h2>
-                  <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {tour.description}
-                  </p>
+                  <Reveal delay={(i % 3) * 80 + 120}>
+                    <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                      {tour.coords}
+                    </p>
+                  </Reveal>
+                  <Reveal delay={(i % 3) * 80 + 220}>
+                    <h2 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
+                      {tour.title}
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={(i % 3) * 80 + 320}>
+                    <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                      {tour.description}
+                    </p>
+                  </Reveal>
 
+                  <Reveal delay={(i % 3) * 80 + 440}>
                   <div className="mt-8 grid grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:flex lg:items-start lg:justify-between lg:gap-10">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
@@ -176,6 +183,7 @@ export default function ToursPage() {
                       </Link>
                     </div>
                   </div>
+                  </Reveal>
                 </div>
               </div>
             </article>

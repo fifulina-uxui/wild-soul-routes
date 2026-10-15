@@ -102,16 +102,23 @@ export default function Tours() {
                 }`}
               >
                 <div className="max-w-[560px]">
-                  <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-                    {tour.coords}
-                  </p>
-                  <h3 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-                    {tour.title}
-                  </h3>
-                  <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {tour.description}
-                  </p>
+                  <Reveal delay={(i % 3) * 80 + 120}>
+                    <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                      {tour.coords}
+                    </p>
+                  </Reveal>
+                  <Reveal delay={(i % 3) * 80 + 220}>
+                    <h3 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
+                      {tour.title}
+                    </h3>
+                  </Reveal>
+                  <Reveal delay={(i % 3) * 80 + 320}>
+                    <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                      {tour.description}
+                    </p>
+                  </Reveal>
 
+                  <Reveal delay={(i % 3) * 80 + 440}>
                   <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 sm:grid-cols-4">
                     <div>
                       <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
@@ -150,7 +157,9 @@ export default function Tours() {
                       </dd>
                     </div>
                   </dl>
+                  </Reveal>
 
+                  <Reveal delay={(i % 3) * 80 + 560}>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <Link
                       to={`/tours/${tour.id}`}
@@ -166,6 +175,7 @@ export default function Tours() {
                       {t.cta.lead}
                     </button>
                   </div>
+                  </Reveal>
                 </div>
               </div>
             </article>
