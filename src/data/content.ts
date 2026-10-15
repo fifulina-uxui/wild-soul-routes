@@ -162,8 +162,8 @@ export const contacts = {
 export const content: Record<'ru' | 'en', PageContent> = {
   ru: {
     nav: [
-      { href: '/tours', label: 'Туры' },
       { href: '/directions', label: 'Направления' },
+      { href: '/tours', label: 'Туры' },
       { href: '/cruises', label: 'Круизы' },
       { href: '/blog', label: 'Блог' },
       { href: '/contacts', label: 'Контакты' },
@@ -1290,8 +1290,8 @@ export const content: Record<'ru' | 'en', PageContent> = {
   },
   en: {
     nav: [
-      { href: '/tours', label: 'Tours' },
       { href: '/directions', label: 'Destinations' },
+      { href: '/tours', label: 'Tours' },
       { href: '/cruises', label: 'Cruises' },
       { href: '/blog', label: 'Blog' },
       { href: '/contacts', label: 'Contacts' },
