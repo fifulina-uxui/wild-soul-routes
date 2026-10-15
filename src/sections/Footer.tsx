@@ -11,7 +11,7 @@ export default function Footer() {
     <footer id="contacts" className="border-t border-[rgb(255_255_255/15%)]">
       <div className="mx-auto max-w-[1300px] px-5 py-5 md:px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-[88px]">
+          <div className="flex items-center gap-8">
             <Logo />
             <SocialIcons className="flex" withEmail />
           </div>
