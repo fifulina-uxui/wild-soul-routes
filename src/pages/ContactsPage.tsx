@@ -34,7 +34,7 @@ export default function ContactsPage() {
             {rows.map((row) => (
               <Reveal key={row.label}>
                 <div className="flex flex-col gap-2">
-                  <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                  <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)] lg:min-h-10">
                     {row.label}
                   </p>
                   {row.href ? (
@@ -52,7 +52,7 @@ export default function ContactsPage() {
             ))}
             <Reveal>
               <div className="flex flex-col gap-2">
-                <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)] lg:min-h-10">
                   {ru ? 'Соцсети' : 'Social media'}
                 </p>
                 <SocialIcons className="-ml-2 flex" />
