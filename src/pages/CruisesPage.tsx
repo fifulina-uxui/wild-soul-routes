@@ -38,16 +38,34 @@ export default function CruisesPage() {
         </div>
       </section>
 
-      {/* Круизы вместе с нами — программы в разработке */}
+      {/* Круизы вместе с нами — будущие направления */}
       <section className="mx-auto max-w-[1200px] px-5 pt-14 md:px-8 md:pt-24">
         <Reveal>
-          <div className="border-t border-[rgb(255_255_255/15%)] pt-6">
-            <h2 className="text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
-              {c.upcomingLabel}
-            </h2>
-            <p className="mt-4 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">{c.upcomingText}</p>
-          </div>
+          <h2 className="text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+            {c.upcomingLabel}
+          </h2>
         </Reveal>
+        <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+          {c.upcoming.map((u, i) => (
+            <Reveal key={u.title} delay={(i % 3) * 80}>
+              <div className="flex h-full flex-col">
+                <div className="overflow-hidden rounded-[8px]">
+                  <img
+                    src={asset(u.image)}
+                    alt={u.title}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover"
+                  />
+                </div>
+                <p className="mt-5 text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                  {c.soon}
+                </p>
+                <h3 className="mt-2 text-[24px] font-bold leading-[30px] text-[#fafafa]">{u.title}</h3>
+                <p className="mt-2 text-[16px] leading-[24px] text-[rgb(250_250_250/55%)]">{u.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* Статьи */}

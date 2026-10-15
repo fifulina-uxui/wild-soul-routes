@@ -95,7 +95,8 @@ export interface PageContent {
     lead: string
     leadTitle: string
     upcomingLabel: string
-    upcomingText: string
+    soon: string
+    upcoming: { title: string; text: string; image: string }[]
     articlesLabel: string
   }
   about: {
@@ -1106,7 +1107,12 @@ export const content: Record<'ru' | 'en', PageContent> = {
       lead: 'Оставить заявку на круиз',
       leadTitle: 'Круиз',
       upcomingLabel: 'Круизы вместе с нами',
-      upcomingText: 'Программы в разработке — скоро будут',
+      soon: 'Скоро',
+      upcoming: [
+        { title: 'Антарктида', text: 'Ледяные просторы, пингвины и экспедиционные корабли. Круиз мечты к краю земли.', image: 'images/gal-everest-05.webp' },
+        { title: 'Норвежские фьорды', text: 'Скалы, водопады и тихие гавани с палубы корабля. Классика северных круизов.', image: 'images/hero-cruises.webp' },
+        { title: 'Средиземноморье', text: 'Бирюзовые бухты, древние порты и кухня побережий. От Греции до Барселоны.', image: 'images/gal-capetown-02.webp' },
+      ],
       articlesLabel: 'Статьи',
     },
     directions: {
@@ -2234,7 +2240,12 @@ export const content: Record<'ru' | 'en', PageContent> = {
       lead: 'Request a cruise',
       leadTitle: 'Cruise',
       upcomingLabel: 'Cruises with us',
-      upcomingText: 'Programmes in the works — coming soon',
+      soon: 'Soon',
+      upcoming: [
+        { title: 'Antarctica', text: 'Icy expanses, penguins and expedition ships. The dream voyage to the edge of the earth.', image: 'images/gal-everest-05.webp' },
+        { title: 'Norwegian fjords', text: 'Cliffs, waterfalls and quiet harbours from the deck of a ship. The classic northern cruise.', image: 'images/hero-cruises.webp' },
+        { title: 'The Mediterranean', text: 'Turquoise bays, ancient ports and coastal cuisine. From Greece to Barcelona.', image: 'images/gal-capetown-02.webp' },
+      ],
       articlesLabel: 'Articles',
     },
     directions: {
