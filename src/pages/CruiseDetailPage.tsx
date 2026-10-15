@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router'
 import { asset } from '../lib/asset'
 import Subpage from './Subpage'
 import { Reveal } from '../sections/Reveal'
+import { BackButton } from '../components/BackButton'
 import { useLeadDialog } from '../sections/LeadDialog'
 import { useLang } from '../i18n'
 
@@ -26,8 +27,11 @@ export default function CruiseDetailPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/20" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-6 md:px-8">
-          <p className="hero-in text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-6 pt-28 md:px-8">
+          <div className="hero-in">
+            <BackButton to="/cruises" label={c.back} />
+          </div>
+          <p className="hero-in mt-6 text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
             {c.soon}
           </p>
           <h1
