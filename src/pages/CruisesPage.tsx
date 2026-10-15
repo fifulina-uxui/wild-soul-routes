@@ -29,35 +29,11 @@ export default function CruisesPage() {
         </div>
       </section>
 
-      {/* Вводный текст и кнопки */}
+      {/* Вводный текст */}
       <section className="mx-auto max-w-[1200px] px-5 pt-14 md:px-8 md:pt-24">
         <div className="max-w-[720px]">
           <Reveal>
             <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{c.intro}</p>
-          </Reveal>
-          <Reveal delay={160}>
-            <h2 className="mt-10 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-              {c.ctaHeading}
-            </h2>
-          </Reveal>
-          <Reveal delay={320}>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <button
-                type="button"
-                onClick={() => openLead(c.leadTitle)}
-                className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
-              >
-                {c.lead}
-              </button>
-              <a
-                href={c.instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
-              >
-                {c.instagram}
-              </a>
-            </div>
           </Reveal>
         </div>
       </section>
@@ -106,6 +82,34 @@ export default function CruisesPage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* Финальный CTA по центру — как на главной */}
+      <section className="mx-auto max-w-[1200px] px-5 pb-16 md:px-8 md:pb-24">
+        <Reveal>
+          <div className="flex flex-col items-center gap-6 text-center">
+            <h2 className="max-w-[720px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
+              {c.ctaHeading}
+            </h2>
+            <div className="flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row">
+              <button
+                type="button"
+                onClick={() => openLead(c.leadTitle)}
+                className="inline-flex min-h-[42px] w-full shrink-0 items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
+              >
+                {c.lead}
+              </button>
+              <a
+                href={c.instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-[42px] w-full shrink-0 items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
+              >
+                {c.instagram}
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </section>
     </Subpage>
   )
