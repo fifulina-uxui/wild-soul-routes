@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fifulina-uxui.github.io/wild-soul-routes/sitemap.xml

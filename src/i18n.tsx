@@ -28,6 +28,11 @@ export function LangProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = lang
+    const description =
+      lang === 'ru'
+        ? 'Wild Soul Routes — авторские путешествия по Тибету, Непалу, Бутану и ЮАР с гидом и психологом, а также подбор круизов по всему миру. Небольшие группы, продуманные маршруты.'
+        : 'Wild Soul Routes — journeys through Tibet, Nepal, Bhutan and South Africa with a guide and a psychologist, plus cruise selection worldwide. Small groups, thoughtful routes.'
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description)
   }, [lang])
 
   return (
