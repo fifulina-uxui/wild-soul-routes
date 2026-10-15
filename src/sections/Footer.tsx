@@ -11,7 +11,10 @@ export default function Footer() {
     <footer id="contacts" className="border-t border-[rgb(255_255_255/15%)]">
       <div className="mx-auto max-w-[1300px] px-5 py-5 md:px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <Logo />
+          <div className="flex items-center gap-[88px]">
+            <Logo />
+            <SocialIcons className="flex" />
+          </div>
 
           <nav className="flex flex-wrap gap-x-4 gap-y-1.5 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
             {t.nav.map((item) => (
@@ -29,7 +32,6 @@ export default function Footer() {
           </nav>
 
           <div className="flex flex-col gap-2 text-[14px] leading-5 text-[rgb(250_250_250/55%)] md:items-end">
-            <SocialIcons className="flex md:-mr-2" />
             <span>
               {contacts.legal[lang]}, ID {contacts.id}
             </span>
