@@ -30,7 +30,7 @@ export default function CruisesPage() {
       </section>
 
       {/* Вводный текст */}
-      <section className="mx-auto max-w-[1200px] px-5 pt-14 md:px-8 md:pt-24">
+      <section className="mx-auto max-w-[1200px] px-5 pt-5 md:px-8 md:pt-8">
         <div className="max-w-[720px]">
           <Reveal>
             <p className="text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">{c.intro}</p>
