@@ -209,6 +209,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           image: 'images/tour-tibet.webp',
           crew: 'both',
           spots: '',
+          groupSize: 'до 18 человек',
         },
         {
           id: 'nepal',
@@ -1252,6 +1253,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           image: 'images/tour-tibet.webp',
           crew: 'both',
           spots: '',
+          groupSize: 'up to 18 people',
         },
         {
           id: 'nepal',
