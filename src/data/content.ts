@@ -96,7 +96,8 @@ export interface PageContent {
     leadTitle: string
     upcomingLabel: string
     soon: string
-    upcoming: { title: string; text: string; image: string }[]
+    back: string
+    upcoming: { slug: string; title: string; text: string; image: string; details: string[] }[]
     articlesLabel: string
   }
   about: {
@@ -988,10 +989,38 @@ export const content: Record<'ru' | 'en', PageContent> = {
       leadTitle: 'Круиз',
       upcomingLabel: 'Круизы вместе с нами',
       soon: 'Скоро',
+      back: 'Все круизы',
       upcoming: [
-        { title: 'Антарктида', text: 'Ледяные просторы, пингвины и экспедиционные корабли. Круиз мечты к краю земли.', image: 'images/gal-everest-05.webp' },
-        { title: 'Норвежские фьорды', text: 'Скалы, водопады и тихие гавани с палубы корабля. Классика северных круизов.', image: 'images/hero-cruises.webp' },
-        { title: 'Средиземноморье', text: 'Бирюзовые бухты, древние порты и кухня побережий. От Греции до Барселоны.', image: 'images/gal-capetown-02.webp' },
+        {
+          slug: 'antarctica',
+          title: 'Антарктида',
+          text: 'Ледяные просторы, пингвины и экспедиционные корабли. Круиз мечты к краю земли.',
+          image: 'images/gal-everest-05.webp',
+          details: [
+            'Экспедиционный круиз к белому континенту: айсберги размером с город, колонии пингвинов, киты в полярных водах и тишина, которую не забывают.',
+            'Мы подберём корабль и маршрут под ваши даты и бюджет, поможем с каютой, перелётами и подготовкой к экспедиции.',
+          ],
+        },
+        {
+          slug: 'norway',
+          title: 'Норвежские фьорды',
+          text: 'Скалы, водопады и тихие гавани с палубы корабля. Классика северных круизов.',
+          image: 'images/hero-cruises.webp',
+          details: [
+            'Классический северный круиз: узкие фьорды между километровыми скалами, водопады, маленькие гавани и полярный день летом.',
+            'Поможем выбрать сезон, корабль и каюту с видом на воду — и собрать маршрут так, чтобы успеть главное.',
+          ],
+        },
+        {
+          slug: 'mediterranean',
+          title: 'Средиземноморье',
+          text: 'Бирюзовые бухты, древние порты и кухня побережий. От Греции до Барселоны.',
+          image: 'images/gal-capetown-02.webp',
+          details: [
+            'Солнце, бирюзовые бухты и древние порты: Греция, Италия, Испания — каждое утро новый город, каждый вечер ужин на берегу.',
+            'Подберём лайнер и маршрут под ваш ритм — от спокойных небольших кораблей до больших лайнеров с богатой программой.',
+          ],
+        },
       ],
       articlesLabel: 'Статьи',
     },
@@ -2001,10 +2030,38 @@ export const content: Record<'ru' | 'en', PageContent> = {
       leadTitle: 'Cruise',
       upcomingLabel: 'Cruises with us',
       soon: 'Soon',
+      back: 'All cruises',
       upcoming: [
-        { title: 'Antarctica', text: 'Icy expanses, penguins and expedition ships. The dream voyage to the edge of the earth.', image: 'images/gal-everest-05.webp' },
-        { title: 'Norwegian fjords', text: 'Cliffs, waterfalls and quiet harbours from the deck of a ship. The classic northern cruise.', image: 'images/hero-cruises.webp' },
-        { title: 'The Mediterranean', text: 'Turquoise bays, ancient ports and coastal cuisine. From Greece to Barcelona.', image: 'images/gal-capetown-02.webp' },
+        {
+          slug: 'antarctica',
+          title: 'Antarctica',
+          text: 'Icy expanses, penguins and expedition ships. The dream voyage to the edge of the earth.',
+          image: 'images/gal-everest-05.webp',
+          details: [
+            'An expedition cruise to the white continent: city-sized icebergs, penguin colonies, whales in polar waters and a silence you never forget.',
+            'We will match the ship and itinerary to your dates and budget, and help with the cabin, flights and expedition preparation.',
+          ],
+        },
+        {
+          slug: 'norway',
+          title: 'Norwegian fjords',
+          text: 'Cliffs, waterfalls and quiet harbours from the deck of a ship. The classic northern cruise.',
+          image: 'images/hero-cruises.webp',
+          details: [
+            'The classic northern cruise: narrow fjords between kilometre-high cliffs, waterfalls, tiny harbours and the midnight sun in summer.',
+            'We will help you pick the season, the ship and a cabin with a water view — and build the route so you catch all the highlights.',
+          ],
+        },
+        {
+          slug: 'mediterranean',
+          title: 'The Mediterranean',
+          text: 'Turquoise bays, ancient ports and coastal cuisine. From Greece to Barcelona.',
+          image: 'images/gal-capetown-02.webp',
+          details: [
+            'Sun, turquoise bays and ancient ports: Greece, Italy, Spain — a new city every morning, dinner by the water every evening.',
+            'We will find a ship and itinerary for your pace — from quiet small vessels to big liners with a rich programme.',
+          ],
+        },
       ],
       articlesLabel: 'Articles',
     },

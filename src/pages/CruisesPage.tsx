@@ -57,54 +57,55 @@ export default function CruisesPage() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
+              <div
+                className={`absolute inset-0 ${
+                  i % 2 === 0
+                    ? 'bg-gradient-to-r from-black/75 via-black/30 to-transparent'
+                    : 'bg-gradient-to-l from-black/75 via-black/30 to-transparent'
+                }`}
+              />
               <div className="absolute inset-0 bg-black/40 sm:hidden" />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
 
-              <div className="relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8">
-                <div className="w-full">
-                  <h3 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
-                    {u.title}
-                  </h3>
-                  <p className="mt-3 max-w-[560px] text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
-                    {u.text}
-                  </p>
+              <div
+                className={`relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8 ${
+                  i % 2 === 0 ? '' : 'justify-end'
+                }`}
+              >
+                <div className="max-w-[560px]">
+                  <Reveal delay={(i % 3) * 80 + 120}>
+                    <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                      {c.soon}
+                    </p>
+                  </Reveal>
+                  <Reveal delay={(i % 3) * 80 + 220}>
+                    <h3 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
+                      {u.title}
+                    </h3>
+                  </Reveal>
+                  <Reveal delay={(i % 3) * 80 + 320}>
+                    <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
+                      {u.text}
+                    </p>
+                  </Reveal>
 
-                  <div className="mt-8 grid grid-cols-2 items-start gap-4 border-t border-[rgb(255_255_255/15%)] pt-5 lg:flex lg:items-start lg:justify-between lg:gap-10">
-                    <div>
-                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                        {t.tours.meta.start}
-                      </dt>
-                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{c.soon}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                        {t.tours.meta.group}
-                      </dt>
-                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">—</dd>
-                    </div>
-                    <div>
-                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                        {t.tours.meta.price}
-                      </dt>
-                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">—</dd>
-                    </div>
-                    <div>
-                      <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
-                        {t.tours.meta.crew}
-                      </dt>
-                      <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{c.leadTitle}</dd>
-                    </div>
-                    <div className="col-span-2 mt-4 lg:mt-0">
+                  <Reveal delay={(i % 3) * 80 + 440}>
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                      <Link
+                        to={`/cruises/${u.slug}`}
+                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
+                      >
+                        {t.cta.more}
+                      </Link>
                       <button
                         type="button"
                         onClick={() => openLead(`${c.leadTitle}: ${u.title}`)}
-                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] bg-[#fafafa] px-8 py-2 text-[16px] font-bold leading-[26px] text-[rgb(0_0_0/87%)] transition-colors duration-200 hover:bg-[#e6e6e6] active:bg-[#d6d6d6] sm:w-auto"
+                        className="inline-flex min-h-[42px] w-full items-center justify-center rounded-[4px] border border-[rgb(255_255_255/23%)] px-8 py-2 text-[16px] font-bold leading-[26px] text-[#fafafa] transition-colors duration-200 hover:border-[#fafafa] sm:w-auto"
                       >
                         {t.cta.lead}
                       </button>
                     </div>
-                  </div>
+                  </Reveal>
                 </div>
               </div>
             </article>
