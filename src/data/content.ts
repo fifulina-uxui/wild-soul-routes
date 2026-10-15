@@ -1113,7 +1113,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Гид, автор маршрутов',
           photo: 'images/about-olesya.jpg',
           instagram: 'https://www.instagram.com/oberendeeva',
-          text: 'Олеся много лет путешествует, водит группы в горы и исследует мир. В Непале она побывала больше 15 раз и давно мечтала создавать собственные маршруты.',
+          text: 'Олеся путешествует и водит группы с 2015 года, открывая удивительные места от Грузии до Гималаев и Южной Америки. За её плечами — горные восхождения, трекинги и экспедиции. В Непале она побывала более 15 раз и давно мечтала создавать собственные маршруты. Олеся также управляет парусной яхтой и делится с путешественниками своей любовью к горам, природе и открытиям.',
         },
         {
           name: 'Виктория',
@@ -2251,7 +2251,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           role: 'Guide, route designer',
           photo: 'images/about-olesya.jpg',
           instagram: 'https://www.instagram.com/oberendeeva',
-          text: 'Olesya has been travelling for many years, leading groups in the mountains and exploring the world. She has been to Nepal more than 15 times and has long dreamed of designing her own routes.',
+          text: 'Olesya has been travelling and leading groups since 2015, discovering amazing places from Georgia to the Himalayas and South America. Her track record includes mountain ascents, treks and expeditions. She has been to Nepal more than 15 times and has long dreamed of designing her own routes. Olesya also skippers a sailing yacht and shares her love of mountains, nature and discovery with fellow travellers.',
         },
         {
           name: 'Viktoria',
