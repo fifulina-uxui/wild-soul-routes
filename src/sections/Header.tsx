@@ -88,10 +88,10 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex flex-1 items-center justify-end gap-3 lg:gap-5">
-            <SocialIcons className="hidden lg:flex" />
             <div className="hidden lg:block">
               <LangSwitcher />
             </div>
+            <SocialIcons className="hidden lg:flex" />
             <Link to="/contacts#lead-form" className={`hidden sm:inline-block ${ctaClass}`}>
               {t.cta.lead}
             </Link>
@@ -123,10 +123,10 @@ export default function Header() {
               ))}
             </nav>
             <div className="ml-auto flex items-center gap-3 md:gap-4">
-              <SocialIcons className="hidden md:flex" />
               <div className="hidden md:block">
                 <LangSwitcher compact />
               </div>
+              <SocialIcons className="hidden md:flex" />
               <Link to="/contacts#lead-form" className={`hidden sm:inline-block ${ctaClass}`}>
                 {t.cta.lead}
               </Link>
