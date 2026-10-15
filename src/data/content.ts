@@ -115,12 +115,6 @@ export interface PageContent {
     back: string
   }
   articles: { id: string; intro: string; body: string[]; images?: string[] }[]
-  team: {
-    label: string
-    heading: string
-    text: string
-    items: { initials: string; name: string; role: string; text: string; instagram: string; photo?: string }[]
-  }
   lead: {
     label: string
     heading: string
@@ -1242,29 +1236,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
         images: ['images/hero.jpg', 'images/tour-cappadocia.jpg'],
       },
     ],
-    team: {
-      label: 'Люди',
-      heading: 'Команда',
-      text: 'Мы не передаём туры подрядчикам — ведём группы сами.',
-      items: [
-        {
-          initials: 'ОБ',
-          name: 'Олеся Берендеева',
-          photo: 'images/team-olesya.jpg',
-          role: 'Гид, автор маршрутов',
-          text: 'Работаю гидом с 2015 года, путешествую и создаю маршруты в разных странах — от Грузии до Гималаев и Южной Америки. За плечами горные восхождения, треккинги и экспедиции. Управляю парусной яхтой, исследую мир и открываю его удивительные места для вас.',
-          instagram: 'https://www.instagram.com/oberendeeva',
-        },
-        {
-          initials: 'АВ',
-          name: 'Виктория Анисимова',
-          photo: 'images/team-viktoria.jpg',
-          role: 'Клинический и семейный психолог',
-          text: 'Клинический и семейный психолог, бизнес-тренер, ведущая групповых программ. Мама, путешественница, неискоренимый оптимист. Без магии, мистики и эзотерики разбираю закономерности работы психологических механизмов. Помогаю проходить жизненные кризисы, стимулирую расти в доходе и достижениях.',
-          instagram: 'https://www.instagram.com/psy_fulcrum',
-        },
-      ],
-    },
     lead: {
       label: 'Заявка',
       heading: 'Оставить заявку',
@@ -2380,29 +2351,6 @@ export const content: Record<'ru' | 'en', PageContent> = {
         images: ['images/hero.jpg', 'images/tour-cappadocia.jpg'],
       },
     ],
-    team: {
-      label: 'People',
-      heading: 'Team',
-      text: 'We never hand tours to contractors — we lead the groups ourselves.',
-      items: [
-        {
-          initials: 'OB',
-          name: 'Olesya Berendeeva',
-          photo: 'images/team-olesya.jpg',
-          role: 'Guide, route designer',
-          text: 'Working as a guide since 2015, travelling and creating routes across countries — from Georgia to the Himalayas and South America. Mountain ascents, treks and expeditions behind me. I sail a yacht, explore the world and open its amazing places for you.',
-          instagram: 'https://www.instagram.com/oberendeeva',
-        },
-        {
-          initials: 'VA',
-          name: 'Viktoria Anisimova',
-          photo: 'images/team-viktoria.jpg',
-          role: 'Clinical and family psychologist',
-          text: 'Clinical and family psychologist, business trainer, group program facilitator. Mother, traveller, incurable optimist. Without magic, mysticism or esotericism, I unpack how psychological mechanisms work. I help people move through life crises and grow in income and achievements.',
-          instagram: 'https://www.instagram.com/psy_fulcrum',
-        },
-      ],
-    },
     lead: {
       label: 'Request',
       heading: 'Plan my trip',
