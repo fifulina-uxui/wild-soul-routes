@@ -69,7 +69,7 @@ export default function CruisesPage() {
       </section>
 
       {/* Статьи */}
-      <section className="mx-auto max-w-[1200px] px-5 pb-20 pt-14 md:px-8 md:pt-24">
+      <section className="mx-auto max-w-[1200px] px-5 pb-14 pt-14 md:px-8 md:pb-24 md:pt-24">
         <Reveal>
           <h2 className="text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
             {c.articlesLabel}
@@ -103,7 +103,7 @@ export default function CruisesPage() {
       </section>
 
       {/* Финальный CTA по центру — как на главной */}
-      <section className="mx-auto max-w-[1200px] px-5 pb-16 md:px-8 md:pb-24">
+      <section className="mx-auto max-w-[1200px] border-t border-[rgb(255_255_255/15%)] px-5 pb-16 pt-14 md:px-8 md:pb-24 md:pt-24">
         <Reveal>
           <div className="flex flex-col items-center gap-6 text-center">
             <h2 className="max-w-[720px] text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.1] tracking-[-0.5px] text-[#fafafa]">
