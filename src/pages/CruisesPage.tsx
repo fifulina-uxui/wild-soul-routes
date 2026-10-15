@@ -20,7 +20,7 @@ export default function CruisesPage() {
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/40" />
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 pb-3 md:px-8">
           <h1 className="hero-in text-[clamp(36px,4.7vw,64px)] font-bold leading-[1.05] text-[#fafafa]">
@@ -60,12 +60,12 @@ export default function CruisesPage() {
               <div
                 className={`absolute inset-0 ${
                   i % 2 === 0
-                    ? 'bg-gradient-to-r from-black/75 via-black/30 to-transparent'
-                    : 'bg-gradient-to-l from-black/75 via-black/30 to-transparent'
+                    ? 'bg-gradient-to-r from-black/85 via-black/60 to-black/25'
+                    : 'bg-gradient-to-l from-black/85 via-black/60 to-black/25'
                 }`}
               />
               <div className="absolute inset-0 bg-black/40 sm:hidden" />
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent" />
 
               <div
                 className={`relative z-10 mx-auto flex h-full min-h-[55vh] w-full max-w-[1200px] items-center px-5 py-14 md:px-8 ${
