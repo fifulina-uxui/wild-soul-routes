@@ -178,7 +178,7 @@ export default function Header() {
               {item.label}
             </NavLink>
           ))}
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-8 flex flex-col items-start gap-4">
             <LangSwitcher />
             <SocialIcons className="flex" />
           </div>
