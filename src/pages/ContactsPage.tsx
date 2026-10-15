@@ -1,6 +1,7 @@
 import Subpage from './Subpage'
 import LeadForm from '../sections/LeadForm'
 import { Reveal } from '../sections/Reveal'
+import { SocialIcons } from '../components/SocialIcons'
 import { contacts } from '../data/content'
 import { useLang } from '../i18n'
 
@@ -29,7 +30,7 @@ export default function ContactsPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid max-w-[960px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid max-w-[1100px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {rows.map((row) => (
               <Reveal key={row.label}>
                 <div className="flex flex-col gap-2">
@@ -49,6 +50,14 @@ export default function ContactsPage() {
                 </div>
               </Reveal>
             ))}
+            <Reveal>
+              <div className="flex flex-col gap-2">
+                <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
+                  {ru ? 'Соцсети' : 'Social media'}
+                </p>
+                <SocialIcons className="-ml-2 flex" />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
