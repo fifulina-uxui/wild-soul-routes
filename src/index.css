@@ -167,7 +167,7 @@
   @keyframes hero-in {
     from {
       opacity: 0;
-      transform: translateY(36px);
+      transform: translateY(var(--hero-shift, 36px));
     }
     to {
       opacity: 1;
@@ -177,6 +177,20 @@
   .hero-in {
     opacity: 0;
     animation: hero-in 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  /* На мобильных анимация мягче: меньше сдвиг, длиннее и плавнее кривая */
+  @media (max-width: 640px) {
+    .reveal {
+      transform: translateY(12px);
+      transition:
+        opacity 0.9s ease-out,
+        transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .hero-in {
+      --hero-shift: 18px;
+      animation-duration: 1.2s;
+      animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .reveal {
