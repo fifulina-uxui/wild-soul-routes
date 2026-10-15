@@ -74,22 +74,36 @@ export default function CruisesPage() {
               >
                 <div className="max-w-[560px]">
                   <Reveal delay={(i % 3) * 80 + 120}>
-                    <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)]">
-                      {c.soon}
-                    </p>
-                  </Reveal>
-                  <Reveal delay={(i % 3) * 80 + 220}>
-                    <h3 className="mt-3 text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
+                    <h3 className="text-[clamp(28px,3vw,44px)] font-bold leading-[1.08] text-[#fafafa]">
                       {u.title}
                     </h3>
                   </Reveal>
-                  <Reveal delay={(i % 3) * 80 + 320}>
+                  <Reveal delay={(i % 3) * 80 + 220}>
                     <p className="mt-3 text-[18px] leading-[26px] text-[rgb(250_250_250/70%)]">
                       {u.text}
                     </p>
                   </Reveal>
 
-                  <Reveal delay={(i % 3) * 80 + 440}>
+                  <Reveal delay={(i % 3) * 80 + 340}>
+                    <dl className="mt-8 grid grid-cols-2 gap-4 border-t border-[rgb(255_255_255/15%)] pt-5">
+                      <div>
+                        <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                          {t.tours.meta.start}
+                        </dt>
+                        <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">{c.soon}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[12px] uppercase leading-5 tracking-[0.12em] text-[rgb(250_250_250/55%)]">
+                          {t.tours.meta.price}
+                        </dt>
+                        <dd className="mt-1 text-[18px] leading-[26px] text-[#fafafa]">
+                          {c.priceOnRequest}
+                        </dd>
+                      </div>
+                    </dl>
+                  </Reveal>
+
+                  <Reveal delay={(i % 3) * 80 + 460}>
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                       <Link
                         to={`/cruises/${u.slug}`}

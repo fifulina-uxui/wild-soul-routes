@@ -96,6 +96,7 @@ export interface PageContent {
     leadTitle: string
     upcomingLabel: string
     soon: string
+    priceOnRequest: string
     back: string
     upcoming: { slug: string; title: string; text: string; image: string; details: string[] }[]
     articlesLabel: string
@@ -989,6 +990,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       leadTitle: 'Круиз',
       upcomingLabel: 'Круизы вместе с нами',
       soon: 'Скоро',
+      priceOnRequest: 'по запросу',
       back: 'Все круизы',
       upcoming: [
         {
@@ -2030,6 +2032,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
       leadTitle: 'Cruise',
       upcomingLabel: 'Cruises with us',
       soon: 'Soon',
+      priceOnRequest: 'on request',
       back: 'All cruises',
       upcoming: [
         {
