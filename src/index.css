@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-Light.ttf') format('truetype');
+  src: url('./assets/fonts/DIN2014-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/DIN2014-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-DemiBold.ttf') format('truetype');
+  src: url('./assets/fonts/DIN2014-DemiBold.woff2') format('woff2');
   font-weight: 500 600;
   font-style: normal;
   font-display: swap;
@@ -28,16 +28,8 @@
 
 @font-face {
   font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-Bold.ttf') format('truetype');
+  src: url('./assets/fonts/DIN2014-Bold.woff2') format('woff2');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }

@@ -7,8 +7,9 @@ export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden sm:items-center">
       <img
-        src={asset('images/hero-home.jpg')}
+        src={asset('images/hero-home.webp')}
         alt="Эверест в закатном свете, полная луна над вершиной"
+        fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />
       {/* Тёмный горизонтальный градиент со стороны текста */}

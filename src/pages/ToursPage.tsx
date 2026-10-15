@@ -53,7 +53,8 @@ export default function ToursPage() {
       {/* Полоса-hero каталога */}
       <section className="relative flex h-[40vh] min-h-[300px] items-end overflow-hidden">
         <img
-          src={asset('images/hero.jpg')}
+          src={asset('images/hero.webp')}
+          fetchPriority="high"
           alt={t.toursPage.heading}
           className="absolute inset-0 h-full w-full object-cover"
         />

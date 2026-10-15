@@ -1,14 +1,16 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router'
 import { LeadDialogProvider } from './sections/LeadDialog'
 import Home from './pages/Home'
-import ToursPage from './pages/ToursPage'
-import TourDetailPage from './pages/TourDetailPage'
-import DirectionsPage from './pages/DirectionsPage'
-import BlogPage from './pages/BlogPage'
-import BlogArticlePage from './pages/BlogArticlePage'
-import ContactsPage from './pages/ContactsPage'
-import PrivacyPage from './pages/PrivacyPage'
+
+// Все страницы, кроме главной, грузятся отдельными чанками по мере перехода
+const ToursPage = lazy(() => import('./pages/ToursPage'))
+const TourDetailPage = lazy(() => import('./pages/TourDetailPage'))
+const DirectionsPage = lazy(() => import('./pages/DirectionsPage'))
+const BlogPage = lazy(() => import('./pages/BlogPage'))
+const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage'))
+const ContactsPage = lazy(() => import('./pages/ContactsPage'))
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -31,17 +33,19 @@ export default function App() {
   return (
     <LeadDialogProvider>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tours" element={<ToursPage />} />
-        <Route path="/tours/:id" element={<TourDetailPage />} />
-        <Route path="/directions" element={<DirectionsPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:id" element={<BlogArticlePage />} />
-        <Route path="/contacts" element={<ContactsPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tours" element={<ToursPage />} />
+          <Route path="/tours/:id" element={<TourDetailPage />} />
+          <Route path="/directions" element={<DirectionsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogArticlePage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Suspense>
     </LeadDialogProvider>
   )
 }
