@@ -33,7 +33,7 @@ export default function ContactsPage() {
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:flex lg:justify-between">
             {rows.map((row) => (
               <Reveal key={row.label}>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1">
                   <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)] lg:min-h-10">
                     {row.label}
                   </p>
@@ -51,7 +51,7 @@ export default function ContactsPage() {
               </Reveal>
             ))}
             <Reveal>
-              <div className="flex flex-col gap-2 lg:items-end">
+              <div className="flex flex-col gap-1 lg:items-end">
                 <p className="text-[12px] uppercase leading-5 tracking-[0.17em] text-[rgb(250_250_250/55%)] lg:min-h-10">
                   {ru ? 'Соцсети' : 'Social media'}
                 </p>
