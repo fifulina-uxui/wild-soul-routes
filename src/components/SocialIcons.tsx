@@ -1,3 +1,5 @@
+import { contacts } from '../data/content'
+
 const socials = [
   {
     label: 'Instagram',
@@ -19,7 +21,19 @@ const socials = [
   },
 ]
 
-export function SocialIcons({ className = '' }: { className?: string }) {
+const emailIcon = (
+  <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+    <path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm-8.34,16L128,133.15,40.34,64ZM32,192V78.66l92.57,73.44a8,8,0,0,0,10.86,0L224,78.66V192Z" />
+  </svg>
+)
+
+export function SocialIcons({
+  className = '',
+  withEmail = false,
+}: {
+  className?: string
+  withEmail?: boolean
+}) {
   return (
     <div className={`items-center gap-1 ${className}`}>
       {socials.map((s) => (
@@ -34,6 +48,15 @@ export function SocialIcons({ className = '' }: { className?: string }) {
           {s.icon}
         </a>
       ))}
+      {withEmail && (
+        <a
+          href={`mailto:${contacts.email}`}
+          aria-label="E-mail"
+          className="flex h-10 w-10 items-center justify-center rounded-[4px] text-[rgb(250_250_250/70%)] transition-colors duration-200 hover:bg-[rgb(255_255_255/10%)] hover:text-[#fafafa]"
+        >
+          {emailIcon}
+        </a>
+      )}
     </div>
   )
 }

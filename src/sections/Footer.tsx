@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-[88px]">
             <Logo />
-            <SocialIcons className="flex" />
+            <SocialIcons className="flex" withEmail />
           </div>
 
           <nav className="flex flex-wrap gap-x-4 gap-y-1.5 text-[14px] leading-5 text-[rgb(250_250_250/55%)]">
@@ -36,12 +36,6 @@ export default function Footer() {
               {contacts.legal[lang]}, ID {contacts.id}
             </span>
             <span>{contacts.address[lang]}</span>
-            <a
-              href={`mailto:${contacts.email}`}
-              className="transition-colors duration-200 hover:text-[#fafafa]"
-            >
-              {contacts.email}
-            </a>
           </div>
         </div>
 
