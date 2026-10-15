@@ -224,6 +224,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           image: 'images/tour-nepal.webp',
           crew: 'both',
           spots: '',
+          groupSize: 'до 16 человек',
         },
         {
           id: 'nepal-bhutan',
@@ -1266,6 +1267,7 @@ export const content: Record<'ru' | 'en', PageContent> = {
           image: 'images/tour-nepal.webp',
           crew: 'both',
           spots: '',
+          groupSize: 'up to 16 people',
         },
         {
           id: 'nepal-bhutan',
