@@ -3,32 +3,40 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-Light.woff2') format('woff2');
+  font-family: 'DINish';
+  src: url('./assets/fonts/DINish-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-Regular.woff2') format('woff2');
+  font-family: 'DINish';
+  src: url('./assets/fonts/DINish-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-DemiBold.woff2') format('woff2');
-  font-weight: 500 600;
+  font-family: 'DINish';
+  src: url('./assets/fonts/DINish-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DIN 2014';
-  src: url('./assets/fonts/DIN2014-Bold.woff2') format('woff2');
+  font-family: 'DINish';
+  src: url('./assets/fonts/DINish-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DINish';
+  src: url('./assets/fonts/DINish-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -63,7 +71,7 @@
   body {
     background: var(--g-bg);
     color: var(--g-text);
-    font-family: 'DIN 2014', 'Roboto', Arial, sans-serif;
+    font-family: 'DINish', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
